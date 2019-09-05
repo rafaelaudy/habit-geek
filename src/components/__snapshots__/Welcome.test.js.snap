@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Welcome 1`] = `
+<div>
+  <h2>
+    Welcome!
+  </h2>
+  <label
+    htmlFor="Name"
+  >
+    Name:
+    <input
+      id="Name"
+      onChange={[Function]}
+      value=""
+    />
+  </label>
+  <div>
+    Avatar:
+    <img
+      alt="Avatar 1"
+      className="avatar"
+      src="001-burglar.svg"
+    />
+    <img
+      alt="Avatar 1"
+      className="avatar"
+      src="002-woman.svg"
+    />
+    <img
+      alt="Avatar 1"
+      className="avatar"
+      src="003-superhero.svg"
+    />
+    <img
+      alt="Avatar 1"
+      className="avatar"
+      src="004-robot.svg"
+    />
+    <img
+      alt="Avatar 1"
+      className="avatar"
+      src="005-dragon.svg"
+    />
+    <img
+      alt="Avatar 1"
+      className="avatar"
+      src="006-cyborg.svg"
+    />
+  </div>
+  <button>
+    Done!
+  </button>
+</div>
+`;

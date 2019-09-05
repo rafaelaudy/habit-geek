@@ -2,6 +2,11 @@
 
 exports[`Renders App 1`] = `
 <div>
-  <Welcome />
+  <Router>
+    <Welcome
+      default={true}
+      path="/"
+    />
+  </Router>
 </div>
 `;
