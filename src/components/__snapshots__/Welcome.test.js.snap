@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders Welcome 1`] = `
+exports[`Welcome component Renders static elements 1`] = `
 <div>
   <h2>
     Welcome!
@@ -48,7 +48,9 @@ exports[`Renders Welcome 1`] = `
       src="006-cyborg.svg"
     />
   </div>
-  <button>
+  <button
+    onClick={[Function]}
+  >
     Done!
   </button>
 </div>

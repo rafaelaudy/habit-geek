@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { navigate } from "@reach/router";
 import "./Welcome.css";
 import avatar1 from "./../imgs/avatars/001-burglar.svg";
 import avatar2 from "./../imgs/avatars/002-woman.svg";
@@ -31,7 +32,7 @@ const Welcome = () => {
         <img className="avatar" alt="Avatar 1" src={avatar6}></img>
       </div>
 
-      <button>Done!</button>
+      <button onClick={() => navigate("/dashboard")}>Done!</button>
     </div>
   );
 };

@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders App 1`] = `
+exports[`App component Renders static elements 1`] = `
 <div>
   <Router>
     <Welcome
       default={true}
       path="/"
+    />
+    <Dashboard
+      path="/dashboard"
     />
   </Router>
 </div>
