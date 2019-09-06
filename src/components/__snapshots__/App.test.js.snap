@@ -7,7 +7,7 @@ exports[`App component Renders static elements 1`] = `
       default={true}
       path="/"
     />
-    <Dashboard
+    <Connect(Dashboard)
       path="/dashboard"
     />
   </Router>
