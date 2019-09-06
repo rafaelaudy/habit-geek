@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { navigate } from "@reach/router";
-import "./Welcome.css";
+import "./Welcome.scss";
 import avatar1 from "./../imgs/avatars/001-burglar.svg";
 import avatar2 from "./../imgs/avatars/002-woman.svg";
 import avatar3 from "./../imgs/avatars/003-superhero.svg";
@@ -12,7 +12,7 @@ const Welcome = () => {
   const [name, setName] = useState("");
 
   return (
-    <div>
+    <div className="welcome">
       <h2>Welcome!</h2>
       <label htmlFor="Name">
         Name:
