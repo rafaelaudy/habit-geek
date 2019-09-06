@@ -2,7 +2,8 @@ import { connect } from "react-redux";
 
 import Dashboard from "./Dashboard";
 
-const mapStateToProps = ({ habits }) => ({
+const mapStateToProps = ({ habits, user }) => ({
+  username: user.name,
   habits: habits.list
 });
 

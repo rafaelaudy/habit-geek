@@ -1,7 +1,7 @@
 import React from "react";
 import "./Dashboard.scss";
 
-const Dashboard = ({ habits }) => {
+const Dashboard = ({ name, habits }) => {
   const habitComponents = habits.map((habit, index) => (
     <div className="dashboard__row" key={`habit-${index}`}>
       {habit}
@@ -22,7 +22,7 @@ const Dashboard = ({ habits }) => {
 
   return (
     <div className="dashboard">
-      <h2>Dashboard</h2>
+      <h2>Do your best{name ? " " + name : ""}!</h2>
       <div className="dashboard__container">
         <div className="dashboard__habits">
           <div className="dashboard__row"></div>
