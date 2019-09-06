@@ -4,7 +4,12 @@ import Dashboard from "./Dashboard";
 
 describe("Dashboard component", () => {
   it("Renders static elements", () => {
-    const dashboard = shallow(<Dashboard />);
+    const dashboard = shallow(<Dashboard habits={[]} />);
+    expect(dashboard).toMatchSnapshot();
+  });
+
+  it("Shows the correct ammount of habits", () => {
+    const dashboard = shallow(<Dashboard habits={["exercise", "read"]} />);
     expect(dashboard).toMatchSnapshot();
   });
 });

@@ -1,0 +1,30 @@
+.dashboard__container {
+  display: flex;
+}
+
+.dashboard__habits {
+  width: 100px;
+}
+
+.dashboard__habits,
+.dashboard__days {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dashboard__row {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard__cell {
+  width: 35px;
+  text-align: center;
+}
+
+.dashboard__add {
+  margin: 10px;
+}
