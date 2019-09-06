@@ -4,7 +4,7 @@ import Dashboard from "./Dashboard";
 
 describe("Dashboard component", () => {
   it("Renders static elements", () => {
-    const dashboard = shallow(<Dashboard habits={[]} />);
+    const dashboard = shallow(<Dashboard name="rafa" habits={[]} />);
     expect(dashboard).toMatchSnapshot();
   });
 

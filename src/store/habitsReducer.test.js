@@ -1,9 +1,9 @@
-import habitReducer from "./habitReducer";
+import habitsReducer from "./habitsReducer";
 
-describe("habitReducer", () => {
+describe("habitsReducer", () => {
   it("returns state when no recognized action is provided", () => {
     const initialState = { works: true };
-    const state = habitReducer(initialState, { type: "NOT_RECOGNIZED" });
+    const state = habitsReducer(initialState, { type: "NOT_RECOGNIZED" });
     expect(state).toEqual(initialState);
   });
 });

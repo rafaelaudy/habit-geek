@@ -2,7 +2,7 @@ const defaulState = {
   list: []
 };
 
-const habitReducer = (state = defaulState, action) => {
+const habitsReducer = (state = defaulState, action) => {
   switch (action.type) {
     default: {
       return state;
@@ -10,4 +10,4 @@ const habitReducer = (state = defaulState, action) => {
   }
 };
 
-export default habitReducer;
+export default habitsReducer;

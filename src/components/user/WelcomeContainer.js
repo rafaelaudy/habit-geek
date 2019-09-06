@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Welcome from "./Welcome";
-import { registerUser } from "../actions/userActions";
+import { registerUser } from "../../actions/userActions";
 
 const mapDispatchToProps = {
   registerUser

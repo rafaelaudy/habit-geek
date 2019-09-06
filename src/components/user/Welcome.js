@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { navigate } from "@reach/router";
 import "./Welcome.scss";
-import avatar1 from "./../imgs/avatars/001-burglar.svg";
-import avatar2 from "./../imgs/avatars/002-woman.svg";
-import avatar3 from "./../imgs/avatars/003-superhero.svg";
-import avatar4 from "./../imgs/avatars/004-robot.svg";
-import avatar5 from "./../imgs/avatars/005-dragon.svg";
-import avatar6 from "./../imgs/avatars/006-cyborg.svg";
+import avatar1 from "./../../imgs/avatars/001-burglar.svg";
+import avatar2 from "./../../imgs/avatars/002-woman.svg";
+import avatar3 from "./../../imgs/avatars/003-superhero.svg";
+import avatar4 from "./../../imgs/avatars/004-robot.svg";
+import avatar5 from "./../../imgs/avatars/005-dragon.svg";
+import avatar6 from "./../../imgs/avatars/006-cyborg.svg";
 
 const Welcome = ({ registerUser }) => {
   const [name, setName] = useState("");

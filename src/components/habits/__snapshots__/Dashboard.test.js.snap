@@ -5,7 +5,9 @@ exports[`Dashboard component Renders static elements 1`] = `
   className="dashboard"
 >
   <h2>
-    Dashboard
+    Do your best
+     rafa
+    !
   </h2>
   <div
     className="dashboard__container"
@@ -75,7 +77,8 @@ exports[`Dashboard component Shows the correct ammount of habits 1`] = `
   className="dashboard"
 >
   <h2>
-    Dashboard
+    Do your best
+    !
   </h2>
   <div
     className="dashboard__container"
