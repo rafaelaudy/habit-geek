@@ -3,7 +3,7 @@
 exports[`App component Renders static elements 1`] = `
 <div>
   <Router>
-    <Welcome
+    <Connect(Welcome)
       default={true}
       path="/"
     />

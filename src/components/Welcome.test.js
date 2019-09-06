@@ -18,9 +18,23 @@ describe("Welcome component", () => {
     expect(welcome).toMatchSnapshot();
   });
 
-  it("Navigates to Dashboard", () => {
-    const welcome = shallow(<Welcome />);
-    welcome.find("button").simulate("click");
-    expect(navigate).toHaveBeenCalledWith("/dashboard");
+  describe("on register", () => {
+    it("Register and navigates to Dashboard", () => {
+      const registerUserAction = jest.fn();
+      const welcome = shallow(<Welcome registerUser={registerUserAction} />);
+      welcome.find("#Name").simulate("change", { target: { value: "Rafa" } });
+      welcome
+        .find(".welcome__avatar")
+        .at(0)
+        .simulate("click");
+      welcome.find("button").simulate("click");
+
+      expect(registerUserAction).toHaveBeenCalled();
+      expect(registerUserAction).toHaveBeenCalledWith(
+        "Rafa",
+        "001-burglar.svg"
+      );
+      expect(navigate).toHaveBeenCalledWith("/dashboard");
+    });
   });
 });

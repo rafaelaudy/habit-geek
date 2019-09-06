@@ -8,11 +8,17 @@ import avatar4 from "./../imgs/avatars/004-robot.svg";
 import avatar5 from "./../imgs/avatars/005-dragon.svg";
 import avatar6 from "./../imgs/avatars/006-cyborg.svg";
 
-const Welcome = () => {
+const Welcome = ({ registerUser }) => {
   const [name, setName] = useState("");
+  const [selectedAvatar, setAvatar] = useState(avatar1);
+
+  const register = () => {
+    registerUser(name, selectedAvatar);
+    navigate("/dashboard");
+  };
 
   return (
-    <div className="welcome">
+    <div>
       <h2>Welcome!</h2>
       <label htmlFor="Name">
         Name:
@@ -24,15 +30,21 @@ const Welcome = () => {
       </label>
       <div>
         Avatar:
-        <img className="avatar" alt="Avatar 1" src={avatar1}></img>
-        <img className="avatar" alt="Avatar 1" src={avatar2}></img>
-        <img className="avatar" alt="Avatar 1" src={avatar3}></img>
-        <img className="avatar" alt="Avatar 1" src={avatar4}></img>
-        <img className="avatar" alt="Avatar 1" src={avatar5}></img>
-        <img className="avatar" alt="Avatar 1" src={avatar6}></img>
+        {[avatar1, avatar2, avatar3, avatar4, avatar5, avatar6].map(
+          (avatar, index) => (
+            <input
+              key={`avatar-${index}`}
+              onClick={() => setAvatar(avatar)}
+              type="image"
+              src={avatar}
+              alt="Search"
+              className="welcome__avatar"
+            ></input>
+          )
+        )}
       </div>
 
-      <button onClick={() => navigate("/dashboard")}>Done!</button>
+      <button onClick={register}>Done!</button>
     </div>
   );
 };
