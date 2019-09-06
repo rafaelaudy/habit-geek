@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard component Renders static elements 1`] = `
-<div
-  className="dashboard"
->
+<div>
   <h2>
     Do your best
      rafa
@@ -73,9 +71,7 @@ exports[`Dashboard component Renders static elements 1`] = `
 `;
 
 exports[`Dashboard component Shows the correct ammount of habits 1`] = `
-<div
-  className="dashboard"
->
+<div>
   <h2>
     Do your best
     !

@@ -21,7 +21,7 @@ const Dashboard = ({ name, habits }) => {
   ));
 
   return (
-    <div className="dashboard">
+    <div>
       <h2>Do your best{name ? " " + name : ""}!</h2>
       <div className="dashboard__container">
         <div className="dashboard__habits">
