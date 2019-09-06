@@ -10,6 +10,9 @@ exports[`App component Renders static elements 1`] = `
     <Connect(Dashboard)
       path="/dashboard"
     />
+    <Connect(NewHabit)
+      path="/newhabit"
+    />
   </Router>
 </div>
 `;
