@@ -7,3 +7,8 @@ export const createHabit = (name, type, frequency) => ({
     frequency
   }
 });
+
+export const START_HABIT_CREATION = "START_HABIT_CREATION";
+export const startHabitCreation = () => ({
+  type: START_HABIT_CREATION
+});
