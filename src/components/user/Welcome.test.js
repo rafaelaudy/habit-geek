@@ -34,7 +34,7 @@ describe("Welcome component", () => {
         "Rafa",
         "001-burglar.svg"
       );
-      expect(navigate).toHaveBeenCalledWith("/dashboard");
+      expect(navigate).toHaveBeenCalledWith("/habits");
     });
   });
 });

@@ -14,7 +14,7 @@ const Welcome = ({ registerUser }) => {
 
   const register = () => {
     registerUser(name, selectedAvatar);
-    navigate("/dashboard");
+    navigate("/habits");
   };
 
   return (

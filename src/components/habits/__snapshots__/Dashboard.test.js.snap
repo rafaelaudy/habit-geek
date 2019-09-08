@@ -63,7 +63,6 @@ exports[`Dashboard component Renders static elements 1`] = `
   </div>
   <button
     className="dashboard__add"
-    onClick={[Function]}
   >
     Add habit
   </button>
@@ -88,15 +87,11 @@ exports[`Dashboard component Shows the correct ammount of habits 1`] = `
       <div
         className="dashboard__row"
         key="habit-0"
-      >
-        exercise
-      </div>
+      />
       <div
         className="dashboard__row"
         key="habit-1"
-      >
-        read
-      </div>
+      />
     </div>
     <div
       className="dashboard__days"
@@ -224,7 +219,6 @@ exports[`Dashboard component Shows the correct ammount of habits 1`] = `
   </div>
   <button
     className="dashboard__add"
-    onClick={[Function]}
   >
     Add habit
   </button>

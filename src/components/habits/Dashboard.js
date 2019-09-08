@@ -1,10 +1,10 @@
 import React from "react";
 import "./Dashboard.scss";
 
-const Dashboard = ({ name, habits }) => {
-  const habitComponents = habits.map((habit, index) => (
+const Dashboard = ({ username, habits, startHabitCreation }) => {
+  const habitComponents = habits.map(({ name }, index) => (
     <div className="dashboard__row" key={`habit-${index}`}>
-      {habit}
+      {name}
     </div>
   ));
 
@@ -22,7 +22,7 @@ const Dashboard = ({ name, habits }) => {
 
   return (
     <div>
-      <h2>Do your best{name ? " " + name : ""}!</h2>
+      <h2>Do your best{username ? " " + username : ""}!</h2>
       <div className="dashboard__container">
         <div className="dashboard__habits">
           <div className="dashboard__row"></div>
@@ -42,7 +42,7 @@ const Dashboard = ({ name, habits }) => {
         </div>
       </div>
 
-      <button className="dashboard__add" onClick={() => {}}>
+      <button className="dashboard__add" onClick={startHabitCreation}>
         Add habit
       </button>
     </div>
