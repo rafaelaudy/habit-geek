@@ -1,226 +1,177 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard component Renders static elements 1`] = `
-<div>
-  <h2>
-    Do your best
+<div
+  className="dashboard"
+>
+  <h2
+    className="mb-3 dashboard__title"
+  >
+    What have you done this week
      rafa
-    !
+    ?
   </h2>
   <div
-    className="dashboard__container"
+    className="d-flex justify-content-center"
   >
-    <div
-      className="dashboard__habits"
+    <button
+      className="btn btn-primary btn-lg dashboard__add"
     >
-      <div
-        className="dashboard__row"
-      />
-    </div>
-    <div
-      className="dashboard__days"
-    >
-      <div
-        className="dashboard__row"
-      >
-        <div
-          className="dashboard__cell"
-        >
-          Mon
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Tue
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Wed
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Thu
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Fri
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Sat
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Sun
-        </div>
-      </div>
-    </div>
+      Add habit
+    </button>
   </div>
-  <button
-    className="dashboard__add"
-  >
-    Add habit
-  </button>
 </div>
 `;
 
 exports[`Dashboard component Shows the correct ammount of habits 1`] = `
-<div>
-  <h2>
-    Do your best
-    !
-  </h2>
-  <div
-    className="dashboard__container"
+<div
+  className="dashboard"
+>
+  <h2
+    className="mb-3 dashboard__title"
   >
+    What have you done this week
+    ?
+  </h2>
+  <div>
     <div
-      className="dashboard__habits"
+      className="mb-3 dashboard__container"
     >
       <div
-        className="dashboard__row"
-      />
-      <div
-        className="dashboard__row"
-        key="habit-0"
-      />
-      <div
-        className="dashboard__row"
-        key="habit-1"
-      />
-    </div>
-    <div
-      className="dashboard__days"
-    >
-      <div
-        className="dashboard__row"
+        className="dashboard__habits"
       >
         <div
-          className="dashboard__cell"
-        >
-          Mon
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Tue
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Wed
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Thu
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Fri
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Sat
-        </div>
-        <div
-          className="dashboard__cell"
-        >
-          Sun
-        </div>
-      </div>
-      <div
-        className="dashboard__row"
-        key="check-container-0"
-      >
-        <input
-          className="dashboard__cell"
-          key="check-0-0"
-          type="checkbox"
+          className="dashboard__row"
         />
-        <input
-          className="dashboard__cell"
-          key="check-0-1"
-          type="checkbox"
+        <div
+          className="dashboard__row"
+          key="habit-0"
         />
-        <input
-          className="dashboard__cell"
-          key="check-0-2"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-0-3"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-0-4"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-0-5"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-0-6"
-          type="checkbox"
+        <div
+          className="dashboard__row"
+          key="habit-1"
         />
       </div>
       <div
-        className="dashboard__row"
-        key="check-container-1"
+        className="dashboard__days"
       >
-        <input
-          className="dashboard__cell"
-          key="check-1-0"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-1-1"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-1-2"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-1-3"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-1-4"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-1-5"
-          type="checkbox"
-        />
-        <input
-          className="dashboard__cell"
-          key="check-1-6"
-          type="checkbox"
-        />
+        <div
+          className="dashboard__row"
+        >
+          <h4
+            className="dashboard__cell"
+          >
+            Mon
+          </h4>
+          <h4
+            className="dashboard__cell"
+          >
+            Tue
+          </h4>
+          <h4
+            className="dashboard__cell"
+          >
+            Wed
+          </h4>
+          <h4
+            className="dashboard__cell"
+          >
+            Thu
+          </h4>
+          <h4
+            className="dashboard__cell"
+          >
+            Fri
+          </h4>
+          <h4
+            className="dashboard__cell"
+          >
+            Sat
+          </h4>
+          <h4
+            className="dashboard__cell"
+          >
+            Sun
+          </h4>
+        </div>
+        <div
+          className="dashboard__row"
+          key="check-container-0"
+        >
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-0-0"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-0-1"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-0-2"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-0-3"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-0-4"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-0-5"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-0-6"
+          />
+        </div>
+        <div
+          className="dashboard__row"
+          key="check-container-1"
+        >
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-1-0"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-1-1"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-1-2"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-1-3"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-1-4"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-1-5"
+          />
+          <HabitCheckbox
+            className="dashboard__cell"
+            key="check-1-6"
+          />
+        </div>
       </div>
     </div>
   </div>
-  <button
-    className="dashboard__add"
+  <hr />
+  <div
+    className="d-flex justify-content-center"
   >
-    Add habit
-  </button>
+    <button
+      className="btn btn-primary btn-lg dashboard__add"
+    >
+      Add habit
+    </button>
+  </div>
 </div>
 `;

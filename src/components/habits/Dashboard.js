@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./Dashboard.scss";
+import HabitCheckbox from "../HabitCheckbox";
 
 const Dashboard = ({ username, habits, startHabitCreation }) => {
   const habitComponents = habits.map(({ name }, index) => (
@@ -11,40 +12,54 @@ const Dashboard = ({ username, habits, startHabitCreation }) => {
   const checkComponents = habits.map((habit, containerIndex) => (
     <div key={`check-container-${containerIndex}`} className="dashboard__row">
       {[...Array(7).keys()].map(checkIndex => (
-        <input
-          key={`check-${containerIndex}-${checkIndex}`}
+        <HabitCheckbox
           className="dashboard__cell"
-          type="checkbox"
-        ></input>
+          key={`check-${containerIndex}-${checkIndex}`}
+        ></HabitCheckbox>
       ))}
     </div>
   ));
 
   return (
-    <div>
-      <h2>Do your best{username ? " " + username : ""}!</h2>
-      <div className="dashboard__container">
-        <div className="dashboard__habits">
-          <div className="dashboard__row"></div>
-          {habitComponents}
-        </div>
-        <div className="dashboard__days">
-          <div className="dashboard__row">
-            <div className="dashboard__cell">Mon</div>
-            <div className="dashboard__cell">Tue</div>
-            <div className="dashboard__cell">Wed</div>
-            <div className="dashboard__cell">Thu</div>
-            <div className="dashboard__cell">Fri</div>
-            <div className="dashboard__cell">Sat</div>
-            <div className="dashboard__cell">Sun</div>
-          </div>
-          {checkComponents}
-        </div>
-      </div>
+    <div className="dashboard">
+      <h2 className="mb-3 dashboard__title">
+        What have you done this week{username ? " " + username : ""}?
+      </h2>
 
-      <button className="dashboard__add" onClick={startHabitCreation}>
-        Add habit
-      </button>
+      {habits.length > 0 ? (
+        <Fragment>
+          <div>
+            <div className="mb-3 dashboard__container">
+              <div className="dashboard__habits">
+                <div className="dashboard__row"></div>
+                {habitComponents}
+              </div>
+              <div className="dashboard__days">
+                <div className="dashboard__row">
+                  <h4 className="dashboard__cell">Mon</h4>
+                  <h4 className="dashboard__cell">Tue</h4>
+                  <h4 className="dashboard__cell">Wed</h4>
+                  <h4 className="dashboard__cell">Thu</h4>
+                  <h4 className="dashboard__cell">Fri</h4>
+                  <h4 className="dashboard__cell">Sat</h4>
+                  <h4 className="dashboard__cell">Sun</h4>
+                </div>
+                {checkComponents}
+              </div>
+            </div>
+          </div>
+          <hr />
+        </Fragment>
+      ) : null}
+
+      <div className="d-flex justify-content-center">
+        <button
+          className="btn btn-primary btn-lg dashboard__add"
+          onClick={startHabitCreation}
+        >
+          Add habit
+        </button>
+      </div>
     </div>
   );
 };

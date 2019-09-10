@@ -1,3 +1,14 @@
+.dashboard {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin: auto;
+}
+
+.dashboard__title {
+  text-align: center;
+}
+
 .dashboard__container {
   display: flex;
 }
@@ -14,17 +25,12 @@
 }
 
 .dashboard__row {
-  height: 30px;
+  height: 40px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .dashboard__cell {
-  width: 35px;
+  width: 60px;
   text-align: center;
-}
-
-.dashboard__add {
-  margin: 10px;
 }
