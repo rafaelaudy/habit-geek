@@ -1,5 +1,6 @@
 import React from "react";
 import { Router } from "@reach/router";
+
 import "./App.scss";
 import WelcomeContainer from "./user/WelcomeContainer";
 import HabitsContainer from "./habits/HabitsContainer";

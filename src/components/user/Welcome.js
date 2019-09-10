@@ -23,16 +23,16 @@ const Welcome = ({ registerUser }) => {
     <div className="welcome">
       <h2 className="welcome__title">Welcome!</h2>
       <div className="mb-3">
-        <label htmlFor="Name">Name:</label>
+        <label htmlFor="welcome-name">Name:</label>
         <input
-          id="Name"
+          id="welcome-name"
           className="form-control"
           value={name}
           onChange={e => setName(e.target.value)}
         ></input>
       </div>
       <div className="mb-3">
-        <label htmlFor="Name">Avatar:</label>
+        <label htmlFor="welcome-avatar">Avatar:</label>
         <div className="input-group welcome__avatar-container">
           {avatars.map((avatar, index) => (
             <input
