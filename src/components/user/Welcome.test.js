@@ -22,7 +22,9 @@ describe("Welcome component", () => {
     it("Register and navigates to Dashboard", () => {
       const registerUserAction = jest.fn();
       const welcome = shallow(<Welcome registerUser={registerUserAction} />);
-      welcome.find("#Name").simulate("change", { target: { value: "Rafa" } });
+      welcome
+        .find("#welcome-name")
+        .simulate("change", { target: { value: "Rafa" } });
       welcome
         .find(".welcome__avatar")
         .at(0)
