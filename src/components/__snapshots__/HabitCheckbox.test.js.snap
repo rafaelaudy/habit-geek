@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitCheckbox component Renders static elements 1`] = `
+<Fragment>
+  <label
+    class="toggle"
+  >
+    <input
+      class="toggle__input"
+      type="checkbox"
+    />
+    <span
+      class="toggle__label"
+    >
+      <span
+        class="toggle__text"
+      />
+    </span>
+  </label>
+</Fragment>
+`;
