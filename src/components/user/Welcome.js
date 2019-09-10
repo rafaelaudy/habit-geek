@@ -8,43 +8,50 @@ import avatar4 from "./../../imgs/avatars/004-robot.svg";
 import avatar5 from "./../../imgs/avatars/005-dragon.svg";
 import avatar6 from "./../../imgs/avatars/006-cyborg.svg";
 
+const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
+
 const Welcome = ({ registerUser }) => {
   const [name, setName] = useState("");
-  const [selectedAvatar, setAvatar] = useState(avatar1);
+  const [selectedAvatar, setAvatar] = useState(1);
 
   const register = () => {
-    registerUser(name, selectedAvatar);
+    registerUser(name, avatars[selectedAvatar]);
     navigate("/habits");
   };
 
   return (
-    <div>
-      <h2>Welcome!</h2>
-      <label htmlFor="Name">
-        Name:
+    <div className="welcome">
+      <h2 className="welcome__title">Welcome!</h2>
+      <div className="mb-3">
+        <label htmlFor="Name">Name:</label>
         <input
           id="Name"
+          className="form-control"
           value={name}
           onChange={e => setName(e.target.value)}
         ></input>
-      </label>
-      <div>
-        Avatar:
-        {[avatar1, avatar2, avatar3, avatar4, avatar5, avatar6].map(
-          (avatar, index) => (
+      </div>
+      <div className="mb-3">
+        <label htmlFor="Name">Avatar:</label>
+        <div className="input-group welcome__avatar-container">
+          {avatars.map((avatar, index) => (
             <input
               key={`avatar-${index}`}
-              onClick={() => setAvatar(avatar)}
+              onClick={() => setAvatar(index)}
               type="image"
               src={avatar}
               alt="Search"
-              className="welcome__avatar"
+              className={`welcome__avatar ${
+                index === selectedAvatar ? "welcome__avatar--selected" : ""
+              }`}
             ></input>
-          )
-        )}
+          ))}
+        </div>
       </div>
-
-      <button onClick={register}>Done!</button>
+      <hr class="mb-4" />
+      <button className="btn btn-primary btn-lg btn-block" onClick={register}>
+        Done!
+      </button>
     </div>
   );
 };
