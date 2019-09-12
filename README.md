@@ -1,5 +1,7 @@
 This project wants to be your go to app to improve and monitor your daily habits!
 
+Check it out here: https://habit-geek.herokuapp.com/habits
+
 Created with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
