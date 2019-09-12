@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/habit-geek/static/css/main.05494800.chunk.css",
+    "main.js": "/habit-geek/static/js/main.37c0fa8e.chunk.js",
+    "main.js.map": "/habit-geek/static/js/main.37c0fa8e.chunk.js.map",
+    "runtime~main.js": "/habit-geek/static/js/runtime~main.9224e52c.js",
+    "runtime~main.js.map": "/habit-geek/static/js/runtime~main.9224e52c.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/habit-geek/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.b940b8ef.chunk.js": "/habit-geek/static/js/2.b940b8ef.chunk.js",
+    "static/js/2.b940b8ef.chunk.js.map": "/habit-geek/static/js/2.b940b8ef.chunk.js.map",
+    "index.html": "/habit-geek/index.html",
+    "precache-manifest.a213d7b51a6e066c6285e4c86e3cd34a.js": "/habit-geek/precache-manifest.a213d7b51a6e066c6285e4c86e3cd34a.js",
+    "service-worker.js": "/habit-geek/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/habit-geek/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.05494800.chunk.css.map": "/habit-geek/static/css/main.05494800.chunk.css.map",
+    "static/media/001-burglar.svg": "/habit-geek/static/media/001-burglar.fad4fb81.svg",
+    "static/media/002-woman.svg": "/habit-geek/static/media/002-woman.972480c3.svg",
+    "static/media/003-superhero.svg": "/habit-geek/static/media/003-superhero.30672cbf.svg",
+    "static/media/004-robot.svg": "/habit-geek/static/media/004-robot.4a1aa59e.svg",
+    "static/media/005-dragon.svg": "/habit-geek/static/media/005-dragon.ffaf3a24.svg",
+    "static/media/006-cyborg.svg": "/habit-geek/static/media/006-cyborg.605d5cd3.svg"
+  }
+}
