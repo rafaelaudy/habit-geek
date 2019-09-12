@@ -9,7 +9,12 @@ describe("Dashboard component", () => {
   });
 
   it("Shows the correct ammount of habits", () => {
-    const dashboard = shallow(<Dashboard habits={["exercise", "read"]} />);
+    const checked = [false, false, false, false, false, false, false];
+    const dashboard = shallow(
+      <Dashboard
+        habits={[{ name: "exercise", checked }, { name: "read", checked }]}
+      />
+    );
     expect(dashboard).toMatchSnapshot();
   });
 

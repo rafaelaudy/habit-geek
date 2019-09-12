@@ -1,21 +1,28 @@
 import React, { Fragment } from "react";
 
 import "./Dashboard.scss";
-import HabitCheckbox from "../HabitCheckbox";
+import HabitCheckbox from "./HabitCheckbox";
 
-const Dashboard = ({ username, habits, startHabitCreation }) => {
+const Dashboard = ({
+  username,
+  habits,
+  startHabitCreation,
+  toggleDayHabit
+}) => {
   const habitComponents = habits.map(({ name }, index) => (
     <div className="dashboard__row" key={`habit-${index}`}>
       {name}
     </div>
   ));
 
-  const checkComponents = habits.map((habit, containerIndex) => (
+  const checkComponents = habits.map(({ name, checked }, containerIndex) => (
     <div key={`check-container-${containerIndex}`} className="dashboard__row">
       {[...Array(7).keys()].map(checkIndex => (
         <HabitCheckbox
           className="dashboard__cell"
           key={`check-${containerIndex}-${checkIndex}`}
+          clickHandler={() => toggleDayHabit(name, checkIndex)}
+          isChecked={checked[checkIndex]}
         ></HabitCheckbox>
       ))}
     </div>

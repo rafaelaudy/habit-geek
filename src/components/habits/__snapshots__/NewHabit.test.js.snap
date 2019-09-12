@@ -1,112 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewHabits component Renders static elements 1`] = `
-<div>
-  <h2>
+<div
+  className="new-habits"
+>
+  <h2
+    className="new-habits__title"
+  >
     Ready to start a new habit?
   </h2>
-  <div>
+  <div
+    className="mb-3"
+  >
     <label
       htmlFor="new-habit-name"
     >
       Name
-      <input
-        id="new-habit-name"
-        onChange={[Function]}
-        value=""
-      />
     </label>
+    <input
+      className="form-control"
+      id="new-habit-name"
+      onChange={[Function]}
+      value=""
+    />
   </div>
-  <div>
+  <div
+    className="mb-3"
+  >
     <label
       htmlFor="new-habit-type"
     >
       Type
-      <select
-        id="new-habit-type"
-        onBlur={[Function]}
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          vaue=""
-        />
-        <option
-          vaue="Health"
-        >
-          Health
-        </option>
-        <option
-          vaue="Social"
-        >
-          Social
-        </option>
-        <option
-          vaue="Career"
-        >
-          Career
-        </option>
-        <option
-          vaue="Hobbies"
-        >
-          Hobbies
-        </option>
-      </select>
     </label>
+    <select
+      className="form-control"
+      id="new-habit-type"
+      onBlur={[Function]}
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        vaue=""
+      />
+      <option
+        vaue="Health"
+      >
+        Health
+      </option>
+      <option
+        vaue="Social"
+      >
+        Social
+      </option>
+      <option
+        vaue="Career"
+      >
+        Career
+      </option>
+      <option
+        vaue="Hobbies"
+      >
+        Hobbies
+      </option>
+    </select>
   </div>
-  <div>
+  <div
+    className="mb-3"
+  >
     <label
       htmlFor="new-habit-frequency"
     >
       Frequency
-      <select
-        id="new-habit-frequency"
-        onBlur={[Function]}
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          vaue=""
-        />
-        <option
-          vaue="1x"
-        >
-          1x
-        </option>
-        <option
-          vaue="2x"
-        >
-          2x
-        </option>
-        <option
-          vaue="3x"
-        >
-          3x
-        </option>
-        <option
-          vaue="4x"
-        >
-          4x
-        </option>
-        <option
-          vaue="5x"
-        >
-          5x
-        </option>
-        <option
-          vaue="6x"
-        >
-          6x
-        </option>
-        <option
-          vaue="7x"
-        >
-          7x
-        </option>
-      </select>
     </label>
+    <select
+      className="form-control"
+      id="new-habit-frequency"
+      onBlur={[Function]}
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        vaue=""
+      />
+      <option
+        vaue="1x"
+      >
+        1x
+      </option>
+      <option
+        vaue="2x"
+      >
+        2x
+      </option>
+      <option
+        vaue="3x"
+      >
+        3x
+      </option>
+      <option
+        vaue="4x"
+      >
+        4x
+      </option>
+      <option
+        vaue="5x"
+      >
+        5x
+      </option>
+      <option
+        vaue="6x"
+      >
+        6x
+      </option>
+      <option
+        vaue="7x"
+      >
+        7x
+      </option>
+    </select>
   </div>
+  <hr
+    class="mb-4"
+  />
   <button
+    className="btn btn-primary btn-lg btn-block"
     onClick={[Function]}
   >
     Create!

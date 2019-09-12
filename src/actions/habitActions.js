@@ -4,7 +4,17 @@ export const createHabit = (name, type, frequency) => ({
   payload: {
     name,
     type,
-    frequency
+    frequency,
+    checked: [false, false, false, false, false, false, false]
+  }
+});
+
+export const TOGGLE_DAY_HABIT = "TOGGLE_DAY_HABIT";
+export const toggleDayHabit = (name, day) => ({
+  type: TOGGLE_DAY_HABIT,
+  payload: {
+    name,
+    day
   }
 });
 

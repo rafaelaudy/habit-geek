@@ -8,7 +8,8 @@ const Habits = ({
   username,
   createHabit,
   isCreatingHabit,
-  startHabitCreation
+  startHabitCreation,
+  toggleDayHabit
 }) => {
   return isCreatingHabit ? (
     <NewHabit createHabit={createHabit} />
@@ -17,6 +18,7 @@ const Habits = ({
       username={username}
       habits={habits}
       startHabitCreation={startHabitCreation}
+      toggleDayHabit={toggleDayHabit}
     />
   );
 };

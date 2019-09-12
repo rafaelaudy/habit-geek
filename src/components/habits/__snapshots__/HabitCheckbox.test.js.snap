@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitCheckbox component Renders static elements 1`] = `
+<Fragment>
+  <label
+    className="toggle"
+  >
+    <input
+      className="toggle__input"
+      type="checkbox"
+    />
+    <span
+      className="toggle__label"
+    >
+      <span
+        className="toggle__text"
+      />
+    </span>
+  </label>
+</Fragment>
+`;
+
+exports[`HabitCheckbox component renders checked checkboxes 1`] = `
+<Fragment>
+  <label
+    className="toggle"
+  >
+    <input
+      className="toggle__input"
+      defaultChecked={true}
+      type="checkbox"
+    />
+    <span
+      className="toggle__label"
+    >
+      <span
+        className="toggle__text"
+      />
+    </span>
+  </label>
+</Fragment>
+`;
