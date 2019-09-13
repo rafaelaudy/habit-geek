@@ -11,21 +11,20 @@
 
 .dashboard__container {
   display: flex;
-}
-
-.dashboard__habits {
-  width: 100px;
-}
-
-.dashboard__habits,
-.dashboard__days {
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .dashboard__row {
-  height: 40px;
+  display: flex;
+}
+
+.dashboard__habit {
+  width: 140px;
+}
+
+.dashboard__frequency {
+  flex-grow: 1;
   display: flex;
   justify-content: space-around;
 }
@@ -33,4 +32,28 @@
 .dashboard__cell {
   width: 60px;
   text-align: center;
+
+  .toggle {
+    margin-left: 7px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard__container {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .dashboard__row {
+    flex-direction: column;
+  }
+
+  .dashboard__habit {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboard__cell {
+    font-size: 1rem;
+  }
 }

@@ -54,7 +54,7 @@ const NewHabit = ({ createHabit }) => {
           <option vaue="7x">7x</option>
         </select>
       </div>
-      <hr class="mb-4" />
+      <hr className="mb-4" />
       <button
         className="btn btn-primary btn-lg btn-block"
         onClick={() => createHabit(name, type, frequency)}
