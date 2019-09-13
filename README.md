@@ -14,9 +14,9 @@ In the project directory, you can run:
 
 ## Next improvements:
 
-- Add Frequency
-- Add Color background
+- Disable checkbox in the future
 - Add History
+- Hihglight today
 
 ### Code Splitting
 
