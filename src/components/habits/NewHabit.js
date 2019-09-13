@@ -28,11 +28,11 @@ const NewHabit = ({ createHabit }) => {
           onChange={e => setType(e.target.value)}
           onBlur={e => setType(e.target.value)}
         >
-          <option vaue=""></option>
-          <option vaue="Health">Health</option>
-          <option vaue="Social">Social</option>
-          <option vaue="Career">Career</option>
-          <option vaue="Hobbies">Hobbies</option>
+          <option value=""></option>
+          <option value="Health">Health</option>
+          <option value="Social">Social</option>
+          <option value="Career">Career</option>
+          <option value="Hobbies">Hobbies</option>
         </select>
       </div>
       <div className="mb-3">
@@ -44,14 +44,14 @@ const NewHabit = ({ createHabit }) => {
           onChange={e => setFrequency(e.target.value)}
           onBlur={e => setFrequency(e.target.value)}
         >
-          <option vaue=""></option>
-          <option vaue="1x">1x</option>
-          <option vaue="2x">2x</option>
-          <option vaue="3x">3x</option>
-          <option vaue="4x">4x</option>
-          <option vaue="5x">5x</option>
-          <option vaue="6x">6x</option>
-          <option vaue="7x">7x</option>
+          <option value=""></option>
+          <option value="1">1x</option>
+          <option value="2">2x</option>
+          <option value="3">3x</option>
+          <option value="4">4x</option>
+          <option value="5">5x</option>
+          <option value="6">6x</option>
+          <option value="7">7x</option>
         </select>
       </div>
       <hr className="mb-4" />

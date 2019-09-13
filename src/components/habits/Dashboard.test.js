@@ -12,7 +12,10 @@ describe("Dashboard component", () => {
     const checked = [false, false, false, false, false, false, false];
     const dashboard = shallow(
       <Dashboard
-        habits={[{ name: "exercise", checked }, { name: "read", checked }]}
+        habits={[
+          { name: "exercise", frequency: 1, checked },
+          { name: "read", frequency: 1, checked }
+        ]}
       />
     );
     expect(dashboard).toMatchSnapshot();

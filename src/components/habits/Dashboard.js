@@ -9,24 +9,28 @@ const Dashboard = ({
   startHabitCreation,
   toggleDayHabit
 }) => {
-  const checkComponents = habits.map(({ name, checked }, containerIndex) => (
-    <div key={`check-container-${containerIndex}`} className="dashboard__row">
-      <div className="dashboard__habit">{name}</div>
-      <div className="dashboard__frequency">
-        {[...Array(7).keys()].map(checkIndex => (
-          <div
-            className="dashboard__cell"
-            key={`check-${containerIndex}-${checkIndex}`}
-          >
-            <HabitCheckbox
-              clickHandler={() => toggleDayHabit(name, checkIndex)}
-              isChecked={checked[checkIndex]}
-            ></HabitCheckbox>
-          </div>
-        ))}
+  const checkComponents = habits.map(
+    ({ name, frequency, checked }, containerIndex) => (
+      <div key={`check-container-${containerIndex}`} className="dashboard__row">
+        <div className="dashboard__habit">
+          ({frequency}x) - {name}
+        </div>
+        <div className="dashboard__frequency">
+          {[...Array(7).keys()].map(checkIndex => (
+            <div
+              className="dashboard__cell"
+              key={`check-${containerIndex}-${checkIndex}`}
+            >
+              <HabitCheckbox
+                clickHandler={() => toggleDayHabit(name, checkIndex)}
+                isChecked={checked[checkIndex]}
+              ></HabitCheckbox>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  ));
+    )
+  );
 
   return (
     <div className="dashboard">

@@ -12,12 +12,11 @@ In the project directory, you can run:
 `npm test`
 `npm run build`
 
-## Next features:
-
-- Deploy on heroku or amazon
-- Mobile view
-
 ## Next improvements:
+
+- Add Frequency
+- Add Color background
+- Add History
 
 ### Code Splitting
 

@@ -5,7 +5,7 @@ import Dashboard from "./Dashboard";
 
 const Habits = ({
   habits,
-  username,
+  name,
   createHabit,
   isCreatingHabit,
   startHabitCreation,
@@ -15,7 +15,7 @@ const Habits = ({
     <NewHabit createHabit={createHabit} />
   ) : (
     <Dashboard
-      username={username}
+      username={name}
       habits={habits}
       startHabitCreation={startHabitCreation}
       toggleDayHabit={toggleDayHabit}

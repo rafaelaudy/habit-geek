@@ -40,25 +40,25 @@ exports[`NewHabits component Renders static elements 1`] = `
       value=""
     >
       <option
-        vaue=""
+        value=""
       />
       <option
-        vaue="Health"
+        value="Health"
       >
         Health
       </option>
       <option
-        vaue="Social"
+        value="Social"
       >
         Social
       </option>
       <option
-        vaue="Career"
+        value="Career"
       >
         Career
       </option>
       <option
-        vaue="Hobbies"
+        value="Hobbies"
       >
         Hobbies
       </option>
@@ -80,40 +80,40 @@ exports[`NewHabits component Renders static elements 1`] = `
       value=""
     >
       <option
-        vaue=""
+        value=""
       />
       <option
-        vaue="1x"
+        value="1"
       >
         1x
       </option>
       <option
-        vaue="2x"
+        value="2"
       >
         2x
       </option>
       <option
-        vaue="3x"
+        value="3"
       >
         3x
       </option>
       <option
-        vaue="4x"
+        value="4"
       >
         4x
       </option>
       <option
-        vaue="5x"
+        value="5"
       >
         5x
       </option>
       <option
-        vaue="6x"
+        value="6"
       >
         6x
       </option>
       <option
-        vaue="7x"
+        value="7"
       >
         7x
       </option>
