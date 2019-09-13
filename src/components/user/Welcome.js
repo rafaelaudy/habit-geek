@@ -10,12 +10,12 @@ import avatar6 from "./../../imgs/avatars/006-cyborg.svg";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
 
-const Welcome = ({ registerUser }) => {
-  const [name, setName] = useState("");
-  const [selectedAvatar, setAvatar] = useState(1);
+const Welcome = ({ name: initialName, avatar, registerUser }) => {
+  const [name, setName] = useState(initialName);
+  const [selectedAvatar, setAvatar] = useState(avatar ? avatar : "");
 
   const register = () => {
-    registerUser(name, avatars[selectedAvatar]);
+    registerUser(name, selectedAvatar);
     navigate("/habits");
   };
 
@@ -37,12 +37,12 @@ const Welcome = ({ registerUser }) => {
           {avatars.map((avatar, index) => (
             <input
               key={`avatar-${index}`}
-              onClick={() => setAvatar(index)}
+              onClick={() => setAvatar(avatar)}
               type="image"
               src={avatar}
               alt="Search"
               className={`welcome__avatar ${
-                index === selectedAvatar ? "welcome__avatar--selected" : ""
+                avatar === selectedAvatar ? "welcome__avatar--selected" : ""
               }`}
             ></input>
           ))}

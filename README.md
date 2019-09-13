@@ -14,7 +14,6 @@ In the project directory, you can run:
 
 ## Next improvements:
 
-- Disable checkbox in the future
 - Add History
 - Hihglight today
 

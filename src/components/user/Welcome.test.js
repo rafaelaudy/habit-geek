@@ -14,7 +14,7 @@ afterAll(() => {
 
 describe("Welcome component", () => {
   it("Renders static elements", () => {
-    const welcome = shallow(<Welcome />);
+    const welcome = shallow(<Welcome avatar="002-woman.svg" name="rafa" />);
     expect(welcome).toMatchSnapshot();
   });
 

@@ -21,7 +21,7 @@ exports[`Welcome component Renders static elements 1`] = `
       className="form-control"
       id="welcome-name"
       onChange={[Function]}
-      value=""
+      value="rafa"
     />
   </div>
   <div
