@@ -13,6 +13,10 @@ describe("DashboardRows component", () => {
     };
   }
 
+  beforeEach(() => {
+    mockDate("2019-09-12T12:34:56z");
+  });
+
   afterEach(() => {
     global.Date = RealDate;
   });
@@ -38,12 +42,13 @@ describe("DashboardRows component", () => {
   });
 
   it("marks habits that are not performing well", () => {
-    mockDate("2019-09-12T12:34:56z");
-    const checked = [true, true, false, false, false, false, false];
+    mockDate("2019-09-13T12:34:56z");
+    const checked = [true, true, false, false, true, false, false];
     const dashboardRows = shallow(
       <DashboardRows
         habits={[
-          { name: "ok", frequency: 6, checked },
+          { name: "ok", frequency: 5, checked },
+          { name: "failed", frequency: 6, checked },
           { name: "failed", frequency: 7, checked }
         ]}
       />

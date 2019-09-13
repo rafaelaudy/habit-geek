@@ -26,6 +26,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -35,6 +36,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -44,6 +46,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -53,6 +56,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -62,6 +66,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -71,6 +76,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -80,6 +86,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
     </div>
@@ -106,6 +113,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -115,6 +123,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -124,6 +133,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -133,6 +143,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -142,6 +153,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -151,6 +163,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -160,6 +173,7 @@ exports[`DashboardRows component Shows the correct ammount of habits 1`] = `
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
     </div>
@@ -191,6 +205,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -200,6 +215,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -209,6 +225,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -218,6 +235,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -227,6 +245,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -236,6 +255,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -245,6 +265,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
     </div>
@@ -271,6 +292,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -280,6 +302,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -289,6 +312,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -298,6 +322,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -307,6 +332,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -316,6 +342,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -325,6 +352,7 @@ exports[`DashboardRows component marks habits correctly at the last day of the w
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
     </div>
@@ -356,6 +384,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -365,6 +394,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -374,6 +404,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -383,6 +414,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -392,6 +424,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -401,6 +434,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -410,6 +444,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
     </div>
@@ -436,6 +471,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -445,6 +481,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -454,6 +491,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -463,6 +501,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -472,6 +511,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -481,6 +521,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -490,6 +531,7 @@ exports[`DashboardRows component marks habits that are completed for that week 1
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
     </div>
@@ -507,7 +549,7 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
       className="dashboard__cell-habit-container"
     >
       (
-      6
+      5
       x) - 
       ok
     </div>
@@ -521,6 +563,7 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -530,6 +573,7 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -539,6 +583,7 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -548,6 +593,7 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
@@ -556,7 +602,8 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
       >
         <HabitCheckbox
           clickHandler={[Function]}
-          isChecked={false}
+          isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
@@ -566,6 +613,7 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
@@ -575,6 +623,7 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
     </div>
@@ -582,6 +631,93 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
   <div
     className="dashboard__row"
     key="check-container-1"
+  >
+    <div
+      className="dashboard__cell-habit-container"
+    >
+      (
+      6
+      x) - 
+      failed
+    </div>
+    <div
+      className="dashboard__cell-frequency-container  table-danger"
+    >
+      <div
+        className="dashboard__cell"
+        key="check-1-0"
+      >
+        <HabitCheckbox
+          clickHandler={[Function]}
+          isChecked={true}
+          isDisabled={false}
+        />
+      </div>
+      <div
+        className="dashboard__cell"
+        key="check-1-1"
+      >
+        <HabitCheckbox
+          clickHandler={[Function]}
+          isChecked={true}
+          isDisabled={false}
+        />
+      </div>
+      <div
+        className="dashboard__cell"
+        key="check-1-2"
+      >
+        <HabitCheckbox
+          clickHandler={[Function]}
+          isChecked={false}
+          isDisabled={false}
+        />
+      </div>
+      <div
+        className="dashboard__cell"
+        key="check-1-3"
+      >
+        <HabitCheckbox
+          clickHandler={[Function]}
+          isChecked={false}
+          isDisabled={false}
+        />
+      </div>
+      <div
+        className="dashboard__cell"
+        key="check-1-4"
+      >
+        <HabitCheckbox
+          clickHandler={[Function]}
+          isChecked={true}
+          isDisabled={false}
+        />
+      </div>
+      <div
+        className="dashboard__cell"
+        key="check-1-5"
+      >
+        <HabitCheckbox
+          clickHandler={[Function]}
+          isChecked={false}
+          isDisabled={true}
+        />
+      </div>
+      <div
+        className="dashboard__cell"
+        key="check-1-6"
+      >
+        <HabitCheckbox
+          clickHandler={[Function]}
+          isChecked={false}
+          isDisabled={true}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="dashboard__row"
+    key="check-container-2"
   >
     <div
       className="dashboard__cell-habit-container"
@@ -596,65 +732,72 @@ exports[`DashboardRows component marks habits that are not performing well 1`] =
     >
       <div
         className="dashboard__cell"
-        key="check-1-0"
+        key="check-2-0"
       >
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
         className="dashboard__cell"
-        key="check-1-1"
+        key="check-2-1"
       >
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
         className="dashboard__cell"
-        key="check-1-2"
+        key="check-2-2"
       >
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
         className="dashboard__cell"
-        key="check-1-3"
+        key="check-2-3"
       >
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={false}
         />
       </div>
       <div
         className="dashboard__cell"
-        key="check-1-4"
+        key="check-2-4"
       >
         <HabitCheckbox
           clickHandler={[Function]}
-          isChecked={false}
+          isChecked={true}
+          isDisabled={false}
         />
       </div>
       <div
         className="dashboard__cell"
-        key="check-1-5"
+        key="check-2-5"
       >
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
       <div
         className="dashboard__cell"
-        key="check-1-6"
+        key="check-2-6"
       >
         <HabitCheckbox
           clickHandler={[Function]}
           isChecked={false}
+          isDisabled={true}
         />
       </div>
     </div>
