@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Welcome from "./Welcome";
+import Profile from "./Profile";
 import { registerUser } from "../../actions/userActions";
 
 const mapStateToProps = ({ user }) => ({
@@ -14,4 +14,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Welcome);
+)(Profile);

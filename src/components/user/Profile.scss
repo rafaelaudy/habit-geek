@@ -1,26 +1,26 @@
-.welcome {
+.profile {
   width: 100%;
   max-width: 340px;
   padding: 15px;
   margin: auto;
 }
 
-.welcome__title {
+.profile__title {
   text-align: center;
 }
 
-.welcome__avatar-container {
+.profile__avatar-container {
   display: flex;
   justify-content: space-around;
   height: 50px;
 }
 
-.welcome__avatar {
+.profile__avatar {
   width: 40px;
   border-radius: 50%;
 }
 
-.welcome__avatar--selected {
+.profile__avatar--selected {
   transition-property: width;
   transition-duration: 0.2s;
   border: 3px solid var(--primary);

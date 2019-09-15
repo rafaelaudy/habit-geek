@@ -46,7 +46,7 @@ const Dashboard = ({
           className="btn btn-primary btn-lg dashboard__add"
           onClick={toggleIsCreatingHabit}
         >
-          Add habit
+          I'll add a new habit!
         </button>
       </div>
     </div>

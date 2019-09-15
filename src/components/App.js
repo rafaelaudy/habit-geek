@@ -2,7 +2,7 @@ import React from "react";
 import { Router } from "@reach/router";
 
 import "./App.scss";
-import WelcomeContainer from "./user/WelcomeContainer";
+import ProfileContainer from "./user/ProfileContainer";
 import HabitsContainer from "./habits/HabitsContainer";
 import Layout from "./layout/Layout";
 
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Layout path="/">
           <HabitsContainer path="/" default></HabitsContainer>
-          <WelcomeContainer path="/profile"></WelcomeContainer>
+          <ProfileContainer path="/profile"></ProfileContainer>
         </Layout>
       </Router>
     </div>

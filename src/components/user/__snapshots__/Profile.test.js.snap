@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile component Renders static elements 1`] = `
+<div
+  className="profile"
+>
+  <h2
+    className="profile__title"
+  >
+    Profile!
+  </h2>
+  <div
+    className="mb-3"
+  >
+    <label
+      htmlFor="profile-name"
+    >
+      Name:
+    </label>
+    <input
+      className="form-control"
+      id="profile-name"
+      onChange={[Function]}
+      value="rafa"
+    />
+  </div>
+  <div
+    className="mb-3"
+  >
+    <label
+      htmlFor="profile-avatar"
+    >
+      Avatar:
+    </label>
+    <div
+      className="input-group profile__avatar-container"
+    >
+      <input
+        alt="Search"
+        className="profile__avatar "
+        key="avatar-0"
+        onClick={[Function]}
+        src="001-burglar.svg"
+        type="image"
+      />
+      <input
+        alt="Search"
+        className="profile__avatar profile__avatar--selected"
+        key="avatar-1"
+        onClick={[Function]}
+        src="002-woman.svg"
+        type="image"
+      />
+      <input
+        alt="Search"
+        className="profile__avatar "
+        key="avatar-2"
+        onClick={[Function]}
+        src="003-superhero.svg"
+        type="image"
+      />
+      <input
+        alt="Search"
+        className="profile__avatar "
+        key="avatar-3"
+        onClick={[Function]}
+        src="004-robot.svg"
+        type="image"
+      />
+      <input
+        alt="Search"
+        className="profile__avatar "
+        key="avatar-4"
+        onClick={[Function]}
+        src="005-dragon.svg"
+        type="image"
+      />
+      <input
+        alt="Search"
+        className="profile__avatar "
+        key="avatar-5"
+        onClick={[Function]}
+        src="006-cyborg.svg"
+        type="image"
+      />
+    </div>
+  </div>
+  <hr
+    className="mb-4"
+  />
+  <button
+    className="btn btn-primary btn-lg btn-block"
+    onClick={[Function]}
+  >
+    Done!
+  </button>
+</div>
+`;

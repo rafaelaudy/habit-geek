@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { navigate } from "@reach/router";
-import "./Welcome.scss";
+import "./Profile.scss";
 import avatar1 from "./../../imgs/avatars/001-burglar.svg";
 import avatar2 from "./../../imgs/avatars/002-woman.svg";
 import avatar3 from "./../../imgs/avatars/003-superhero.svg";
@@ -10,7 +10,7 @@ import avatar6 from "./../../imgs/avatars/006-cyborg.svg";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
 
-const Welcome = ({ name: initialName, avatar, registerUser }) => {
+const Profile = ({ name: initialName, avatar, registerUser }) => {
   const [name, setName] = useState(initialName);
   const [selectedAvatar, setAvatar] = useState(avatar ? avatar : "");
 
@@ -20,20 +20,20 @@ const Welcome = ({ name: initialName, avatar, registerUser }) => {
   };
 
   return (
-    <div className="welcome">
-      <h2 className="welcome__title">Welcome!</h2>
+    <div className="profile">
+      <h2 className="profile__title">Super hero who?</h2>
       <div className="mb-3">
-        <label htmlFor="welcome-name">Name:</label>
+        <label htmlFor="profile-name">Name:</label>
         <input
-          id="welcome-name"
+          id="profile-name"
           className="form-control"
           value={name}
           onChange={e => setName(e.target.value)}
         ></input>
       </div>
       <div className="mb-3">
-        <label htmlFor="welcome-avatar">Avatar:</label>
-        <div className="input-group welcome__avatar-container">
+        <label htmlFor="profile-avatar">Avatar:</label>
+        <div className="input-group profile__avatar-container">
           {avatars.map((avatar, index) => (
             <input
               key={`avatar-${index}`}
@@ -41,8 +41,8 @@ const Welcome = ({ name: initialName, avatar, registerUser }) => {
               type="image"
               src={avatar}
               alt="Search"
-              className={`welcome__avatar ${
-                avatar === selectedAvatar ? "welcome__avatar--selected" : ""
+              className={`profile__avatar ${
+                avatar === selectedAvatar ? "profile__avatar--selected" : ""
               }`}
             ></input>
           ))}
@@ -56,4 +56,4 @@ const Welcome = ({ name: initialName, avatar, registerUser }) => {
   );
 };
 
-export default Welcome;
+export default Profile;

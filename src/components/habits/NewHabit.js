@@ -9,7 +9,7 @@ const NewHabit = ({ createHabit, toggleIsCreatingHabit }) => {
 
   return (
     <div className="new-habits">
-      <h2 className="new-habits__title">Ready to start a new habit?</h2>
+      <h2 className="new-habits__title">Nice, what will be?</h2>
       <div className="mb-3">
         <label htmlFor="new-habit-name">Name</label>
         <input
@@ -59,14 +59,14 @@ const NewHabit = ({ createHabit, toggleIsCreatingHabit }) => {
         className="btn btn-primary btn-lg btn-block"
         onClick={() => createHabit(name, type, frequency)}
       >
-        Create!
+        Let's start!
       </button>
 
       <button
         className="btn btn-secondary btn-lg btn-block"
         onClick={toggleIsCreatingHabit}
       >
-        Cancel...
+        Maybe tomorrow...
       </button>
     </div>
   );
