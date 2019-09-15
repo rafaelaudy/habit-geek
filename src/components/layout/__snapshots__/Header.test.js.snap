@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component Renders static elements 1`] = `
+<header>
+  <nav
+    className="navbar navbar-expand navbar-dark bg-dark header"
+  >
+    <ForwardRef
+      className="navbar-brand"
+      to="/"
+    >
+      Habit Geek!
+    </ForwardRef>
+    <div
+      className="navbar-nav"
+    >
+      <ForwardRef
+        getProps={[Function]}
+        to="/"
+      >
+        My habits
+      </ForwardRef>
+      <ForwardRef
+        getProps={[Function]}
+        to="/history"
+      >
+        History
+      </ForwardRef>
+      <ForwardRef
+        getProps={[Function]}
+        to="/profile"
+      >
+        Profile
+      </ForwardRef>
+    </div>
+  </nav>
+</header>
+`;

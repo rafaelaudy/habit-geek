@@ -4,13 +4,16 @@ import { Router } from "@reach/router";
 import "./App.scss";
 import WelcomeContainer from "./user/WelcomeContainer";
 import HabitsContainer from "./habits/HabitsContainer";
+import Layout from "./layout/Layout";
 
 function App() {
   return (
     <div>
       <Router>
-        <WelcomeContainer path="/" default></WelcomeContainer>
-        <HabitsContainer path="/habits"></HabitsContainer>
+        <Layout path="/">
+          <HabitsContainer path="/" default></HabitsContainer>
+          <WelcomeContainer path="/profile"></WelcomeContainer>
+        </Layout>
       </Router>
     </div>
   );

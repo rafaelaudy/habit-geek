@@ -15,7 +15,8 @@ In the project directory, you can run:
 ## Next improvements:
 
 - Add History
-- Hihglight today
+- Add validation
+- Highlight today
 
 ### Code Splitting
 
