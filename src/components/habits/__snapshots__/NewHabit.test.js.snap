@@ -128,5 +128,10 @@ exports[`NewHabits component Renders static elements 1`] = `
   >
     Create!
   </button>
+  <button
+    className="btn btn-secondary btn-lg btn-block"
+  >
+    Cancel...
+  </button>
 </div>
 `;

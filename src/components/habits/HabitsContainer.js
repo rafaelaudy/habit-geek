@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import Habits from "./Habits";
 import {
   createHabit,
-  startHabitCreation,
+  toggleIsCreatingHabit,
   toggleDayHabit
 } from "../../actions/habitActions";
 
@@ -28,7 +28,7 @@ const mapStateToProps = ({ habits, user }) => {
 
 const mapDispatchToProps = {
   createHabit: createHabit,
-  startHabitCreation: startHabitCreation,
+  toggleIsCreatingHabit: toggleIsCreatingHabit,
   toggleDayHabit: toggleDayHabit
 };
 

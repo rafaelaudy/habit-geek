@@ -22,7 +22,7 @@ describe("NewHabits component", () => {
     newHabits
       .find("#new-habit-frequency")
       .simulate("change", { target: { value: "1x" } });
-    newHabits.find("button").simulate("click");
+    newHabits.find(".btn-primary").simulate("click");
     expect(createHabitMock).toHaveBeenCalledWith("Read", "Social", "1x");
   });
 
@@ -37,7 +37,16 @@ describe("NewHabits component", () => {
     newHabits
       .find("#new-habit-frequency")
       .simulate("blur", { target: { value: "1x" } });
-    newHabits.find("button").simulate("click");
+    newHabits.find(".btn-primary").simulate("click");
     expect(createHabitMock).toHaveBeenCalledWith("", "Social", "1x");
+  });
+
+  it("cancels habit creation", () => {
+    const toggleIsCreatingHabitMock = jest.fn();
+    const newHabits = shallow(
+      <NewHabit toggleIsCreatingHabit={toggleIsCreatingHabitMock}></NewHabit>
+    );
+    newHabits.find(".btn-secondary").simulate("click");
+    expect(toggleIsCreatingHabitMock).toHaveBeenCalled();
   });
 });

@@ -18,7 +18,7 @@ export const toggleDayHabit = (name, day) => ({
   }
 });
 
-export const START_HABIT_CREATION = "START_HABIT_CREATION";
-export const startHabitCreation = () => ({
-  type: START_HABIT_CREATION
+export const TOGGLE_IS_CREATING_HABIT = "TOGGLE_IS_CREATING_HABIT";
+export const toggleIsCreatingHabit = () => ({
+  type: TOGGLE_IS_CREATING_HABIT
 });

@@ -1,7 +1,7 @@
 import habitsReducer from "./habitsReducer";
 import {
   createHabit,
-  startHabitCreation,
+  toggleIsCreatingHabit,
   toggleDayHabit
 } from "../actions/habitActions";
 
@@ -41,7 +41,7 @@ describe("habitsReducer", () => {
 
   it("sets isCreatingHabit to true", () => {
     const initialState = {};
-    const state = habitsReducer(initialState, startHabitCreation());
+    const state = habitsReducer(initialState, toggleIsCreatingHabit());
     expect(state.isCreatingHabit).toEqual(true);
   });
 

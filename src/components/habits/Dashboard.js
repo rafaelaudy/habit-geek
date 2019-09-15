@@ -6,7 +6,7 @@ import DashboardRows from "./DashboardRows";
 const Dashboard = ({
   username,
   habits,
-  startHabitCreation,
+  toggleIsCreatingHabit,
   toggleDayHabit
 }) => {
   return (
@@ -44,7 +44,7 @@ const Dashboard = ({
       <div className="d-flex justify-content-center">
         <button
           className="btn btn-primary btn-lg dashboard__add"
-          onClick={startHabitCreation}
+          onClick={toggleIsCreatingHabit}
         >
           Add habit
         </button>

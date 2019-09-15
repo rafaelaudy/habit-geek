@@ -8,16 +8,19 @@ const Habits = ({
   name,
   createHabit,
   isCreatingHabit,
-  startHabitCreation,
+  toggleIsCreatingHabit,
   toggleDayHabit
 }) => {
   return isCreatingHabit ? (
-    <NewHabit createHabit={createHabit} />
+    <NewHabit
+      createHabit={createHabit}
+      toggleIsCreatingHabit={toggleIsCreatingHabit}
+    />
   ) : (
     <Dashboard
       username={name}
       habits={habits}
-      startHabitCreation={startHabitCreation}
+      toggleIsCreatingHabit={toggleIsCreatingHabit}
       toggleDayHabit={toggleDayHabit}
     />
   );

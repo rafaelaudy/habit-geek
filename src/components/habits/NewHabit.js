@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./NewHabit.scss";
 
-const NewHabit = ({ createHabit }) => {
+const NewHabit = ({ createHabit, toggleIsCreatingHabit }) => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [frequency, setFrequency] = useState("");
@@ -60,6 +60,13 @@ const NewHabit = ({ createHabit }) => {
         onClick={() => createHabit(name, type, frequency)}
       >
         Create!
+      </button>
+
+      <button
+        className="btn btn-secondary btn-lg btn-block"
+        onClick={toggleIsCreatingHabit}
+      >
+        Cancel...
       </button>
     </div>
   );

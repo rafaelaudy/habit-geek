@@ -1,6 +1,6 @@
 import {
   CREATE_HABIT,
-  START_HABIT_CREATION,
+  TOGGLE_IS_CREATING_HABIT,
   TOGGLE_DAY_HABIT
 } from "../actions/habitActions";
 
@@ -50,8 +50,8 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
       };
     }
 
-    case START_HABIT_CREATION: {
-      return { ...state, isCreatingHabit: true };
+    case TOGGLE_IS_CREATING_HABIT: {
+      return { ...state, isCreatingHabit: !state.isCreatingHabit };
     }
 
     default: {
