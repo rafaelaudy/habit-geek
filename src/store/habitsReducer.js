@@ -12,6 +12,9 @@ import { getCurrentWeek } from "../utils/dateUtils";
 //   }
 // }
 
+// import mockState from "./habitMockState";
+// const habitsReducer = (state = mockState, { type, payload }) => {
+
 const defaulState = {
   weeks: {
     [getCurrentWeek()]: {}
