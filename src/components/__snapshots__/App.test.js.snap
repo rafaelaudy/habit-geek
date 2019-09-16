@@ -10,8 +10,11 @@ exports[`App component Renders static elements 1`] = `
         default={true}
         path="/"
       />
-      <Connect(Welcome)
+      <Connect(Profile)
         path="/profile"
+      />
+      <History
+        path="/history"
       />
     </Layout>
   </Router>

@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 
-import "./NewHabit.scss";
-
 const NewHabit = ({ createHabit, toggleIsCreatingHabit }) => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [frequency, setFrequency] = useState("");
 
   return (
-    <div className="new-habits">
-      <h2 className="new-habits__title">Nice, what will be?</h2>
+    <div className="mobile-size-container">
+      <h2>Nice, what will it be?</h2>
       <div className="mb-3">
         <label htmlFor="new-habit-name">Name</label>
         <input

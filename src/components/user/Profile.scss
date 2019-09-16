@@ -1,29 +1,20 @@
 .profile {
-  width: 100%;
-  max-width: 340px;
-  padding: 15px;
-  margin: auto;
-}
+  &__avatar-container {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+  }
 
-.profile__title {
-  text-align: center;
-}
+  &__avatar {
+    width: 40px;
+    border-radius: 50%;
+  }
 
-.profile__avatar-container {
-  display: flex;
-  justify-content: space-around;
-  height: 50px;
-}
-
-.profile__avatar {
-  width: 40px;
-  border-radius: 50%;
-}
-
-.profile__avatar--selected {
-  transition-property: width;
-  transition-duration: 0.2s;
-  border: 3px solid var(--primary);
-  outline: none;
-  width: 50px;
+  &__avatar--selected {
+    transition-property: width;
+    transition-duration: 0.2s;
+    border: 3px solid var(--primary);
+    outline: none;
+    width: 50px;
+  }
 }

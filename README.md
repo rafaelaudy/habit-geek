@@ -15,6 +15,7 @@ In the project directory, you can run:
 ## Next improvements:
 
 - Add History
+- Editar
 - Add validation
 - Highlight today
 
@@ -38,4 +39,5 @@ https://facebook.github.io/create-react-app/docs/deployment
 
 ## Tech debt
 
-Add id for habits and change it for the name on the habitCheckbox
+- Add migration stategy for when a change to the schema is necessary on local storage
+  https://www.freecodecamp.org/news/how-to-use-redux-persist-when-migrating-your-states-a5dee16b5ead/

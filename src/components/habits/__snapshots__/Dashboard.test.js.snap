@@ -2,10 +2,10 @@
 
 exports[`Dashboard component Renders static elements 1`] = `
 <div
-  className="dashboard"
+  className="large-size-container"
 >
   <h2
-    className="mb-3 dashboard__title"
+    className="mb-3"
   >
     What have you done this week
      rafa
@@ -17,7 +17,7 @@ exports[`Dashboard component Renders static elements 1`] = `
     <button
       className="btn btn-primary btn-lg dashboard__add"
     >
-      Add habit
+      I'll add a new habit!
     </button>
   </div>
 </div>
@@ -25,10 +25,10 @@ exports[`Dashboard component Renders static elements 1`] = `
 
 exports[`Dashboard component Shows the correct ammount of habits 1`] = `
 <div
-  className="dashboard"
+  className="large-size-container"
 >
   <h2
-    className="mb-3 dashboard__title"
+    className="mb-3"
   >
     What have you done this week
     ?
@@ -122,7 +122,7 @@ exports[`Dashboard component Shows the correct ammount of habits 1`] = `
     <button
       className="btn btn-primary btn-lg dashboard__add"
     >
-      Add habit
+      I'll add a new habit!
     </button>
   </div>
 </div>

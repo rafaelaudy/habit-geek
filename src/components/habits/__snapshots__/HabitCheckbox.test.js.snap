@@ -26,8 +26,8 @@ exports[`HabitCheckbox component renders checked checkboxes 1`] = `
     className="toggle"
   >
     <input
+      checked={true}
       className="toggle__input"
-      defaultChecked={true}
       type="checkbox"
     />
     <span

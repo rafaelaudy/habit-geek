@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History component Renders static elements 1`] = `
+<div
+  className="large-size-container"
+>
+  <h2
+    className="mb-3"
+  >
+    Here is your progress so far:
+  </h2>
+  <div
+    className="mb-3"
+  />
+</div>
+`;

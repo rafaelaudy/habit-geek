@@ -2,12 +2,10 @@
 
 exports[`NewHabits component Renders static elements 1`] = `
 <div
-  className="new-habits"
+  className="mobile-size-container"
 >
-  <h2
-    className="new-habits__title"
-  >
-    Ready to start a new habit?
+  <h2>
+    Nice, what will it be?
   </h2>
   <div
     className="mb-3"
@@ -126,12 +124,12 @@ exports[`NewHabits component Renders static elements 1`] = `
     className="btn btn-primary btn-lg btn-block"
     onClick={[Function]}
   >
-    Create!
+    Let's start!
   </button>
   <button
     className="btn btn-secondary btn-lg btn-block"
   >
-    Cancel...
+    Maybe tomorrow...
   </button>
 </div>
 `;

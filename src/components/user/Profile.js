@@ -20,8 +20,8 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
   };
 
   return (
-    <div className="profile">
-      <h2 className="profile__title">Super hero who?</h2>
+    <div className="mobile-size-container">
+      <h2>Super hero who?</h2>
       <div className="mb-3">
         <label htmlFor="profile-name">Name:</label>
         <input

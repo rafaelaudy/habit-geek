@@ -27,9 +27,9 @@ const mapStateToProps = ({ habits, user }) => {
 };
 
 const mapDispatchToProps = {
-  createHabit: createHabit,
-  toggleIsCreatingHabit: toggleIsCreatingHabit,
-  toggleDayHabit: toggleDayHabit
+  createHabit,
+  toggleIsCreatingHabit,
+  toggleDayHabit
 };
 
 export default connect(

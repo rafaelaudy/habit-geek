@@ -10,8 +10,8 @@ const Dashboard = ({
   toggleDayHabit
 }) => {
   return (
-    <div className="dashboard">
-      <h2 className="mb-3 dashboard__title">
+    <div className="large-size-container">
+      <h2 className="mb-3">
         What have you done this week{username ? " " + username : ""}?
       </h2>
 

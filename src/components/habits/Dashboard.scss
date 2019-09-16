@@ -1,13 +1,4 @@
 .dashboard {
-  width: 100%;
-  max-width: 600px;
-  padding: 15px;
-  margin: auto;
-
-  &__title {
-    text-align: center;
-  }
-
   &__table {
     display: flex;
     flex-direction: column;

@@ -8,9 +8,9 @@ const HabitCheckbox = ({ isChecked, clickHandler, isDisabled }) => {
       <label className="toggle">
         <input
           className="toggle__input"
-          onClick={clickHandler}
+          onChange={clickHandler}
           type="checkbox"
-          defaultChecked={isChecked}
+          checked={isChecked}
           disabled={isDisabled}
         />
         <span className="toggle__label">

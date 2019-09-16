@@ -18,7 +18,7 @@ describe("HabitCheckbox component", () => {
     const dashboard = shallow(
       <HabitCheckbox clickHandler={clickHandlerMock} />
     );
-    dashboard.find("input").simulate("click");
+    dashboard.find("input").simulate("change");
     expect(clickHandlerMock).toHaveBeenCalledTimes(1);
   });
 });

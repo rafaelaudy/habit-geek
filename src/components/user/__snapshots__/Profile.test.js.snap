@@ -2,12 +2,10 @@
 
 exports[`Profile component Renders static elements 1`] = `
 <div
-  className="profile"
+  className="mobile-size-container"
 >
-  <h2
-    className="profile__title"
-  >
-    Profile!
+  <h2>
+    Super hero who?
   </h2>
   <div
     className="mb-3"

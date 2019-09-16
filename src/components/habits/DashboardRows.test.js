@@ -101,7 +101,7 @@ describe("DashboardRows component", () => {
     dashboardRows
       .find("input")
       .at(0)
-      .simulate("click");
+      .simulate("change");
     expect(toggleDayHabitMock).toHaveBeenCalledTimes(1);
   });
 });
