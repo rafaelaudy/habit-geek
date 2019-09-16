@@ -39,5 +39,6 @@ https://facebook.github.io/create-react-app/docs/deployment
 
 ## Tech debt
 
+- Test containers
 - Add migration stategy for when a change to the schema is necessary on local storage
   https://www.freecodecamp.org/news/how-to-use-redux-persist-when-migrating-your-states-a5dee16b5ead/

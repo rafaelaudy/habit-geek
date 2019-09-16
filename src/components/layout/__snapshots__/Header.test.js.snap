@@ -1,38 +1,186 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component Renders static elements 1`] = `
-<header>
-  <nav
-    className="navbar navbar-expand navbar-dark bg-dark header"
-  >
-    <ForwardRef
-      className="navbar-brand"
-      to="/"
-    >
-      Habit Geek!
-    </ForwardRef>
-    <div
-      className="navbar-nav"
+<Header>
+  <header>
+    <nav
+      className="navbar navbar-expand navbar-dark bg-dark header"
     >
       <ForwardRef
-        getProps={[Function]}
+        className="navbar-brand"
         to="/"
       >
-        My habits
+        <Location>
+          <LocationProvider
+            history={
+              Object {
+                "_onTransitionComplete": [Function],
+                "listen": [Function],
+                "location": Object {
+                  "assign": [Function],
+                  "hash": "",
+                  "host": "localhost",
+                  "hostname": "localhost",
+                  "href": "http://localhost/",
+                  "key": "initial",
+                  "origin": "http://localhost",
+                  "pathname": "/",
+                  "port": "",
+                  "protocol": "http:",
+                  "reload": [Function],
+                  "replace": [Function],
+                  "search": "",
+                  "state": null,
+                  "toString": [Function],
+                },
+                "navigate": [Function],
+                "transitioning": false,
+              }
+            }
+          >
+            <a
+              aria-current="page"
+              className="navbar-brand"
+              href="/"
+              onClick={[Function]}
+            >
+              Habit Geek!
+            </a>
+          </LocationProvider>
+        </Location>
       </ForwardRef>
-      <ForwardRef
-        getProps={[Function]}
-        to="/history"
+      <div
+        className="navbar-nav"
       >
-        History
-      </ForwardRef>
-      <ForwardRef
-        getProps={[Function]}
-        to="/profile"
-      >
-        Profile
-      </ForwardRef>
-    </div>
-  </nav>
-</header>
+        <ForwardRef
+          getProps={[Function]}
+          to="/"
+        >
+          <Location>
+            <LocationProvider
+              history={
+                Object {
+                  "_onTransitionComplete": [Function],
+                  "listen": [Function],
+                  "location": Object {
+                    "assign": [Function],
+                    "hash": "",
+                    "host": "localhost",
+                    "hostname": "localhost",
+                    "href": "http://localhost/",
+                    "key": "initial",
+                    "origin": "http://localhost",
+                    "pathname": "/",
+                    "port": "",
+                    "protocol": "http:",
+                    "reload": [Function],
+                    "replace": [Function],
+                    "search": "",
+                    "state": null,
+                    "toString": [Function],
+                  },
+                  "navigate": [Function],
+                  "transitioning": false,
+                }
+              }
+            >
+              <a
+                aria-current="page"
+                className="nav-item nav-link active"
+                href="/"
+                onClick={[Function]}
+              >
+                My habits
+              </a>
+            </LocationProvider>
+          </Location>
+        </ForwardRef>
+        <ForwardRef
+          getProps={[Function]}
+          to="/history"
+        >
+          <Location>
+            <LocationProvider
+              history={
+                Object {
+                  "_onTransitionComplete": [Function],
+                  "listen": [Function],
+                  "location": Object {
+                    "assign": [Function],
+                    "hash": "",
+                    "host": "localhost",
+                    "hostname": "localhost",
+                    "href": "http://localhost/",
+                    "key": "initial",
+                    "origin": "http://localhost",
+                    "pathname": "/",
+                    "port": "",
+                    "protocol": "http:",
+                    "reload": [Function],
+                    "replace": [Function],
+                    "search": "",
+                    "state": null,
+                    "toString": [Function],
+                  },
+                  "navigate": [Function],
+                  "transitioning": false,
+                }
+              }
+            >
+              <a
+                className="nav-item nav-link"
+                href="/history"
+                onClick={[Function]}
+              >
+                History
+              </a>
+            </LocationProvider>
+          </Location>
+        </ForwardRef>
+        <ForwardRef
+          getProps={[Function]}
+          to="/profile"
+        >
+          <Location>
+            <LocationProvider
+              history={
+                Object {
+                  "_onTransitionComplete": [Function],
+                  "listen": [Function],
+                  "location": Object {
+                    "assign": [Function],
+                    "hash": "",
+                    "host": "localhost",
+                    "hostname": "localhost",
+                    "href": "http://localhost/",
+                    "key": "initial",
+                    "origin": "http://localhost",
+                    "pathname": "/",
+                    "port": "",
+                    "protocol": "http:",
+                    "reload": [Function],
+                    "replace": [Function],
+                    "search": "",
+                    "state": null,
+                    "toString": [Function],
+                  },
+                  "navigate": [Function],
+                  "transitioning": false,
+                }
+              }
+            >
+              <a
+                className="nav-item nav-link"
+                href="/profile"
+                onClick={[Function]}
+              >
+                Profile
+              </a>
+            </LocationProvider>
+          </Location>
+        </ForwardRef>
+      </div>
+    </nav>
+  </header>
+</Header>
 `;
