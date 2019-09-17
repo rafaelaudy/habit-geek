@@ -15,7 +15,7 @@ In the project directory, you can run:
 ## Next improvements:
 
 - History
-  - Add check and paint the row depending of accomplishment
+  - Finish reducer tests
   - Order weeks
   - Expand weeks
 - Edit habit

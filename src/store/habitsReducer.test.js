@@ -11,7 +11,7 @@ jest.mock("../utils/dateUtils", () => ({
   getTodayIndex: jest.fn().mockReturnValue("1")
 }));
 
-describe("habitsReducer", () => {
+describe("habitsReducer - start new week", () => {
   it("starts a new week", () => {
     const initialState = {
       weeks: {
@@ -58,23 +58,9 @@ describe("habitsReducer", () => {
   it.skip("adds habitSucced and habitFailure flags for the weeks between the last week and the new week", () => {
     expect(true).toBe(false);
   });
+});
 
-  it("creates a habit", () => {
-    const state = habitsReducer(undefined, createHabit("read", "hobby", "1x"));
-    expect(state.isCreatingHabit).toEqual(false);
-    expect(state.currentWeek).toEqual("y1w1");
-    expect(state.weeks).toEqual({
-      y1w1: {
-        read: {
-          checked: [false, false, false, false, false, false, false],
-          frequency: "1x",
-          name: "read",
-          type: "hobby"
-        }
-      }
-    });
-  });
-
+describe("habitsReducer - toggles a habit", () => {
   it("toggles a habit", () => {
     let state = habitsReducer(undefined, createHabit("read", "hobby", "1x"));
     state = habitsReducer(state, toggleDayHabit("read", 1));
@@ -94,6 +80,30 @@ describe("habitsReducer", () => {
     });
   });
 
+  it.skip("marks habits that are completed for that week", () => {});
+
+  it.skip("marks habits that have failed for that week", () => {});
+
+  it.skip("marks habits correctly at the last day of the week", () => {});
+});
+
+describe("habitsReducer", () => {
+  it("creates a habit", () => {
+    const state = habitsReducer(undefined, createHabit("read", "hobby", "1x"));
+    expect(state.isCreatingHabit).toEqual(false);
+    expect(state.currentWeek).toEqual("y1w1");
+    expect(state.weeks).toEqual({
+      y1w1: {
+        read: {
+          checked: [false, false, false, false, false, false, false],
+          frequency: "1x",
+          name: "read",
+          type: "hobby"
+        }
+      }
+    });
+  });
+
   it("sets isCreatingHabit to true", () => {
     const initialState = {};
     const state = habitsReducer(initialState, toggleIsCreatingHabit());
@@ -106,30 +116,3 @@ describe("habitsReducer", () => {
     expect(state).toEqual(initialState);
   });
 });
-
-// it("marks habits correctly at the last day of the week", () => {
-//   const checked = [true, true, true, true, true, false, false];
-//   const habitRows = shallow(
-//     <HabitRows
-//       habits={[
-//         { name: "ok", frequency: 6, checked },
-//         { name: "failed", frequency: 7, checked }
-//       ]}
-//     />
-//   );
-//   expect(habitRows).toMatchSnapshot();
-// });
-
-// it("marks habits that are completed for that week", () => {
-//   mockDate("2019-09-12T12:34:56z");
-//   const checked = [true, true, false, false, false, false, false];
-//   const habitRows = shallow(
-//     <HabitRows
-//       habits={[
-//         { name: "ok", frequency: 3, checked },
-//         { name: "failed", frequency: 2, checked }
-//       ]}
-//     />
-//   );
-//   expect(habitRows).toMatchSnapshot();
-// });

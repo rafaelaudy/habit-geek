@@ -4,11 +4,11 @@ import {
   TOGGLE_DAY_HABIT,
   START_NEW_WEEK
 } from "../actions/habitActions";
-import { getCurrentWeek } from "../utils/dateUtils";
+import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
 
 // {
 //   1 (weeks) {
-//      name: {name, type, frequency, checked: [false, false, false, false, false, false, false] };
+//      name: {name, type, frequency, habitSucceded, habitFailed, checked: [false, false, false, false, false, false, false] };
 //   }
 // }
 
@@ -63,6 +63,21 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
     }
 
     case TOGGLE_DAY_HABIT: {
+      const { frequency } = state.weeks[state.currentWeek][payload.name];
+      const updatedChecked = state.weeks[state.currentWeek][
+        payload.name
+      ].checked.map((item, index) => (index !== payload.day ? item : !item));
+
+      const todayIndex = getTodayIndex();
+      const daysUntilEndOfWeek = updatedChecked[todayIndex]
+        ? -todayIndex + 6
+        : -todayIndex + 7;
+      const checkedDays = updatedChecked.filter(checkedDay => checkedDay)
+        .length;
+
+      const habitSucceded = frequency <= checkedDays;
+      const habitFailed = frequency > checkedDays + daysUntilEndOfWeek;
+
       return {
         ...state,
         weeks: {
@@ -71,6 +86,8 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
             ...state.weeks[state.currentWeek],
             [payload.name]: {
               ...state.weeks[state.currentWeek][payload.name],
+              habitSucceded,
+              habitFailed,
               checked: state.weeks[state.currentWeek][payload.name].checked.map(
                 (item, index) => (index !== payload.day ? item : !item)
               )
