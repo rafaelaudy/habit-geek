@@ -1,16 +1,19 @@
 import { connect } from "react-redux";
-import Habits from "./Habits";
+import History from "./History";
 
 const mapStateToProps = ({ habits }) => {
-  const mappedHabits = Object.keys(habits).map(habitKey => {
-    return Object.key(habits[habitKey]).map(habitKey => {
-      return habits[habitKey][habitKey];
-    });
+  const mappedWeeks = Object.keys(habits.weeks).map(weekKey => {
+    return {
+      week: weekKey,
+      habits: Object.keys(habits.weeks[weekKey]).map(habitKey => {
+        return habits.weeks[weekKey][habitKey];
+      })
+    };
   });
 
   return {
-    weeks: mappedHabits
+    weeks: mappedWeeks
   };
 };
 
-export default connect(mapStateToProps)(Habits);
+export default connect(mapStateToProps)(History);

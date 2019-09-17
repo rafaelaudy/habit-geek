@@ -6,7 +6,7 @@ import { getCurrentWeek } from "../utils/dateUtils";
 import ProfileContainer from "./user/ProfileContainer";
 import HabitsContainer from "./habits/HabitsContainer";
 import Layout from "./layout/Layout";
-import History from "./history/History";
+import HistoryContainer from "./history/HistoryContainer";
 
 import "./App.scss";
 
@@ -21,7 +21,7 @@ function App({ currentWeek, startNewWeek }) {
         <Layout path="/">
           <HabitsContainer path="/" default></HabitsContainer>
           <ProfileContainer path="/profile"></ProfileContainer>
-          <History path="/history"></History>
+          <HistoryContainer path="/history"></HistoryContainer>
         </Layout>
       </Router>
     </div>

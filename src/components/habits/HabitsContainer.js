@@ -13,8 +13,7 @@ const mapStateToProps = ({ habits, user }) => {
     ? Object.keys(currentWeekHabits).map(key => {
         return {
           name: key,
-          frequency: currentWeekHabits[key].frequency,
-          checked: currentWeekHabits[key].checked
+          ...currentWeekHabits[key]
         };
       })
     : [];

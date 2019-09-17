@@ -13,7 +13,7 @@ exports[`App component Renders static elements 1`] = `
       <Connect(Profile)
         path="/profile"
       />
-      <History
+      <Connect(History)
         path="/history"
       />
     </Layout>
