@@ -1,16 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HabitCheckbox component Renders static elements 1`] = `
+exports[`HabitCheckbox component disables component 1`] = `
 <Fragment>
   <label
     className="toggle"
   >
     <input
+      checked={true}
       className="toggle__input"
+      disabled={true}
       type="checkbox"
     />
     <span
       className="toggle__label"
+    >
+      <span
+        className="toggle__text"
+      />
+    </span>
+  </label>
+</Fragment>
+`;
+
+exports[`HabitCheckbox component only disables component if it is not readonly 1`] = `
+<Fragment>
+  <label
+    className="toggle"
+  >
+    <input
+      checked={true}
+      className="toggle__input"
+      data-readonly={true}
+      disabled={false}
+      type="checkbox"
+    />
+    <span
+      className="toggle__label"
+      data-readonly={true}
     >
       <span
         className="toggle__text"
@@ -27,6 +53,26 @@ exports[`HabitCheckbox component renders checked checkboxes 1`] = `
   >
     <input
       checked={true}
+      className="toggle__input"
+      type="checkbox"
+    />
+    <span
+      className="toggle__label"
+    >
+      <span
+        className="toggle__text"
+      />
+    </span>
+  </label>
+</Fragment>
+`;
+
+exports[`HabitCheckbox component renders static elements 1`] = `
+<Fragment>
+  <label
+    className="toggle"
+  >
+    <input
       className="toggle__input"
       type="checkbox"
     />

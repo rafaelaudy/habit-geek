@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Habits from "./Habits";
+import Dashboard from "./Dashboard";
 import {
   createHabit,
   toggleIsCreatingHabit,
@@ -34,4 +34,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Habits);
+)(Dashboard);

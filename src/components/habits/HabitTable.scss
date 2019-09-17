@@ -1,4 +1,4 @@
-.dashboard {
+.habit {
   &__table {
     display: flex;
     flex-direction: column;
@@ -22,11 +22,15 @@
   &__cell {
     width: 60px;
     text-align: center;
+
+    .toggle {
+      margin: 5px 0 5px 7px;
+    }
   }
 }
 
 @media (max-width: 576px) {
-  .dashboard {
+  .habit {
     &__table {
       max-width: 400px;
       margin: auto;

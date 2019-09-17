@@ -4,7 +4,12 @@ import History from "./History";
 
 describe("History component", () => {
   it("Renders static elements", () => {
-    const history = shallow(<History />);
+    const weeks = [
+      { week: "y1w1", habits: [{}] },
+      { week: "y1w2", habits: [{}] }
+    ];
+
+    const history = shallow(<History weeks={weeks} />);
     expect(history).toMatchSnapshot();
   });
 });

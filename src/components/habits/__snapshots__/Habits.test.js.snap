@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Habits component Renders Habits list 1`] = `<Dashboard />`;
-
-exports[`Habits component Renders new Habit to create a new one 1`] = `<NewHabit />`;

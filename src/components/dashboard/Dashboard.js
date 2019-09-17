@@ -1,9 +1,9 @@
 import React from "react";
 
-import NewHabit from "./NewHabit";
-import Dashboard from "./Dashboard";
+import SaveHabit from "../habits/SaveHabit";
+import DashboardView from "./DashboardView";
 
-const Habits = ({
+const Dashboard = ({
   habits,
   name,
   createHabit,
@@ -12,12 +12,12 @@ const Habits = ({
   toggleDayHabit
 }) => {
   return isCreatingHabit ? (
-    <NewHabit
+    <SaveHabit
       createHabit={createHabit}
       toggleIsCreatingHabit={toggleIsCreatingHabit}
     />
   ) : (
-    <Dashboard
+    <DashboardView
       username={name}
       habits={habits}
       toggleIsCreatingHabit={toggleIsCreatingHabit}
@@ -26,4 +26,4 @@ const Habits = ({
   );
 };
 
-export default Habits;
+export default Dashboard;

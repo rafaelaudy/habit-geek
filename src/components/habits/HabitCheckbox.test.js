@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import HabitCheckbox from "./HabitCheckbox";
 
 describe("HabitCheckbox component", () => {
-  it("Renders static elements", () => {
+  it("renders static elements", () => {
     const habitCheckbox = shallow(<HabitCheckbox />);
     expect(habitCheckbox).toMatchSnapshot();
   });
@@ -13,12 +13,26 @@ describe("HabitCheckbox component", () => {
     expect(habitCheckbox).toMatchSnapshot();
   });
 
-  it("Toggles the checkbox", () => {
+  it("toggles the checkbox", () => {
     const clickHandlerMock = jest.fn();
     const dashboard = shallow(
       <HabitCheckbox clickHandler={clickHandlerMock} />
     );
     dashboard.find("input").simulate("change");
     expect(clickHandlerMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("disables component", () => {
+    const habitCheckbox = shallow(
+      <HabitCheckbox isChecked={true} isDisabled={true} />
+    );
+    expect(habitCheckbox).toMatchSnapshot();
+  });
+
+  it("only disables component if it is not readonly", () => {
+    const habitCheckbox = shallow(
+      <HabitCheckbox isChecked={true} isDisabled={true} isReadOnly={true} />
+    );
+    expect(habitCheckbox).toMatchSnapshot();
   });
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewHabits component Renders static elements 1`] = `
+exports[`SaveHabit component Renders static elements 1`] = `
 <div
   className="mobile-size-container"
 >

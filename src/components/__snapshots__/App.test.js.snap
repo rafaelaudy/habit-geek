@@ -6,7 +6,7 @@ exports[`App component Renders static elements 1`] = `
     <Layout
       path="/"
     >
-      <Connect(Habits)
+      <Connect(Dashboard)
         default={true}
         path="/"
       />

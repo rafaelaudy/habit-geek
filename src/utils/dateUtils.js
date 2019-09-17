@@ -6,3 +6,8 @@ export const getCurrentWeek = function(providedDate) {
   );
   return `y${date.getFullYear()}w${currentWeek}`;
 };
+
+export const getTodayIndex = function() {
+  const now = new Date();
+  return now.getDay() === 0 ? 6 : now.getDay() - 1;
+};

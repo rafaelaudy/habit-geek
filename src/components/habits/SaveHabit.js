@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const NewHabit = ({ createHabit, toggleIsCreatingHabit }) => {
+const SaveHabit = ({ createHabit, toggleIsCreatingHabit }) => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [frequency, setFrequency] = useState("");
@@ -70,4 +70,4 @@ const NewHabit = ({ createHabit, toggleIsCreatingHabit }) => {
   );
 };
 
-export default NewHabit;
+export default SaveHabit;

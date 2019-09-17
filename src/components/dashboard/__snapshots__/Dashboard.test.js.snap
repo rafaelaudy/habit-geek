@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard component Renders Dashboard list 1`] = `<DashboardView />`;
+
+exports[`Dashboard component Renders new Habit to create a new one 1`] = `<SaveHabit />`;

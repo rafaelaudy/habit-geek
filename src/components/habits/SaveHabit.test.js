@@ -1,52 +1,52 @@
 import React from "react";
 import { shallow } from "enzyme";
-import NewHabit from "./NewHabit";
+import SaveHabit from "./SaveHabit";
 
-describe("NewHabits component", () => {
+describe("SaveHabit component", () => {
   it("Renders static elements", () => {
-    const newHabits = shallow(<NewHabit></NewHabit>);
-    expect(newHabits).toMatchSnapshot();
+    const saveHabits = shallow(<SaveHabit></SaveHabit>);
+    expect(saveHabits).toMatchSnapshot();
   });
 
   it("creates a habit", () => {
     const createHabitMock = jest.fn();
-    const newHabits = shallow(
-      <NewHabit createHabit={createHabitMock}></NewHabit>
+    const saveHabits = shallow(
+      <SaveHabit createHabit={createHabitMock}></SaveHabit>
     );
-    newHabits
+    saveHabits
       .find("#new-habit-name")
       .simulate("change", { target: { value: "Read" } });
-    newHabits
+    saveHabits
       .find("#new-habit-type")
       .simulate("change", { target: { value: "Social" } });
-    newHabits
+    saveHabits
       .find("#new-habit-frequency")
       .simulate("change", { target: { value: "1x" } });
-    newHabits.find(".btn-primary").simulate("click");
+    saveHabits.find(".btn-primary").simulate("click");
     expect(createHabitMock).toHaveBeenCalledWith("Read", "Social", "1x");
   });
 
   it("selects change on blur for accessibility", () => {
     const createHabitMock = jest.fn();
-    const newHabits = shallow(
-      <NewHabit createHabit={createHabitMock}></NewHabit>
+    const saveHabits = shallow(
+      <SaveHabit createHabit={createHabitMock}></SaveHabit>
     );
-    newHabits
+    saveHabits
       .find("#new-habit-type")
       .simulate("blur", { target: { value: "Social" } });
-    newHabits
+    saveHabits
       .find("#new-habit-frequency")
       .simulate("blur", { target: { value: "1x" } });
-    newHabits.find(".btn-primary").simulate("click");
+    saveHabits.find(".btn-primary").simulate("click");
     expect(createHabitMock).toHaveBeenCalledWith("", "Social", "1x");
   });
 
   it("cancels habit creation", () => {
     const toggleIsCreatingHabitMock = jest.fn();
-    const newHabits = shallow(
-      <NewHabit toggleIsCreatingHabit={toggleIsCreatingHabitMock}></NewHabit>
+    const saveHabits = shallow(
+      <SaveHabit toggleIsCreatingHabit={toggleIsCreatingHabitMock}></SaveHabit>
     );
-    newHabits.find(".btn-secondary").simulate("click");
+    saveHabits.find(".btn-secondary").simulate("click");
     expect(toggleIsCreatingHabitMock).toHaveBeenCalled();
   });
 });

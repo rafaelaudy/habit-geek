@@ -7,7 +7,8 @@ import {
 } from "../actions/habitActions";
 
 jest.mock("../utils/dateUtils", () => ({
-  getCurrentWeek: jest.fn().mockReturnValue("y1w1")
+  getCurrentWeek: jest.fn().mockReturnValue("y1w1"),
+  getTodayIndex: jest.fn().mockReturnValue("1")
 }));
 
 describe("habitsReducer", () => {
@@ -50,6 +51,14 @@ describe("habitsReducer", () => {
     });
   });
 
+  it.skip("creates empty weeks for the weeks between the last week and the new week", () => {
+    expect(true).toBe(false);
+  });
+
+  it.skip("adds habitSucced and habitFailure flags for the weeks between the last week and the new week", () => {
+    expect(true).toBe(false);
+  });
+
   it("creates a habit", () => {
     const state = habitsReducer(undefined, createHabit("read", "hobby", "1x"));
     expect(state.isCreatingHabit).toEqual(false);
@@ -77,7 +86,9 @@ describe("habitsReducer", () => {
           checked: [false, true, false, false, false, false, false],
           frequency: "1x",
           name: "read",
-          type: "hobby"
+          type: "hobby",
+          habitFailed: false,
+          habitSucceded: false
         }
       }
     });
@@ -95,3 +106,30 @@ describe("habitsReducer", () => {
     expect(state).toEqual(initialState);
   });
 });
+
+// it("marks habits correctly at the last day of the week", () => {
+//   const checked = [true, true, true, true, true, false, false];
+//   const habitRows = shallow(
+//     <HabitRows
+//       habits={[
+//         { name: "ok", frequency: 6, checked },
+//         { name: "failed", frequency: 7, checked }
+//       ]}
+//     />
+//   );
+//   expect(habitRows).toMatchSnapshot();
+// });
+
+// it("marks habits that are completed for that week", () => {
+//   mockDate("2019-09-12T12:34:56z");
+//   const checked = [true, true, false, false, false, false, false];
+//   const habitRows = shallow(
+//     <HabitRows
+//       habits={[
+//         { name: "ok", frequency: 3, checked },
+//         { name: "failed", frequency: 2, checked }
+//       ]}
+//     />
+//   );
+//   expect(habitRows).toMatchSnapshot();
+// });

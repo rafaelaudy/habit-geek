@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardView component Don't show username is none is provided 1`] = `
+<div
+  className="large-size-container"
+>
+  <h2
+    className="mb-3"
+  >
+    What have you done this week
+    ?
+  </h2>
+  <div
+    className="d-flex justify-content-center"
+  >
+    <button
+      className="btn btn-primary btn-lg"
+    >
+      I'll add a new habit!
+    </button>
+  </div>
+</div>
+`;
+
+exports[`DashboardView component Renders static elements 1`] = `
+<div
+  className="large-size-container"
+>
+  <h2
+    className="mb-3"
+  >
+    What have you done this week
+     rafa
+    ?
+  </h2>
+  <HabitTable
+    habits={
+      Array [
+        Object {},
+        Object {},
+      ]
+    }
+  />
+  <div
+    className="d-flex justify-content-center"
+  >
+    <button
+      className="btn btn-primary btn-lg"
+    >
+      I'll add a new habit!
+    </button>
+  </div>
+</div>
+`;

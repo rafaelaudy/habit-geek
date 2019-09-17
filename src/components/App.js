@@ -4,7 +4,7 @@ import { Router } from "@reach/router";
 import { getCurrentWeek } from "../utils/dateUtils";
 
 import ProfileContainer from "./user/ProfileContainer";
-import HabitsContainer from "./habits/HabitsContainer";
+import DashboardContainer from "./dashboard/DashboardContainer";
 import Layout from "./layout/Layout";
 import HistoryContainer from "./history/HistoryContainer";
 
@@ -19,7 +19,7 @@ function App({ currentWeek, startNewWeek }) {
     <div>
       <Router>
         <Layout path="/">
-          <HabitsContainer path="/" default></HabitsContainer>
+          <DashboardContainer path="/" default></DashboardContainer>
           <ProfileContainer path="/profile"></ProfileContainer>
           <HistoryContainer path="/history"></HistoryContainer>
         </Layout>

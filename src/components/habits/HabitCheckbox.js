@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 import "./HabitCheckbox.scss";
 
-const HabitCheckbox = ({ isChecked, clickHandler, isDisabled }) => {
+const HabitCheckbox = ({ isChecked, clickHandler, isDisabled, isReadOnly }) => {
   return (
     <Fragment>
       <label className="toggle">
@@ -11,9 +11,10 @@ const HabitCheckbox = ({ isChecked, clickHandler, isDisabled }) => {
           onChange={clickHandler}
           type="checkbox"
           checked={isChecked}
-          disabled={isDisabled}
+          disabled={isReadOnly ? false : isDisabled}
+          data-readonly={isReadOnly}
         />
-        <span className="toggle__label">
+        <span className="toggle__label" data-readonly={isReadOnly}>
           <span className="toggle__text"></span>
         </span>
       </label>

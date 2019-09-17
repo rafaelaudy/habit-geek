@@ -14,8 +14,11 @@ In the project directory, you can run:
 
 ## Next improvements:
 
-- Add History
-- Editar
+- History
+  - Add check and paint the row depending of accomplishment
+  - Order weeks
+  - Expand weeks
+- Edit habit
 - Add validation
 - Highlight today
 

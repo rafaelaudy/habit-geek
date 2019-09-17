@@ -11,6 +11,46 @@ exports[`History component Renders static elements 1`] = `
   </h2>
   <div
     className="mb-3"
+    key="history-habit-1"
+  >
+    <h5
+      key="y1w1"
+    >
+      Week 1 of 1
+    </h5>
+    <HabitTable
+      habits={
+        Array [
+          Object {},
+        ]
+      }
+      isReadOnly={true}
+      key="history-habit-table-1"
+      toggleDayHabit={[Function]}
+    />
+  </div>
+  <div
+    className="mb-3"
+    key="history-habit-2"
+  >
+    <h5
+      key="y1w2"
+    >
+      Week 2 of 1
+    </h5>
+    <HabitTable
+      habits={
+        Array [
+          Object {},
+        ]
+      }
+      isReadOnly={true}
+      key="history-habit-table-2"
+      toggleDayHabit={[Function]}
+    />
+  </div>
+  <div
+    className="mb-3"
   />
 </div>
 `;

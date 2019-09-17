@@ -48,6 +48,10 @@ LEVEL 1. CORE STYLES
   z-index: 2;
 }
 
+.toggle__label[data-readonly="true"]:before {
+  border: var(--uiToggleBorderWidth) solid var(--uiToggleDisabledColor);
+}
+
 .toggle__input:disabled ~ .toggle__label:before {
   border-color: var(--uiToggleDisabledColor);
 }
@@ -63,6 +67,17 @@ LEVEL 1. CORE STYLES
 .toggle__input:not(:disabled) ~ .toggle__label:after {
   background-color: var(--uiToggleColor);
   opacity: 0;
+}
+
+.toggle__input[data-readonly] ~ .toggle__label:after {
+  box-shadow: none;
+  background-color: var(--uiToggleDisabledColor);
+}
+
+.toggle__input[data-readonly]:focus ~ .toggle__label:before,
+.toggle__input[data-readonly]:not(:disabled):checked:focus
+  ~ .toggle__label:after {
+  box-shadow: none;
 }
 
 .toggle__input:not(:disabled):checked ~ .toggle__label:after {
