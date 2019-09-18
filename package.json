@@ -46,6 +46,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/**/*Container.{js,jsx}",
+      "!src/**/*Mock*.{js,jsx}",
       "!src/index.js",
       "!src/store/index.js"
     ]

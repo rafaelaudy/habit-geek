@@ -15,6 +15,19 @@ import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
 // import mockState from "./habitMockState";
 // const habitsReducer = (state = mockState, { type, payload }) => {
 
+const getHabitStatus = (frequency, checked) => {
+  const todayIndex = getTodayIndex();
+  const daysUntilEndOfWeek = checked[todayIndex]
+    ? -todayIndex + 6
+    : -todayIndex + 7;
+  const checkedDays = checked.filter(checkedDay => checkedDay).length;
+
+  return {
+    habitSucceded: frequency <= checkedDays,
+    habitFailed: frequency > checkedDays + daysUntilEndOfWeek
+  };
+};
+
 const defaulState = {
   weeks: {
     [getCurrentWeek()]: {}
@@ -36,6 +49,7 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
           checked: [false, false, false, false, false, false, false]
         };
       });
+
       const currentWeek = getCurrentWeek();
 
       return {
@@ -49,6 +63,11 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
     }
 
     case CREATE_HABIT: {
+      const { habitSucceded, habitFailed } = getHabitStatus(
+        payload.frequency,
+        payload.checked
+      );
+
       return {
         ...state,
         isCreatingHabit: false,
@@ -56,7 +75,7 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
           ...state.weeks,
           [state.currentWeek]: {
             ...state.weeks[state.currentWeek],
-            [payload.name]: { ...payload }
+            [payload.name]: { ...payload, habitSucceded, habitFailed }
           }
         }
       };
@@ -68,15 +87,10 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
         payload.name
       ].checked.map((item, index) => (index !== payload.day ? item : !item));
 
-      const todayIndex = getTodayIndex();
-      const daysUntilEndOfWeek = updatedChecked[todayIndex]
-        ? -todayIndex + 6
-        : -todayIndex + 7;
-      const checkedDays = updatedChecked.filter(checkedDay => checkedDay)
-        .length;
-
-      const habitSucceded = frequency <= checkedDays;
-      const habitFailed = frequency > checkedDays + daysUntilEndOfWeek;
+      const { habitSucceded, habitFailed } = getHabitStatus(
+        frequency,
+        updatedChecked
+      );
 
       return {
         ...state,

@@ -15,7 +15,6 @@ In the project directory, you can run:
 ## Next improvements:
 
 - History
-  - Finish reducer tests
   - Order weeks
   - Expand weeks
 - Edit habit
