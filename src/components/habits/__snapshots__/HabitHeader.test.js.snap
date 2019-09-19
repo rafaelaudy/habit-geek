@@ -46,5 +46,8 @@ exports[`HabitHeader component Renders static elements 1`] = `
       Sun
     </h5>
   </div>
+  <div
+    className="habit__cell-action-container"
+  />
 </div>
 `;

@@ -6,13 +6,13 @@ import "./HabitTable.scss";
 
 const HabitTable = ({ habits, toggleDayHabit, isReadOnly }) => {
   return (
-    <div className="mb-3 dashboard__table">
-      <HabitHeader></HabitHeader>
+    <div className="mb-3">
+      <HabitHeader isReadOnly={isReadOnly}></HabitHeader>
       {
         <HabitRows
           habits={habits}
-          toggleDayHabit={toggleDayHabit}
           isReadOnly={isReadOnly}
+          toggleDayHabit={toggleDayHabit}
         ></HabitRows>
       }
     </div>

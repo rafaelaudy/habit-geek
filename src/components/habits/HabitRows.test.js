@@ -48,6 +48,12 @@ describe("HabitRows component", () => {
     expect(habitRows.find("[isDisabled=true]").length).toBe(5);
   });
 
+  it("Hides action container when is in readonly mode and disables checkboxes", () => {
+    const habitRows = shallow(<habitRows habits={[{}]} isReadOnly={true} />);
+    expect(habitRows.find("[isReadOnly=true]").length).toBe(1);
+    expect(habitRows.find(".habit__cell-action-container").length).toBe(0);
+  });
+
   it("toggles habits", () => {
     const toggleDayHabitMock = jest.fn();
     const habitRows = mount(

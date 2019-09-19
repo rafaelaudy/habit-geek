@@ -14,9 +14,6 @@ In the project directory, you can run:
 
 ## Next improvements:
 
-- History
-  - Order weeks
-  - Expand weeks
 - Edit habit
 - Add validation
 - Highlight today

@@ -1,9 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
 import HabitCheckbox from "./HabitCheckbox";
 import { getTodayIndex } from "../../utils/dateUtils";
 
-const HabitRows = ({ habits, toggleDayHabit, isReadOnly }) =>
+const HabitRows = ({ habits, isReadOnly, toggleDayHabit }) =>
   habits.map(
     (
       { name, frequency, checked, habitSucceded, habitFailed },
@@ -37,6 +39,14 @@ const HabitRows = ({ habits, toggleDayHabit, isReadOnly }) =>
               </div>
             ))}
           </div>
+          {isReadOnly ? null : (
+            <button
+              className="habit__cell-action-container btn btn-link"
+              onClick={() => {}}
+            >
+              <FontAwesomeIcon icon={faEdit} />
+            </button>
+          )}
         </div>
       );
     }

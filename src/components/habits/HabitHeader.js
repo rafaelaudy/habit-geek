@@ -1,6 +1,6 @@
 import React from "react";
 
-const HabitHeader = () => {
+const HabitHeader = ({ isReadOnly }) => {
   return (
     <div className="habit__row">
       <div className="habit__cell-habit-container"></div>
@@ -13,6 +13,7 @@ const HabitHeader = () => {
         <h5 className="habit__cell">Sat</h5>
         <h5 className="habit__cell">Sun</h5>
       </div>
+      {isReadOnly ? null : <div className="habit__cell-action-container"></div>}
     </div>
   );
 };
