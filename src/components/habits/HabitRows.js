@@ -16,7 +16,9 @@ const HabitRows = ({ habits, toggleDayHabit, isReadOnly }) =>
       return (
         <div key={`check-container-${containerIndex}`} className="habit__row">
           <div className="habit__cell-habit-container">
-            ({frequency}x) - {name}
+            <span>
+              ({frequency}x) - {name}
+            </span>
           </div>
           <div
             className={`habit__cell-frequency-container ${succededClass} ${failedClass}`}

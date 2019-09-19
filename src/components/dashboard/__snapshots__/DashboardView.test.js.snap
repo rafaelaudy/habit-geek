@@ -41,6 +41,7 @@ exports[`DashboardView component Renders static elements 1`] = `
       ]
     }
   />
+  <hr />
   <div
     className="d-flex justify-content-center"
   >

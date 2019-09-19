@@ -10,47 +10,84 @@ exports[`History component Renders static elements 1`] = `
     Here is your progress so far:
   </h2>
   <div
-    className="mb-3"
-    key="history-habit-1"
+    id="history-accordion"
   >
-    <h5
-      key="y1w1"
+    <div
+      className="card"
+      key="history-habit-1"
     >
-      Week 1 of 1
-    </h5>
-    <HabitTable
-      habits={
-        Array [
-          Object {},
-        ]
-      }
-      isReadOnly={true}
-      key="history-habit-table-1"
-      toggleDayHabit={[Function]}
-    />
-  </div>
-  <div
-    className="mb-3"
-    key="history-habit-2"
-  >
-    <h5
-      key="y1w2"
+      <div
+        className="card-header history__header"
+        id="history-habit-header-1"
+      >
+        <button
+          aria-controls="history-habit-content-1"
+          aria-expanded="True"
+          className="btn btn-secondary history__header-button"
+          onClick={[Function]}
+        >
+          Week 1 of 1
+        </button>
+      </div>
+      <div
+        aria-labelledby="history-habit-header-1"
+        className="collapse show"
+        id="history-habit-content-1"
+      >
+        <div
+          className="card-body"
+        >
+          <HabitTable
+            habits={
+              Array [
+                Object {},
+              ]
+            }
+            isReadOnly={true}
+            key="history-habit-table-1"
+            toggleDayHabit={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+      key="history-habit-2"
     >
-      Week 2 of 1
-    </h5>
-    <HabitTable
-      habits={
-        Array [
-          Object {},
-        ]
-      }
-      isReadOnly={true}
-      key="history-habit-table-2"
-      toggleDayHabit={[Function]}
-    />
+      <div
+        className="card-header history__header"
+        id="history-habit-header-2"
+      >
+        <button
+          aria-controls="history-habit-content-2"
+          aria-expanded="False"
+          className="btn btn-secondary history__header-button"
+          onClick={[Function]}
+        >
+          Week 2 of 1
+        </button>
+      </div>
+      <div
+        aria-labelledby="history-habit-header-2"
+        className="collapse "
+        id="history-habit-content-2"
+      >
+        <div
+          className="card-body"
+        >
+          <HabitTable
+            habits={
+              Array [
+                Object {},
+              ]
+            }
+            isReadOnly={true}
+            key="history-habit-table-2"
+            toggleDayHabit={[Function]}
+          />
+        </div>
+      </div>
+    </div>
   </div>
-  <div
-    className="mb-3"
-  />
 </div>
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import HabitTable from "../habits/HabitTable";
 
@@ -15,10 +15,13 @@ const DashboardView = ({
       </h2>
 
       {habits.length > 0 ? (
-        <HabitTable
-          toggleDayHabit={toggleDayHabit}
-          habits={habits}
-        ></HabitTable>
+        <Fragment>
+          <HabitTable
+            toggleDayHabit={toggleDayHabit}
+            habits={habits}
+          ></HabitTable>
+          <hr />
+        </Fragment>
       ) : null}
 
       <div className="d-flex justify-content-center">
