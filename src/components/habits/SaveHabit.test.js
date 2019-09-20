@@ -3,11 +3,13 @@ import { shallow } from "enzyme";
 import SaveHabit from "./SaveHabit";
 
 let saveHabitMock;
+let deleteHabitMock;
 let goBackMock;
 
 describe("SaveHabit component", () => {
   beforeEach(() => {
     saveHabitMock = jest.fn();
+    deleteHabitMock = jest.fn();
     goBackMock = jest.fn();
   });
 
@@ -60,6 +62,19 @@ describe("SaveHabit component", () => {
       .simulate("change", { target: { value: "1x" } });
     saveHabits.find(".btn-primary").simulate("click");
     expect(saveHabitMock).toHaveBeenCalledWith("read", "Read", "Social", "1x");
+    expect(goBackMock).toBeCalled();
+  });
+
+  it("deletes a habit", () => {
+    const saveHabits = shallow(
+      <SaveHabit
+        id="read"
+        deleteHabit={deleteHabitMock}
+        goBack={goBackMock}
+      ></SaveHabit>
+    );
+    saveHabits.find(".btn-danger").simulate("click");
+    expect(deleteHabitMock).toHaveBeenCalledWith("read");
     expect(goBackMock).toBeCalled();
   });
 

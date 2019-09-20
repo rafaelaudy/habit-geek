@@ -2,16 +2,24 @@ import React from "react";
 import { shallow, mount } from "enzyme";
 import Dashboard from "./Dashboard";
 
+const props = {
+  habits: [],
+  username: "",
+  saveHabit: "",
+  deleteHabit: "",
+  toggleDayHabit: ""
+};
+
 describe("Dashboard component", () => {
   it("Renders Dashboard list", () => {
-    const dashboard = shallow(<Dashboard />);
+    const dashboard = shallow(<Dashboard {...props} />);
     expect(dashboard).toMatchSnapshot();
   });
 
-  it("Creates new habit", () => {
-    const dashboard = mount(<Dashboard habits={[]} />);
+  it("Renders New Habit", () => {
+    const dashboard = mount(<Dashboard {...props} />);
     dashboard.find(".btn-primary").simulate("click");
-    expect(dashboard.find("#new-habit-name").length).toBe(1);
+    expect(dashboard).toMatchSnapshot();
   });
 
   it("Updates habit", () => {

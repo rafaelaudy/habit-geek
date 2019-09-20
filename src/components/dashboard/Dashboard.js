@@ -3,7 +3,13 @@ import React, { useState } from "react";
 import SaveHabit from "../habits/SaveHabit";
 import DashboardView from "./DashboardView";
 
-const Dashboard = ({ habits, username, saveHabit, toggleDayHabit }) => {
+const Dashboard = ({
+  habits,
+  username,
+  saveHabit,
+  deleteHabit,
+  toggleDayHabit
+}) => {
   const [isEditingHabit, setIsEditingHabit] = useState({});
 
   if (isEditingHabit.isEditing) {
@@ -18,6 +24,7 @@ const Dashboard = ({ habits, username, saveHabit, toggleDayHabit }) => {
         frequency={frequency}
         type={type}
         saveHabit={saveHabit}
+        deleteHabit={deleteHabit}
         goBack={() => setIsEditingHabit({})}
       />
     );

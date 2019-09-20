@@ -6,6 +6,7 @@ const SaveHabit = ({
   type: defaultType = "",
   frequency: defaultFrequency = "",
   saveHabit,
+  deleteHabit,
   goBack
 }) => {
   const [name, setName] = useState(defaultName);
@@ -14,6 +15,11 @@ const SaveHabit = ({
 
   const saveAndClose = () => {
     saveHabit(id, name, type, frequency);
+    goBack();
+  };
+
+  const deleteHabitAndClose = () => {
+    deleteHabit(id);
     goBack();
   };
 
@@ -71,7 +77,14 @@ const SaveHabit = ({
       >
         Let's start!
       </button>
-
+      {id ? (
+        <button
+          className="btn btn-danger btn-lg btn-block"
+          onClick={deleteHabitAndClose}
+        >
+          Let's scrap this!
+        </button>
+      ) : null}
       <button className="btn btn-secondary btn-lg btn-block" onClick={goBack}>
         Maybe tomorrow...
       </button>
