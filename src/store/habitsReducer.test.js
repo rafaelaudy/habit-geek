@@ -2,7 +2,8 @@ import habitsReducer from "./habitsReducer";
 import {
   saveHabit,
   toggleDayHabit,
-  startNewWeek
+  startNewWeek,
+  deleteHabit
 } from "../actions/habitActions";
 import { getTodayIndex } from "../utils/dateUtils";
 
@@ -237,6 +238,17 @@ describe("habitsReducer - updates a habit", () => {
       });
     }
   );
+});
+
+describe("habitsReducer - deletes a habit", () => {
+  it("deletes a habit", () => {
+    let state = habitsReducer(
+      undefined,
+      saveHabit(undefined, " read  ", "hobby", "1")
+    );
+    state = habitsReducer(state, deleteHabit(" read "));
+    expect(state.weeks).toEqual({ y1w1: {} });
+  });
 });
 
 describe("habitsReducer", () => {

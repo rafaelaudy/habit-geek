@@ -1,7 +1,8 @@
 import {
   SAVE_HABIT,
   TOGGLE_DAY_HABIT,
-  START_NEW_WEEK
+  START_NEW_WEEK,
+  DELETE_HABIT
 } from "../actions/habitActions";
 import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
 
@@ -79,6 +80,22 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
       };
 
       if (payload.id && payload.id !== name) delete habits[payload.id];
+
+      return {
+        ...state,
+        weeks: {
+          ...state.weeks,
+          [state.currentWeek]: habits
+        }
+      };
+    }
+
+    case DELETE_HABIT: {
+      const habits = {
+        ...state.weeks[state.currentWeek]
+      };
+
+      delete habits[payload.id.trim()];
 
       return {
         ...state,

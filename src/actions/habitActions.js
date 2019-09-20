@@ -14,6 +14,14 @@ export const saveHabit = (id, name, type, frequency) => ({
   }
 });
 
+export const DELETE_HABIT = "DELETE_HABIT";
+export const deleteHabit = id => ({
+  type: DELETE_HABIT,
+  payload: {
+    id
+  }
+});
+
 export const TOGGLE_DAY_HABIT = "TOGGLE_DAY_HABIT";
 export const toggleDayHabit = (name, day) => ({
   type: TOGGLE_DAY_HABIT,
