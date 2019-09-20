@@ -2,16 +2,25 @@ import React from "react";
 import { shallow } from "enzyme";
 import SaveHabit from "./SaveHabit";
 
+let saveHabitMock;
+let goBackMock;
+
 describe("SaveHabit component", () => {
+  beforeEach(() => {
+    saveHabitMock = jest.fn();
+    goBackMock = jest.fn();
+  });
+
   it("Renders static elements", () => {
-    const saveHabits = shallow(<SaveHabit></SaveHabit>);
+    const saveHabits = shallow(
+      <SaveHabit name="name" frequency="frequency" type="1"></SaveHabit>
+    );
     expect(saveHabits).toMatchSnapshot();
   });
 
   it("creates a habit", () => {
-    const createHabitMock = jest.fn();
     const saveHabits = shallow(
-      <SaveHabit createHabit={createHabitMock}></SaveHabit>
+      <SaveHabit saveHabit={saveHabitMock} goBack={goBackMock}></SaveHabit>
     );
     saveHabits
       .find("#new-habit-name")
@@ -23,13 +32,40 @@ describe("SaveHabit component", () => {
       .find("#new-habit-frequency")
       .simulate("change", { target: { value: "1x" } });
     saveHabits.find(".btn-primary").simulate("click");
-    expect(createHabitMock).toHaveBeenCalledWith("Read", "Social", "1x");
+    expect(saveHabitMock).toHaveBeenCalledWith(
+      undefined,
+      "Read",
+      "Social",
+      "1x"
+    );
+    expect(goBackMock).toBeCalled();
+  });
+
+  it("updates a habit", () => {
+    const saveHabits = shallow(
+      <SaveHabit
+        id="read"
+        saveHabit={saveHabitMock}
+        goBack={goBackMock}
+      ></SaveHabit>
+    );
+    saveHabits
+      .find("#new-habit-name")
+      .simulate("change", { target: { value: "Read" } });
+    saveHabits
+      .find("#new-habit-type")
+      .simulate("change", { target: { value: "Social" } });
+    saveHabits
+      .find("#new-habit-frequency")
+      .simulate("change", { target: { value: "1x" } });
+    saveHabits.find(".btn-primary").simulate("click");
+    expect(saveHabitMock).toHaveBeenCalledWith("read", "Read", "Social", "1x");
+    expect(goBackMock).toBeCalled();
   });
 
   it("selects change on blur for accessibility", () => {
-    const createHabitMock = jest.fn();
     const saveHabits = shallow(
-      <SaveHabit createHabit={createHabitMock}></SaveHabit>
+      <SaveHabit saveHabit={saveHabitMock} goBack={goBackMock}></SaveHabit>
     );
     saveHabits
       .find("#new-habit-type")
@@ -38,15 +74,12 @@ describe("SaveHabit component", () => {
       .find("#new-habit-frequency")
       .simulate("blur", { target: { value: "1x" } });
     saveHabits.find(".btn-primary").simulate("click");
-    expect(createHabitMock).toHaveBeenCalledWith("", "Social", "1x");
+    expect(saveHabitMock).toHaveBeenCalledWith(undefined, "", "Social", "1x");
   });
 
   it("cancels habit creation", () => {
-    const toggleIsCreatingHabitMock = jest.fn();
-    const saveHabits = shallow(
-      <SaveHabit toggleIsCreatingHabit={toggleIsCreatingHabitMock}></SaveHabit>
-    );
+    const saveHabits = shallow(<SaveHabit goBack={goBackMock}></SaveHabit>);
     saveHabits.find(".btn-secondary").simulate("click");
-    expect(toggleIsCreatingHabitMock).toHaveBeenCalled();
+    expect(goBackMock).toHaveBeenCalled();
   });
 });

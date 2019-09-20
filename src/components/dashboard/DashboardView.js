@@ -5,7 +5,8 @@ import HabitTable from "../habits/HabitTable";
 const DashboardView = ({
   username,
   habits,
-  toggleIsCreatingHabit,
+  addNewHabit,
+  updateHabit,
   toggleDayHabit
 }) => {
   return (
@@ -19,16 +20,14 @@ const DashboardView = ({
           <HabitTable
             toggleDayHabit={toggleDayHabit}
             habits={habits}
+            updateHabit={updateHabit}
           ></HabitTable>
           <hr />
         </Fragment>
       ) : null}
 
       <div className="d-flex justify-content-center">
-        <button
-          className="btn btn-primary btn-lg"
-          onClick={toggleIsCreatingHabit}
-        >
+        <button className="btn btn-primary btn-lg" onClick={addNewHabit}>
           I'll add a new habit!
         </button>
       </div>

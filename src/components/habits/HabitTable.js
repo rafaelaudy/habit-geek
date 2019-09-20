@@ -4,7 +4,7 @@ import HabitHeader from "./HabitHeader";
 import HabitRows from "./HabitRows";
 import "./HabitTable.scss";
 
-const HabitTable = ({ habits, toggleDayHabit, isReadOnly }) => {
+const HabitTable = ({ habits, isReadOnly, toggleDayHabit, updateHabit }) => {
   return (
     <div className="mb-3">
       <HabitHeader isReadOnly={isReadOnly}></HabitHeader>
@@ -13,6 +13,7 @@ const HabitTable = ({ habits, toggleDayHabit, isReadOnly }) => {
           habits={habits}
           isReadOnly={isReadOnly}
           toggleDayHabit={toggleDayHabit}
+          updateHabit={updateHabit}
         ></HabitRows>
       }
     </div>

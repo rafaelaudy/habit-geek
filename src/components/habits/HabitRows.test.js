@@ -8,7 +8,14 @@ jest.mock("../../utils/dateUtils.js", () => ({
 
 describe("HabitRows component", () => {
   it("Renders static elements", () => {
-    const habitRows = shallow(<HabitRows username="rafa" habits={[]} />);
+    const habitRows = shallow(
+      <HabitRows
+        username="rafa"
+        habits={[]}
+        toggleDayHabit={() => {}}
+        updateHabit={() => {}}
+      />
+    );
     expect(habitRows).toMatchSnapshot();
   });
 

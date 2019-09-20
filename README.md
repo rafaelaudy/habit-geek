@@ -15,6 +15,7 @@ In the project directory, you can run:
 ## Next improvements:
 
 - Edit habit
+- Hide last week
 - Add validation
 - Highlight today
 
@@ -38,6 +39,7 @@ https://facebook.github.io/create-react-app/docs/deployment
 
 ## Tech debt
 
+- Remove readony prop since it's not used (use functions instead)
 - Test containers
 - Add migration stategy for when a change to the schema is necessary on local storage
   https://www.freecodecamp.org/news/how-to-use-redux-persist-when-migrating-your-states-a5dee16b5ead/

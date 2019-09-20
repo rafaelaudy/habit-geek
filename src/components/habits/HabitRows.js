@@ -5,7 +5,7 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import HabitCheckbox from "./HabitCheckbox";
 import { getTodayIndex } from "../../utils/dateUtils";
 
-const HabitRows = ({ habits, isReadOnly, toggleDayHabit }) =>
+const HabitRows = ({ habits, isReadOnly, toggleDayHabit, updateHabit }) =>
   habits.map(
     (
       { name, frequency, checked, habitSucceded, habitFailed },
@@ -42,7 +42,7 @@ const HabitRows = ({ habits, isReadOnly, toggleDayHabit }) =>
           {isReadOnly ? null : (
             <button
               className="habit__cell-action-container btn btn-link"
-              onClick={() => {}}
+              onClick={() => updateHabit(name)}
             >
               <FontAwesomeIcon icon={faEdit} />
             </button>

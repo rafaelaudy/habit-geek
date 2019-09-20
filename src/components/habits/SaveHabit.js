@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 
-const SaveHabit = ({ createHabit, toggleIsCreatingHabit }) => {
-  const [name, setName] = useState("");
-  const [type, setType] = useState("");
-  const [frequency, setFrequency] = useState("");
+const SaveHabit = ({
+  id,
+  name: defaultName = "",
+  type: defaultType = "",
+  frequency: defaultFrequency = "",
+  saveHabit,
+  goBack
+}) => {
+  const [name, setName] = useState(defaultName);
+  const [type, setType] = useState(defaultType);
+  const [frequency, setFrequency] = useState(defaultFrequency);
+
+  const saveAndClose = () => {
+    saveHabit(id, name, type, frequency);
+    goBack();
+  };
 
   return (
     <div className="mobile-size-container">
@@ -55,15 +67,12 @@ const SaveHabit = ({ createHabit, toggleIsCreatingHabit }) => {
       <hr className="mb-4" />
       <button
         className="btn btn-primary btn-lg btn-block"
-        onClick={() => createHabit(name, type, frequency)}
+        onClick={saveAndClose}
       >
         Let's start!
       </button>
 
-      <button
-        className="btn btn-secondary btn-lg btn-block"
-        onClick={toggleIsCreatingHabit}
-      >
+      <button className="btn btn-secondary btn-lg btn-block" onClick={goBack}>
         Maybe tomorrow...
       </button>
     </div>

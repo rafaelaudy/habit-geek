@@ -1,10 +1,6 @@
 import { connect } from "react-redux";
 import Dashboard from "./Dashboard";
-import {
-  createHabit,
-  toggleIsCreatingHabit,
-  toggleDayHabit
-} from "../../actions/habitActions";
+import { saveHabit, toggleDayHabit } from "../../actions/habitActions";
 
 const mapStateToProps = ({ habits, user }) => {
   const currentWeekHabits = habits.weeks[habits.currentWeek];
@@ -19,15 +15,13 @@ const mapStateToProps = ({ habits, user }) => {
     : [];
 
   return {
-    name: user.name,
-    habits: mappedHabits,
-    isCreatingHabit: habits.isCreatingHabit
+    username: user.name,
+    habits: mappedHabits
   };
 };
 
 const mapDispatchToProps = {
-  createHabit,
-  toggleIsCreatingHabit,
+  saveHabit,
   toggleDayHabit
 };
 

@@ -1,6 +1,5 @@
 import {
-  CREATE_HABIT,
-  TOGGLE_IS_CREATING_HABIT,
+  SAVE_HABIT,
   TOGGLE_DAY_HABIT,
   START_NEW_WEEK
 } from "../actions/habitActions";
@@ -32,8 +31,7 @@ const defaulState = {
   weeks: {
     [getCurrentWeek()]: {}
   },
-  currentWeek: getCurrentWeek(),
-  isCreatingHabit: false
+  currentWeek: getCurrentWeek()
 };
 
 const habitsReducer = (state = defaulState, { type, payload }) => {
@@ -62,21 +60,31 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
       };
     }
 
-    case CREATE_HABIT: {
+    case SAVE_HABIT: {
+      const checked = payload.id
+        ? state.weeks[state.currentWeek][payload.id].checked
+        : [false, false, false, false, false, false, false];
+
+      const name = payload.name.trim();
+      const { frequency, type } = payload;
+
       const { habitSucceded, habitFailed } = getHabitStatus(
         payload.frequency,
-        payload.checked
+        checked
       );
+
+      const habits = {
+        ...state.weeks[state.currentWeek],
+        [name]: { name, frequency, type, checked, habitSucceded, habitFailed }
+      };
+
+      if (payload.id && payload.id !== name) delete habits[payload.id];
 
       return {
         ...state,
-        isCreatingHabit: false,
         weeks: {
           ...state.weeks,
-          [state.currentWeek]: {
-            ...state.weeks[state.currentWeek],
-            [payload.name]: { ...payload, habitSucceded, habitFailed }
-          }
+          [state.currentWeek]: habits
         }
       };
     }
@@ -109,10 +117,6 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
           }
         }
       };
-    }
-
-    case TOGGLE_IS_CREATING_HABIT: {
-      return { ...state, isCreatingHabit: !state.isCreatingHabit };
     }
 
     default: {

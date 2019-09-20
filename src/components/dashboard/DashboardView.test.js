@@ -23,15 +23,15 @@ describe("DashboardView component", () => {
   });
 
   it("starts to create a habit", () => {
-    const toggleIsCreatingHabitMock = jest.fn();
+    const addNewHabitMock = jest.fn();
     const dashboardView = shallow(
       <DashboardView
         username="rafa"
         habits={[]}
-        toggleIsCreatingHabit={toggleIsCreatingHabitMock}
+        addNewHabit={addNewHabitMock}
       />
     );
-    dashboardView.find("button").simulate("click");
-    expect(toggleIsCreatingHabitMock).toHaveBeenCalledTimes(1);
+    dashboardView.find(".btn-primary").simulate("click");
+    expect(addNewHabitMock).toHaveBeenCalledTimes(1);
   });
 });

@@ -1,26 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 
 import SaveHabit from "../habits/SaveHabit";
 import DashboardView from "./DashboardView";
 
-const Dashboard = ({
-  habits,
-  name,
-  createHabit,
-  isCreatingHabit,
-  toggleIsCreatingHabit,
-  toggleDayHabit
-}) => {
-  return isCreatingHabit ? (
-    <SaveHabit
-      createHabit={createHabit}
-      toggleIsCreatingHabit={toggleIsCreatingHabit}
-    />
-  ) : (
+const Dashboard = ({ habits, username, saveHabit, toggleDayHabit }) => {
+  const [isEditingHabit, setIsEditingHabit] = useState({});
+
+  if (isEditingHabit.isEditing) {
+    const { name, frequency, type } = isEditingHabit.id
+      ? habits.filter(({ name }) => name === isEditingHabit.id)[0]
+      : {};
+
+    return (
+      <SaveHabit
+        id={isEditingHabit.id}
+        name={name}
+        frequency={frequency}
+        type={type}
+        saveHabit={saveHabit}
+        goBack={() => setIsEditingHabit({})}
+      />
+    );
+  }
+
+  return (
     <DashboardView
-      username={name}
+      username={username}
       habits={habits}
-      toggleIsCreatingHabit={toggleIsCreatingHabit}
+      addNewHabit={() => setIsEditingHabit({ isEditing: true })}
+      updateHabit={id => setIsEditingHabit({ isEditing: true, id })}
       toggleDayHabit={toggleDayHabit}
     />
   );

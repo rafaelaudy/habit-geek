@@ -4,7 +4,14 @@ exports[`HabitTable component Renders static elements 1`] = `
 <div
   className="mb-3"
 >
-  <HabitHeader />
-  <HabitRows />
+  <HabitHeader
+    isReadOnly={true}
+  />
+  <HabitRows
+    habits={Array []}
+    isReadOnly={true}
+    toggleDayHabit={[Function]}
+    updateHabit={[Function]}
+  />
 </div>
 `;

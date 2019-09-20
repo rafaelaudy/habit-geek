@@ -3,14 +3,14 @@ export const startNewWeek = () => ({
   type: START_NEW_WEEK
 });
 
-export const CREATE_HABIT = "CREATE_HABIT";
-export const createHabit = (name, type, frequency) => ({
-  type: CREATE_HABIT,
+export const SAVE_HABIT = "SAVE_HABIT";
+export const saveHabit = (id, name, type, frequency) => ({
+  type: SAVE_HABIT,
   payload: {
+    id,
     name,
     type,
-    frequency,
-    checked: [false, false, false, false, false, false, false]
+    frequency
   }
 });
 
@@ -21,9 +21,4 @@ export const toggleDayHabit = (name, day) => ({
     name,
     day
   }
-});
-
-export const TOGGLE_IS_CREATING_HABIT = "TOGGLE_IS_CREATING_HABIT";
-export const toggleIsCreatingHabit = () => ({
-  type: TOGGLE_IS_CREATING_HABIT
 });

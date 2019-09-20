@@ -19,7 +19,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
       className="form-control"
       id="new-habit-name"
       onChange={[Function]}
-      value=""
+      value="name"
     />
   </div>
   <div
@@ -35,7 +35,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
       id="new-habit-type"
       onBlur={[Function]}
       onChange={[Function]}
-      value=""
+      value="1"
     >
       <option
         value=""
@@ -75,7 +75,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
       id="new-habit-frequency"
       onBlur={[Function]}
       onChange={[Function]}
-      value=""
+      value="frequency"
     >
       <option
         value=""
