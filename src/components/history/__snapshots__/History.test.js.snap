@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`History component Don't show anything if historical weeks are empty 1`] = `
+<div
+  className="large-size-container"
+>
+  <h2
+    className="mb-3"
+  >
+    You just started, come back next week!
+  </h2>
+</div>
+`;
+
 exports[`History component Renders static elements 1`] = `
 <div
   className="large-size-container"

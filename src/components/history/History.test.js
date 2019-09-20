@@ -13,6 +13,12 @@ describe("History component", () => {
     expect(history).toMatchSnapshot();
   });
 
+  it("Don't show anything if historical weeks are empty", () => {
+    const weeks = [];
+    const history = shallow(<History weeks={weeks} />);
+    expect(history).toMatchSnapshot();
+  });
+
   it("shows and collapses week informations", () => {
     const weeks = [
       { week: "y1w1", habits: [{}] },
