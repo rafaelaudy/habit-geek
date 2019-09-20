@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-import { getCurrentWeek } from "../../utils/dateUtils";
-
 import HabitTable from "../habits/HabitTable";
 import "./History.scss";
 
 const History = ({ weeks }) => {
-  const [openedList, setOpened] = useState({ [getCurrentWeek()]: true });
+  const [openedList, setOpened] = useState({ [weeks[0].week]: true });
 
   const toggleOpened = week => {
     setOpened({ ...openedList, [week]: openedList[week] ? false : true });

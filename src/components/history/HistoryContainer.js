@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import History from "./History";
 
 const mapStateToProps = ({ habits }) => {
-  const mappedWeeks = Object.keys(habits.weeks)
+  let mappedWeeks = Object.keys(habits.weeks)
     .map(weekKey => {
       return {
         week: weekKey,
@@ -12,6 +12,8 @@ const mapStateToProps = ({ habits }) => {
       };
     })
     .reverse();
+
+  mappedWeeks.shift();
 
   return {
     weeks: mappedWeeks

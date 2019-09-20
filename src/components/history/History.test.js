@@ -2,10 +2,6 @@ import React from "react";
 import { shallow } from "enzyme";
 import History from "./History";
 
-jest.mock("../../utils/dateUtils.js", () => ({
-  getCurrentWeek: jest.fn().mockReturnValue("y1w1")
-}));
-
 describe("History component", () => {
   it("Renders static elements", () => {
     const weeks = [
