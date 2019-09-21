@@ -12,17 +12,16 @@ const SaveHabit = ({
   const [name, setName] = useState(defaultName);
   const [type, setType] = useState(defaultType);
   const [frequency, setFrequency] = useState(defaultFrequency);
-  const [validityChecked, setCheckedValidity] = useState(false);
+  const [validityChecked, setValidityChecked] = useState(false);
 
   const saveAndClose = event => {
     event.preventDefault();
+    setValidityChecked(true);
 
     if (event.target.checkValidity()) {
       saveHabit(id, name, type, frequency);
       goBack();
     }
-
-    setCheckedValidity(true);
   };
 
   const deleteHabitAndClose = () => {
@@ -94,18 +93,21 @@ const SaveHabit = ({
         </div>
       </div>
       <hr className="mb-4" />
-      <button type="submit" className="btn btn-primary btn-lg btn-block">
-        Let's start!
-      </button>
+      <button className="btn btn-primary btn-lg btn-block">Let's start!</button>
       {id ? (
         <button
+          type="button"
           className="btn btn-danger btn-lg btn-block"
           onClick={deleteHabitAndClose}
         >
           Let's scrap this!
         </button>
       ) : null}
-      <button className="btn btn-secondary btn-lg btn-block" onClick={goBack}>
+      <button
+        type="button"
+        className="btn btn-secondary btn-lg btn-block"
+        onClick={goBack}
+      >
         Maybe tomorrow...
       </button>
     </form>

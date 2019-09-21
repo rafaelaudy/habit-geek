@@ -1,3 +1,5 @@
+//
+
 import React, { useState } from "react";
 import { navigate } from "@reach/router";
 import "./Profile.scss";
@@ -12,15 +14,27 @@ const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
 
 const Profile = ({ name: initialName, avatar, registerUser }) => {
   const [name, setName] = useState(initialName);
-  const [selectedAvatar, setAvatar] = useState(avatar ? avatar : "");
+  const [selectedAvatar, setAvatar] = useState(avatar ? avatar : avatar1);
+  const [validityChecked, setValidityChecked] = useState(false);
 
-  const register = () => {
-    registerUser(name, selectedAvatar);
-    navigate("/habits");
+  const register = event => {
+    event.preventDefault();
+    setValidityChecked(true);
+
+    if (event.target.checkValidity()) {
+      registerUser(name, selectedAvatar);
+      navigate("/habits");
+    }
   };
 
   return (
-    <div className="mobile-size-container">
+    <form
+      className={`mobile-size-container ${
+        validityChecked ? "was-validated" : ""
+      }`}
+      onSubmit={register}
+      noValidate
+    >
       <h2>Super hero who?</h2>
       <div className="mb-3">
         <label htmlFor="profile-name">Name:</label>
@@ -29,30 +43,34 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
           className="form-control"
           value={name}
           onChange={e => setName(e.target.value)}
+          required
         ></input>
+        <div className="invalid-feedback">
+          What an honor! The invisible habit geek among us?
+        </div>
       </div>
       <div className="mb-3">
         <label htmlFor="profile-avatar">Avatar:</label>
         <div className="input-group profile__avatar-container">
           {avatars.map((avatar, index) => (
-            <input
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events
+            <img
               key={`avatar-${index}`}
               onClick={() => setAvatar(avatar)}
-              type="image"
               src={avatar}
-              alt="Search"
+              alt="Avatar, not really important. Don't worry!"
               className={`profile__avatar ${
                 avatar === selectedAvatar ? "profile__avatar--selected" : ""
               }`}
-            ></input>
+            ></img>
           ))}
         </div>
       </div>
       <hr className="mb-4" />
-      <button className="btn btn-primary btn-lg btn-block" onClick={register}>
+      <button type="submit" className="btn btn-primary btn-lg btn-block">
         Done!
       </button>
-    </div>
+    </form>
   );
 };
 

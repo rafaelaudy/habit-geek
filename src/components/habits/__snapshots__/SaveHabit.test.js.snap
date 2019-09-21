@@ -142,12 +142,12 @@ exports[`SaveHabit component Renders static elements 1`] = `
   />
   <button
     className="btn btn-primary btn-lg btn-block"
-    type="submit"
   >
     Let's start!
   </button>
   <button
     className="btn btn-secondary btn-lg btn-block"
+    type="button"
   >
     Maybe tomorrow...
   </button>
