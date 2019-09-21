@@ -12,10 +12,17 @@ const SaveHabit = ({
   const [name, setName] = useState(defaultName);
   const [type, setType] = useState(defaultType);
   const [frequency, setFrequency] = useState(defaultFrequency);
+  const [validityChecked, setCheckedValidity] = useState(false);
 
-  const saveAndClose = () => {
-    saveHabit(id, name, type, frequency);
-    goBack();
+  const saveAndClose = event => {
+    event.preventDefault();
+
+    if (event.target.checkValidity()) {
+      saveHabit(id, name, type, frequency);
+      goBack();
+    }
+
+    setCheckedValidity(true);
   };
 
   const deleteHabitAndClose = () => {
@@ -24,7 +31,13 @@ const SaveHabit = ({
   };
 
   return (
-    <div className="mobile-size-container">
+    <form
+      onSubmit={saveAndClose}
+      className={`mobile-size-container ${
+        validityChecked ? "was-validated" : ""
+      }`}
+      noValidate
+    >
       <h2>Nice, what will it be?</h2>
       <div className="mb-3">
         <label htmlFor="new-habit-name">Name</label>
@@ -33,7 +46,11 @@ const SaveHabit = ({
           className="form-control"
           value={name}
           onChange={e => setName(e.target.value)}
+          required
         ></input>
+        <div className="invalid-feedback">
+          Hey! Trying to commit to "Blank"?
+        </div>
       </div>
       <div className="mb-3">
         <label htmlFor="new-habit-type">Type</label>
@@ -43,6 +60,7 @@ const SaveHabit = ({
           value={type}
           onChange={e => setType(e.target.value)}
           onBlur={e => setType(e.target.value)}
+          required
         >
           <option value=""></option>
           <option value="Health">Health</option>
@@ -50,6 +68,7 @@ const SaveHabit = ({
           <option value="Career">Career</option>
           <option value="Hobbies">Hobbies</option>
         </select>
+        <div className="invalid-feedback">Common... Help me help you!</div>
       </div>
       <div className="mb-3">
         <label htmlFor="new-habit-frequency">Frequency</label>
@@ -59,6 +78,7 @@ const SaveHabit = ({
           value={frequency}
           onChange={e => setFrequency(e.target.value)}
           onBlur={e => setFrequency(e.target.value)}
+          required
         >
           <option value=""></option>
           <option value="1">1x</option>
@@ -69,12 +89,12 @@ const SaveHabit = ({
           <option value="6">6x</option>
           <option value="7">7x</option>
         </select>
+        <div className="invalid-feedback">
+          Funny, that's an easy way to ace it!
+        </div>
       </div>
       <hr className="mb-4" />
-      <button
-        className="btn btn-primary btn-lg btn-block"
-        onClick={saveAndClose}
-      >
+      <button type="submit" className="btn btn-primary btn-lg btn-block">
         Let's start!
       </button>
       {id ? (
@@ -88,7 +108,7 @@ const SaveHabit = ({
       <button className="btn btn-secondary btn-lg btn-block" onClick={goBack}>
         Maybe tomorrow...
       </button>
-    </div>
+    </form>
   );
 };
 

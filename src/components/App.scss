@@ -16,3 +16,8 @@
     text-align: center;
   }
 }
+
+.was-validated .form-control:valid,
+.was-validated .form-control:invalid {
+  background-image: none;
+}

@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SaveHabit component Renders static elements 1`] = `
-<div
-  className="mobile-size-container"
+<form
+  className="mobile-size-container "
+  noValidate={true}
+  onSubmit={[Function]}
 >
   <h2>
     Nice, what will it be?
@@ -19,8 +21,14 @@ exports[`SaveHabit component Renders static elements 1`] = `
       className="form-control"
       id="new-habit-name"
       onChange={[Function]}
+      required={true}
       value="name"
     />
+    <div
+      className="invalid-feedback"
+    >
+      Hey! Trying to commit to "Blank"?
+    </div>
   </div>
   <div
     className="mb-3"
@@ -35,6 +43,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
       id="new-habit-type"
       onBlur={[Function]}
       onChange={[Function]}
+      required={true}
       value="1"
     >
       <option
@@ -61,6 +70,11 @@ exports[`SaveHabit component Renders static elements 1`] = `
         Hobbies
       </option>
     </select>
+    <div
+      className="invalid-feedback"
+    >
+      Common... Help me help you!
+    </div>
   </div>
   <div
     className="mb-3"
@@ -75,6 +89,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
       id="new-habit-frequency"
       onBlur={[Function]}
       onChange={[Function]}
+      required={true}
       value="frequency"
     >
       <option
@@ -116,13 +131,18 @@ exports[`SaveHabit component Renders static elements 1`] = `
         7x
       </option>
     </select>
+    <div
+      className="invalid-feedback"
+    >
+      Funny, that's an easy way to ace it!
+    </div>
   </div>
   <hr
     className="mb-4"
   />
   <button
     className="btn btn-primary btn-lg btn-block"
-    onClick={[Function]}
+    type="submit"
   >
     Let's start!
   </button>
@@ -131,5 +151,5 @@ exports[`SaveHabit component Renders static elements 1`] = `
   >
     Maybe tomorrow...
   </button>
-</div>
+</form>
 `;

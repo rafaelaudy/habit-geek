@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import SaveHabit from "./SaveHabit";
 
+let fakeEvent;
 let saveHabitMock;
 let deleteHabitMock;
 let goBackMock;
@@ -11,6 +12,10 @@ describe("SaveHabit component", () => {
     saveHabitMock = jest.fn();
     deleteHabitMock = jest.fn();
     goBackMock = jest.fn();
+    fakeEvent = {
+      preventDefault: jest.fn(),
+      target: { checkValidity: jest.fn().mockReturnValue(true) }
+    };
   });
 
   it("Renders static elements", () => {
@@ -33,7 +38,7 @@ describe("SaveHabit component", () => {
     saveHabits
       .find("#new-habit-frequency")
       .simulate("change", { target: { value: "1x" } });
-    saveHabits.find(".btn-primary").simulate("click");
+    saveHabits.find("form").simulate("submit", fakeEvent);
     expect(saveHabitMock).toHaveBeenCalledWith(
       undefined,
       "Read",
@@ -60,9 +65,22 @@ describe("SaveHabit component", () => {
     saveHabits
       .find("#new-habit-frequency")
       .simulate("change", { target: { value: "1x" } });
-    saveHabits.find(".btn-primary").simulate("click");
+    saveHabits.find("form").simulate("submit", fakeEvent);
     expect(saveHabitMock).toHaveBeenCalledWith("read", "Read", "Social", "1x");
     expect(goBackMock).toBeCalled();
+  });
+
+  it("validates forms", () => {
+    const saveHabit = shallow(
+      <SaveHabit saveHabit={saveHabitMock} goBack={goBackMock}></SaveHabit>
+    );
+    fakeEvent.target.checkValidity.mockReturnValueOnce(false);
+    saveHabit.find("form").simulate("submit", fakeEvent);
+    expect(saveHabit.find(".was-validated").length).toBe(1);
+    expect(fakeEvent.preventDefault).toHaveBeenCalledTimes(1);
+    expect(fakeEvent.target.checkValidity).toHaveBeenCalledTimes(1);
+    expect(saveHabitMock).toHaveBeenCalledTimes(0);
+    expect(goBackMock).toHaveBeenCalledTimes(0);
   });
 
   it("deletes a habit", () => {
@@ -88,7 +106,7 @@ describe("SaveHabit component", () => {
     saveHabits
       .find("#new-habit-frequency")
       .simulate("blur", { target: { value: "1x" } });
-    saveHabits.find(".btn-primary").simulate("click");
+    saveHabits.find("form").simulate("submit", fakeEvent);
     expect(saveHabitMock).toHaveBeenCalledWith(undefined, "", "Social", "1x");
   });
 
