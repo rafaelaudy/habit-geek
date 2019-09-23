@@ -23,9 +23,10 @@ export const deleteHabit = id => ({
 });
 
 export const TOGGLE_DAY_HABIT = "TOGGLE_DAY_HABIT";
-export const toggleDayHabit = (name, day) => ({
+export const toggleDayHabit = (week, name, day) => ({
   type: TOGGLE_DAY_HABIT,
   payload: {
+    week,
     name,
     day
   }

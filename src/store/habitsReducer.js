@@ -50,10 +50,16 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
       });
 
       const currentWeek = getCurrentWeek();
+      const [currentYearString, currentWeekString] = currentWeek.split("w");
+      const previousWeekKey = `${currentYearString}w${currentWeekString - 1}`;
+      const previousWeek = state.weeks[previousWeekKey]
+        ? previousWeekKey
+        : undefined;
 
       return {
         ...state,
         currentWeek,
+        previousWeek,
         weeks: {
           ...state.weeks,
           [currentWeek]: newWeek
@@ -107,10 +113,11 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
     }
 
     case TOGGLE_DAY_HABIT: {
-      const { frequency } = state.weeks[state.currentWeek][payload.name];
-      const updatedChecked = state.weeks[state.currentWeek][
-        payload.name
-      ].checked.map((item, index) => (index !== payload.day ? item : !item));
+      const week = payload.week;
+      const { frequency } = state.weeks[week][payload.name];
+      const updatedChecked = state.weeks[week][payload.name].checked.map(
+        (item, index) => (index !== payload.day ? item : !item)
+      );
 
       const { habitSucceded, habitFailed } = getHabitStatus(
         frequency,
@@ -121,13 +128,13 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
         ...state,
         weeks: {
           ...state.weeks,
-          [state.currentWeek]: {
-            ...state.weeks[state.currentWeek],
+          [week]: {
+            ...state.weeks[week],
             [payload.name]: {
-              ...state.weeks[state.currentWeek][payload.name],
+              ...state.weeks[week][payload.name],
               habitSucceded,
               habitFailed,
-              checked: state.weeks[state.currentWeek][payload.name].checked.map(
+              checked: state.weeks[week][payload.name].checked.map(
                 (item, index) => (index !== payload.day ? item : !item)
               )
             }
