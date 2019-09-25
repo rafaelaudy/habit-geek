@@ -4,8 +4,11 @@ import SaveHabit from "../habits/SaveHabit";
 import DashboardView from "./DashboardView";
 
 const Dashboard = ({
-  habits,
   username,
+  currentHabits,
+  previousHabits,
+  currentWeek,
+  previousWeek,
   saveHabit,
   deleteHabit,
   toggleDayHabit
@@ -14,7 +17,7 @@ const Dashboard = ({
 
   if (isEditingHabit.isEditing) {
     const { name, frequency, type } = isEditingHabit.id
-      ? habits.filter(({ name }) => name === isEditingHabit.id)[0]
+      ? currentHabits.filter(({ name }) => name === isEditingHabit.id)[0]
       : {};
 
     return (
@@ -25,7 +28,7 @@ const Dashboard = ({
         type={type}
         saveHabit={saveHabit}
         deleteHabit={deleteHabit}
-        goBack={() => setIsEditingHabit({})}
+        onGoBack={() => setIsEditingHabit({})}
       />
     );
   }
@@ -33,9 +36,12 @@ const Dashboard = ({
   return (
     <DashboardView
       username={username}
-      habits={habits}
-      addNewHabit={() => setIsEditingHabit({ isEditing: true })}
-      updateHabit={id => setIsEditingHabit({ isEditing: true, id })}
+      currentHabits={currentHabits}
+      previousHabits={previousHabits}
+      currentWeek={currentWeek}
+      previousWeek={previousWeek}
+      onAddNewHabit={() => setIsEditingHabit({ isEditing: true })}
+      onUpdateHabit={id => setIsEditingHabit({ isEditing: true, id })}
       toggleDayHabit={toggleDayHabit}
     />
   );

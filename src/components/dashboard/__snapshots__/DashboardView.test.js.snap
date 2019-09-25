@@ -1,25 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DashboardView component Don't show username is none is provided 1`] = `
-<div
-  className="large-size-container"
+exports[`DashboardView component Doesn't show username is none is provided 1`] = `
+<h2
+  className="mb-3"
 >
-  <h2
-    className="mb-3"
-  >
-    What have you done this week
-    ?
-  </h2>
-  <div
-    className="d-flex justify-content-center"
-  >
-    <button
-      className="btn btn-primary btn-lg"
-    >
-      I'll add a new habit!
-    </button>
-  </div>
-</div>
+  What have you done this week
+  ?
+</h2>
 `;
 
 exports[`DashboardView component Renders static elements 1`] = `
@@ -30,16 +17,33 @@ exports[`DashboardView component Renders static elements 1`] = `
     className="mb-3"
   >
     What have you done this week
-     rafa
+     username
     ?
   </h2>
+  <h5
+    className="mb-3"
+  >
+    Current week
+  </h5>
+  <DashboardWeekHeader
+    hasPreviousWeek="y1w0"
+    isCurrentWeek={true}
+    toggleWeek={[Function]}
+  />
   <HabitTable
     habits={
       Array [
-        Object {},
-        Object {},
+        Object {
+          "checked": Array [],
+          "frequency": "1",
+          "name": "write",
+          "type": "health",
+        },
       ]
     }
+    onUpdateHabit={[Function]}
+    toggleDayHabit={[Function]}
+    week="y1w1"
   />
   <hr />
   <div
@@ -47,6 +51,7 @@ exports[`DashboardView component Renders static elements 1`] = `
   >
     <button
       className="btn btn-primary btn-lg"
+      onClick={[Function]}
     >
       I'll add a new habit!
     </button>

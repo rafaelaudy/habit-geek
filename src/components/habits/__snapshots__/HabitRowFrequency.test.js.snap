@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitRowFrequency component Renders static elements 1`] = `
+<div
+  className="habit__cell-frequency-container  "
+>
+  <div
+    className="habit__cell"
+    key="check-name-0"
+  >
+    <HabitCheckbox
+      clickHandler={[Function]}
+      isChecked={true}
+      isDisabled={false}
+      isReadOnly={true}
+    />
+  </div>
+  <div
+    className="habit__cell"
+    key="check-name-1"
+  >
+    <HabitCheckbox
+      clickHandler={[Function]}
+      isChecked={true}
+      isDisabled={false}
+      isReadOnly={true}
+    />
+  </div>
+  <div
+    className="habit__cell"
+    key="check-name-2"
+  >
+    <HabitCheckbox
+      clickHandler={[Function]}
+      isChecked={false}
+      isDisabled={false}
+      isReadOnly={true}
+    />
+  </div>
+  <div
+    className="habit__cell"
+    key="check-name-3"
+  >
+    <HabitCheckbox
+      clickHandler={[Function]}
+      isChecked={false}
+      isDisabled={false}
+      isReadOnly={true}
+    />
+  </div>
+  <div
+    className="habit__cell"
+    key="check-name-4"
+  >
+    <HabitCheckbox
+      clickHandler={[Function]}
+      isChecked={true}
+      isDisabled={false}
+      isReadOnly={true}
+    />
+  </div>
+  <div
+    className="habit__cell"
+    key="check-name-5"
+  >
+    <HabitCheckbox
+      clickHandler={[Function]}
+      isChecked={false}
+      isDisabled={false}
+      isReadOnly={true}
+    />
+  </div>
+  <div
+    className="habit__cell"
+    key="check-name-6"
+  >
+    <HabitCheckbox
+      clickHandler={[Function]}
+      isChecked={false}
+      isDisabled={false}
+      isReadOnly={true}
+    />
+  </div>
+</div>
+`;

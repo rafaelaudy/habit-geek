@@ -121,28 +121,25 @@ describe("habitsReducer - toggles a habit", () => {
     state = habitsReducer(state, startNewWeek());
     state = habitsReducer(state, toggleDayHabit("y1w1", "read", 1));
     state = habitsReducer(state, toggleDayHabit("y1w2", "read", 2));
-    expect(state.weeks).toEqual({
-      y1w1: {
-        read: {
-          checked: [false, true, false, false, false, false, false],
-          frequency: "2",
-          name: "read",
-          type: "hobby",
-          habitFailed: false,
-          habitSucceded: false
-        }
-      },
-      y1w2: {
-        read: {
-          checked: [false, false, true, false, false, false, false],
-          frequency: "2",
-          name: "read",
-          type: "hobby",
-          habitFailed: false,
-          habitSucceded: false
-        }
-      }
-    });
+    const week1Checked = [false, true, false, false, false, false, false];
+    const week2Checked = [false, false, true, false, false, false, false];
+    expect(state.weeks.y1w1.read.checked).toEqual(week1Checked);
+    expect(state.weeks.y1w2.read.checked).toEqual(week2Checked);
+  });
+
+  it("marks habits as completed or incompleted on previous weeks", () => {
+    let state = habitsReducer(
+      undefined,
+      saveHabit(undefined, "read", "hobby", "2")
+    );
+    getCurrentWeek.mockReturnValueOnce("y1w2");
+    state = habitsReducer(state, startNewWeek());
+    state = habitsReducer(state, toggleDayHabit("y1w1", "read", 1));
+    expect(state.weeks.y1w1.read.habitFailed).toEqual(true);
+    expect(state.weeks.y1w1.read.habitSucceded).toEqual(false);
+    state = habitsReducer(state, toggleDayHabit("y1w1", "read", 2));
+    expect(state.weeks.y1w1.read.habitFailed).toEqual(false);
+    expect(state.weeks.y1w1.read.habitSucceded).toEqual(true);
   });
 
   it("marks habits that are completed for that week", () => {

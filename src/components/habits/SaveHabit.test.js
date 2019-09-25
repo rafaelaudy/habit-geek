@@ -5,13 +5,13 @@ import SaveHabit from "./SaveHabit";
 let fakeEvent;
 let saveHabitMock;
 let deleteHabitMock;
-let goBackMock;
+let onGoBackMock;
 
 describe("SaveHabit component", () => {
   beforeEach(() => {
     saveHabitMock = jest.fn();
     deleteHabitMock = jest.fn();
-    goBackMock = jest.fn();
+    onGoBackMock = jest.fn();
     fakeEvent = {
       preventDefault: jest.fn(),
       target: { checkValidity: jest.fn().mockReturnValue(true) }
@@ -27,7 +27,7 @@ describe("SaveHabit component", () => {
 
   it("creates a habit", () => {
     const saveHabits = shallow(
-      <SaveHabit saveHabit={saveHabitMock} goBack={goBackMock}></SaveHabit>
+      <SaveHabit saveHabit={saveHabitMock} onGoBack={onGoBackMock}></SaveHabit>
     );
     saveHabits
       .find("#new-habit-name")
@@ -45,7 +45,7 @@ describe("SaveHabit component", () => {
       "Social",
       "1x"
     );
-    expect(goBackMock).toBeCalled();
+    expect(onGoBackMock).toBeCalled();
   });
 
   it("updates a habit", () => {
@@ -53,7 +53,7 @@ describe("SaveHabit component", () => {
       <SaveHabit
         id="read"
         saveHabit={saveHabitMock}
-        goBack={goBackMock}
+        onGoBack={onGoBackMock}
       ></SaveHabit>
     );
     saveHabits
@@ -67,12 +67,12 @@ describe("SaveHabit component", () => {
       .simulate("change", { target: { value: "1x" } });
     saveHabits.find("form").simulate("submit", fakeEvent);
     expect(saveHabitMock).toHaveBeenCalledWith("read", "Read", "Social", "1x");
-    expect(goBackMock).toBeCalled();
+    expect(onGoBackMock).toBeCalled();
   });
 
   it("validates forms", () => {
     const saveHabit = shallow(
-      <SaveHabit saveHabit={saveHabitMock} goBack={goBackMock}></SaveHabit>
+      <SaveHabit saveHabit={saveHabitMock} onGoBack={onGoBackMock}></SaveHabit>
     );
     fakeEvent.target.checkValidity.mockReturnValueOnce(false);
     saveHabit.find("form").simulate("submit", fakeEvent);
@@ -80,7 +80,7 @@ describe("SaveHabit component", () => {
     expect(fakeEvent.preventDefault).toHaveBeenCalledTimes(1);
     expect(fakeEvent.target.checkValidity).toHaveBeenCalledTimes(1);
     expect(saveHabitMock).toHaveBeenCalledTimes(0);
-    expect(goBackMock).toHaveBeenCalledTimes(0);
+    expect(onGoBackMock).toHaveBeenCalledTimes(0);
   });
 
   it("deletes a habit", () => {
@@ -88,17 +88,17 @@ describe("SaveHabit component", () => {
       <SaveHabit
         id="read"
         deleteHabit={deleteHabitMock}
-        goBack={goBackMock}
+        onGoBack={onGoBackMock}
       ></SaveHabit>
     );
     saveHabits.find(".btn-danger").simulate("click");
     expect(deleteHabitMock).toHaveBeenCalledWith("read");
-    expect(goBackMock).toBeCalled();
+    expect(onGoBackMock).toBeCalled();
   });
 
   it("selects change on blur for accessibility", () => {
     const saveHabits = shallow(
-      <SaveHabit saveHabit={saveHabitMock} goBack={goBackMock}></SaveHabit>
+      <SaveHabit saveHabit={saveHabitMock} onGoBack={onGoBackMock}></SaveHabit>
     );
     saveHabits
       .find("#new-habit-type")
@@ -111,8 +111,8 @@ describe("SaveHabit component", () => {
   });
 
   it("cancels habit creation", () => {
-    const saveHabits = shallow(<SaveHabit goBack={goBackMock}></SaveHabit>);
+    const saveHabits = shallow(<SaveHabit onGoBack={onGoBackMock}></SaveHabit>);
     saveHabits.find(".btn-secondary").simulate("click");
-    expect(goBackMock).toHaveBeenCalled();
+    expect(onGoBackMock).toHaveBeenCalled();
   });
 });

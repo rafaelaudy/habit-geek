@@ -1,37 +1,46 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import DashboardView from "./DashboardView";
+
+const props = {
+  username: "username",
+  currentHabits: [
+    { name: "write", frequency: "1", type: "health", checked: [] }
+  ],
+  previousHabits: [],
+  currentWeek: "y1w1",
+  previousWeek: "y1w0",
+  onAddNewHabit: () => {},
+  onUpdateHabit: () => {},
+  toggleDayHabit: () => {}
+};
 
 describe("DashboardView component", () => {
   it("Renders static elements", () => {
-    const dashboardView = shallow(
-      <DashboardView username="rafa" habits={[{}, {}]} />
-    );
+    const dashboardView = shallow(<DashboardView {...props} />);
     expect(dashboardView).toMatchSnapshot();
   });
 
-  it("Don't show habits if none are stored", () => {
-    const dashboardView = shallow(
-      <DashboardView username="rafa" habits={[]} />
-    );
-    expect(dashboardView.find("HabitTable").length).toBe(0);
+  it("Doesn't show username is none is provided", () => {
+    const dashboardView = shallow(<DashboardView {...props} username="" />);
+    expect(dashboardView.find("h2")).toMatchSnapshot();
   });
 
-  it("Don't show username is none is provided", () => {
-    const dashboardView = shallow(<DashboardView habits={[]} />);
-    expect(dashboardView).toMatchSnapshot();
+  it("Doesn't show the add button on previous weeks", () => {
+    const dashboardView = mount(<DashboardView {...props} username="" />);
+    dashboardView
+      .find("button")
+      .at(0)
+      .simulate("click");
+    expect(dashboardView.find(".btn-primary").length).toBe(0);
   });
 
   it("starts to create a habit", () => {
-    const addNewHabitMock = jest.fn();
+    const onAddNewHabitMock = jest.fn();
     const dashboardView = shallow(
-      <DashboardView
-        username="rafa"
-        habits={[]}
-        addNewHabit={addNewHabitMock}
-      />
+      <DashboardView {...props} onAddNewHabit={onAddNewHabitMock} />
     );
     dashboardView.find(".btn-primary").simulate("click");
-    expect(addNewHabitMock).toHaveBeenCalledTimes(1);
+    expect(onAddNewHabitMock).toHaveBeenCalledTimes(1);
   });
 });

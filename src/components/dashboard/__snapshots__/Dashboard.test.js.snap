@@ -2,26 +2,32 @@
 
 exports[`Dashboard component Renders Dashboard list 1`] = `
 <DashboardView
-  addNewHabit={[Function]}
-  habits={Array []}
-  toggleDayHabit=""
-  updateHabit={[Function]}
-  username=""
+  currentHabits={Array []}
+  currentWeek="y1w1"
+  onAddNewHabit={[Function]}
+  onUpdateHabit={[Function]}
+  previousHabits={Array []}
+  previousWeek="y1w0"
+  toggleDayHabit={[Function]}
+  username="rafa"
 />
 `;
 
 exports[`Dashboard component Renders New Habit 1`] = `
 <Dashboard
-  deleteHabit=""
-  habits={Array []}
-  saveHabit=""
-  toggleDayHabit=""
-  username=""
+  currentHabits={Array []}
+  currentWeek="y1w1"
+  deleteHabit={[Function]}
+  previousHabits={Array []}
+  previousWeek="y1w0"
+  saveHabit={[Function]}
+  toggleDayHabit={[Function]}
+  username="rafa"
 >
   <SaveHabit
-    deleteHabit=""
-    goBack={[Function]}
-    saveHabit=""
+    deleteHabit={[Function]}
+    onGoBack={[Function]}
+    saveHabit={[Function]}
   >
     <form
       className="mobile-size-container "

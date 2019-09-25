@@ -14,6 +14,8 @@ In the project directory, you can run:
 
 ## Next improvements:
 
+- Refactor CSS
+- Fails or approves previous habits when week changes
 - Chek trello board
 
 ### Code Splitting

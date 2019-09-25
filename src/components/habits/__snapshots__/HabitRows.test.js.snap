@@ -1,3 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HabitRows component Renders static elements 1`] = `null`;
+exports[`HabitRows component Renders static elements 1`] = `
+<div
+  className="habit__row"
+  key="check-container-0"
+>
+  <div
+    className="habit__cell-habit-container"
+  >
+    <span>
+      (
+      frequency
+      x) - 
+      name
+    </span>
+  </div>
+  <HabitRowFrequency
+    checked="checked"
+    habitFailed="habitFailed"
+    habitSucceded="habitSucceded"
+    isReadOnly={false}
+    name="name"
+    toggleDayHabit={[Function]}
+    week="week"
+  />
+  <HabitRowActions
+    name="name"
+    onUpdateHabit={[Function]}
+    week="week"
+  />
+</div>
+`;

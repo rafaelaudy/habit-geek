@@ -6,12 +6,25 @@ describe("HabitTable component", () => {
   it("Renders static elements", () => {
     const habitTable = shallow(
       <HabitTable
-        habits={[]}
+        week="y1w1"
+        habits={[{}, {}]}
         isReadOnly={true}
         toggleDayHabit={() => {}}
-        updateHabit={() => {}}
+        onUpdateHabit={() => {}}
       />
     );
     expect(habitTable).toMatchSnapshot();
+  });
+
+  it("Returns null if no habits is passed", () => {
+    const habitTable = shallow(
+      <HabitTable
+        habits={[]}
+        isReadOnly={true}
+        toggleDayHabit={() => {}}
+        onUpdateHabit={() => {}}
+      />
+    );
+    expect(habitTable.type()).toBe(null);
   });
 });

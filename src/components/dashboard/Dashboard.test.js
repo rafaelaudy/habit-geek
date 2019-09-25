@@ -3,12 +3,20 @@ import { shallow, mount } from "enzyme";
 import Dashboard from "./Dashboard";
 
 const props = {
-  habits: [],
-  username: "",
-  saveHabit: "",
-  deleteHabit: "",
-  toggleDayHabit: ""
+  username: "rafa",
+  currentHabits: [],
+  previousHabits: [],
+  currentWeek: "y1w1",
+  previousWeek: "y1w0",
+  saveHabit: () => {},
+  deleteHabit: () => {},
+  toggleDayHabit: () => {}
 };
+
+jest.mock("../../utils/dateUtils.js", () => ({
+  getTodayIndex: jest.fn().mockReturnValue(1),
+  getCurrentWeek: jest.fn().mockReturnValue("y1w1")
+}));
 
 describe("Dashboard component", () => {
   it("Renders Dashboard list", () => {
@@ -25,7 +33,8 @@ describe("Dashboard component", () => {
   it("Updates habit", () => {
     const dashboard = mount(
       <Dashboard
-        habits={[
+        currentWeek="y1w1"
+        currentHabits={[
           { name: "write", frequency: "1", type: "health", checked: [] }
         ]}
       />
@@ -39,7 +48,7 @@ describe("Dashboard component", () => {
   it("Comes back from new/update habit", () => {
     const dashboard = mount(
       <Dashboard
-        habits={[
+        currentHabits={[
           { name: "write", frequency: "1", type: "health", checked: [] }
         ]}
       />

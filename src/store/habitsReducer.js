@@ -6,6 +6,8 @@ import {
 } from "../actions/habitActions";
 import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
 
+// import mockState from "./habitMockState";
+
 // {
 //   1 (weeks) {
 //      name: {name, type, frequency, habitSucceded, habitFailed, checked: [false, false, false, false, false, false, false] };
@@ -13,18 +15,22 @@ import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
 // }
 
 // import mockState from "./habitMockState";
-// const habitsReducer = (state = mockState, { type, payload }) => {
 
-const getHabitStatus = (frequency, checked) => {
+const getHabitStatus = (frequency, checked, isPreviousWeek) => {
   const todayIndex = getTodayIndex();
   const daysUntilEndOfWeek = checked[todayIndex]
     ? -todayIndex + 6
     : -todayIndex + 7;
   const checkedDays = checked.filter(checkedDay => checkedDay).length;
 
+  const habitSucceded = frequency <= checkedDays;
+  const habitFailed = isPreviousWeek
+    ? !habitSucceded
+    : frequency > checkedDays + daysUntilEndOfWeek;
+
   return {
-    habitSucceded: frequency <= checkedDays,
-    habitFailed: frequency > checkedDays + daysUntilEndOfWeek
+    habitSucceded,
+    habitFailed
   };
 };
 
@@ -35,6 +41,7 @@ const defaulState = {
   currentWeek: getCurrentWeek()
 };
 
+// const habitsReducer = (state = mockState, { type, payload }) => {
 const habitsReducer = (state = defaulState, { type, payload }) => {
   switch (type) {
     case START_NEW_WEEK: {
@@ -118,10 +125,12 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
       const updatedChecked = state.weeks[week][payload.name].checked.map(
         (item, index) => (index !== payload.day ? item : !item)
       );
+      const isPreviousWeek = payload.week !== state.currentWeek;
 
       const { habitSucceded, habitFailed } = getHabitStatus(
         frequency,
-        updatedChecked
+        updatedChecked,
+        isPreviousWeek
       );
 
       return {

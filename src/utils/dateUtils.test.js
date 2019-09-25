@@ -21,7 +21,8 @@ describe("dateUtils component", () => {
     });
 
     it("considers sunday as the last day of the week", () => {
-      expect(getCurrentWeek(new Date("2019-01-13T12:34:56z"))).toBe("y2019w3");
+      expect(getCurrentWeek(new Date("2019-01-13T23:54:56z"))).toBe("y2019w2");
+      expect(getCurrentWeek(new Date("2019-01-14T00:00:00z"))).toBe("y2019w3");
     });
   });
 

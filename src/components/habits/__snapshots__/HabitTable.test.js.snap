@@ -8,10 +8,16 @@ exports[`HabitTable component Renders static elements 1`] = `
     isReadOnly={true}
   />
   <HabitRows
-    habits={Array []}
+    habits={
+      Array [
+        Object {},
+        Object {},
+      ]
+    }
     isReadOnly={true}
+    onUpdateHabit={[Function]}
     toggleDayHabit={[Function]}
-    updateHabit={[Function]}
+    week="y1w1"
   />
 </div>
 `;

@@ -1,21 +1,5 @@
 export default {
   weeks: {
-    y2019w35: {
-      Read: {
-        name: "Read",
-        type: "Health",
-        frequency: "3",
-        habitSucceded: true,
-        checked: [true, false, false, true, true, false, false]
-      },
-      Write: {
-        name: "Write",
-        type: "Career",
-        frequency: "4",
-        habitFailed: true,
-        checked: [true, false, false, false, true, false, false]
-      }
-    },
     y2019w36: {
       Read: {
         name: "Read",
@@ -32,23 +16,23 @@ export default {
         checked: [true, false, false, true, true, true, false]
       }
     },
-    y2019w37: {
+    y2019w38: {
       Read: {
         name: "Read",
         type: "Health",
         frequency: "3",
         habitSucceded: true,
-        checked: [true, false, false, false, true, true, true]
+        checked: [true, false, false, true, true, false, false]
       },
       Write: {
         name: "Write",
         type: "Career",
         frequency: "4",
-        habitSucceded: true,
-        checked: [true, false, false, true, true, true, false]
+        habitFailed: true,
+        checked: [true, false, false, false, true, false, false]
       }
     }
   },
-  currentWeek: "y2019w37",
+  currentWeek: "y2019w38",
   isCreatingHabit: false
 };

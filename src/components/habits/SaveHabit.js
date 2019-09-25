@@ -7,7 +7,7 @@ const SaveHabit = ({
   frequency: defaultFrequency = "",
   saveHabit,
   deleteHabit,
-  goBack
+  onGoBack
 }) => {
   const [name, setName] = useState(defaultName);
   const [type, setType] = useState(defaultType);
@@ -20,13 +20,13 @@ const SaveHabit = ({
 
     if (event.target.checkValidity()) {
       saveHabit(id, name, type, frequency);
-      goBack();
+      onGoBack();
     }
   };
 
   const deleteHabitAndClose = () => {
     deleteHabit(id);
-    goBack();
+    onGoBack();
   };
 
   return (
@@ -106,7 +106,7 @@ const SaveHabit = ({
       <button
         type="button"
         className="btn btn-secondary btn-lg btn-block"
-        onClick={goBack}
+        onClick={onGoBack}
       >
         Maybe tomorrow...
       </button>
