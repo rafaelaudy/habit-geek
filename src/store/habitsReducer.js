@@ -45,10 +45,26 @@ const defaulState = {
 const habitsReducer = (state = defaulState, { type, payload }) => {
   switch (type) {
     case START_NEW_WEEK: {
-      const newWeek = {};
+      const newWeekHabits = {};
+      const previousWeekHabits = {};
+
       Object.keys(state.weeks[state.currentWeek]).forEach(key => {
-        const { name, type, frequency } = state.weeks[state.currentWeek][key];
-        newWeek[key] = {
+        const habit = state.weeks[state.currentWeek][key];
+        const { name, type, frequency, checked } = habit;
+
+        const { habitSucceded, habitFailed } = getHabitStatus(
+          frequency,
+          checked,
+          true
+        );
+
+        previousWeekHabits[key] = {
+          ...habit,
+          habitSucceded,
+          habitFailed
+        };
+
+        newWeekHabits[key] = {
           name,
           type,
           frequency,
@@ -69,7 +85,8 @@ const habitsReducer = (state = defaulState, { type, payload }) => {
         previousWeek,
         weeks: {
           ...state.weeks,
-          [currentWeek]: newWeek
+          [state.currentWeek]: previousWeekHabits,
+          [currentWeek]: newWeekHabits
         }
       };
     }

@@ -13,26 +13,31 @@ jest.mock("../utils/dateUtils", () => ({
 }));
 
 describe("habitsReducer - start new week", () => {
-  it("starts a new week with previous week set", () => {
-    const initialState = {
-      weeks: {
-        y1w0: {
-          drive: {
-            checked: [false, false, true, false, false, false, false],
-            frequency: "1",
-            name: "read",
-            type: "hobby"
-          },
-          read: {
-            checked: [false, true, false, true, false, false, false],
-            frequency: "1",
-            name: "read",
-            type: "hobby"
-          }
+  const initialState = {
+    weeks: {
+      y1w0: {
+        drive: {
+          checked: [false, false, true, false, false, false, false],
+          frequency: "3",
+          name: "read",
+          type: "hobby",
+          habitFailed: true,
+          habitSucceded: false
+        },
+        read: {
+          checked: [false, true, false, true, false, false, false],
+          frequency: "1",
+          name: "read",
+          type: "hobby",
+          habitFailed: false,
+          habitSucceded: true
         }
-      },
-      currentWeek: "y1w0"
-    };
+      }
+    },
+    currentWeek: "y1w0"
+  };
+
+  it("starts a new week with previous week set", () => {
     const state = habitsReducer(initialState, startNewWeek());
     expect(state.currentWeek).toEqual("y1w1");
     expect(state.previousWeek).toEqual("y1w0");
@@ -41,36 +46,21 @@ describe("habitsReducer - start new week", () => {
       y1w1: {
         drive: {
           ...initialState.weeks.y1w0.drive,
-          checked: [false, false, false, false, false, false, false]
+          checked: [false, false, false, false, false, false, false],
+          habitFailed: undefined,
+          habitSucceded: undefined
         },
         read: {
           ...initialState.weeks.y1w0.read,
-          checked: [false, false, false, false, false, false, false]
+          checked: [false, false, false, false, false, false, false],
+          habitFailed: undefined,
+          habitSucceded: undefined
         }
       }
     });
   });
 
   it("starts a new week without a previous week set", () => {
-    const initialState = {
-      weeks: {
-        y1w0: {
-          drive: {
-            checked: [false, false, true, false, false, false, false],
-            frequency: "1",
-            name: "read",
-            type: "hobby"
-          },
-          read: {
-            checked: [false, true, false, true, false, false, false],
-            frequency: "1",
-            name: "read",
-            type: "hobby"
-          }
-        }
-      },
-      currentWeek: "y1w0"
-    };
     getCurrentWeek.mockReturnValueOnce("y1w2");
     const state = habitsReducer(initialState, startNewWeek());
     expect(state.currentWeek).toEqual("y1w2");
@@ -80,14 +70,26 @@ describe("habitsReducer - start new week", () => {
       y1w2: {
         drive: {
           ...initialState.weeks.y1w0.drive,
-          checked: [false, false, false, false, false, false, false]
+          checked: [false, false, false, false, false, false, false],
+          habitFailed: undefined,
+          habitSucceded: undefined
         },
         read: {
           ...initialState.weeks.y1w0.read,
-          checked: [false, false, false, false, false, false, false]
+          checked: [false, false, false, false, false, false, false],
+          habitFailed: undefined,
+          habitSucceded: undefined
         }
       }
     });
+  });
+
+  it("sets failure and success status for the previous week habits", () => {
+    const state = habitsReducer(initialState, startNewWeek());
+    expect(state.weeks.y1w0.drive.habitSucceded).toEqual(false);
+    expect(state.weeks.y1w0.drive.habitFailed).toEqual(true);
+    expect(state.weeks.y1w0.read.habitSucceded).toEqual(true);
+    expect(state.weeks.y1w0.read.habitFailed).toEqual(false);
   });
 });
 
@@ -255,6 +257,17 @@ describe("habitsReducer - creates a habit", () => {
   });
 });
 
+describe("habitsReducer - deletes a habit", () => {
+  it("deletes a habit", () => {
+    let state = habitsReducer(
+      undefined,
+      saveHabit(undefined, " read  ", "hobby", "1")
+    );
+    state = habitsReducer(state, deleteHabit(" read "));
+    expect(state.weeks).toEqual({ y1w1: {} });
+  });
+});
+
 describe("habitsReducer - updates a habit", () => {
   [
     {
@@ -309,18 +322,7 @@ describe("habitsReducer - updates a habit", () => {
   );
 });
 
-describe("habitsReducer - deletes a habit", () => {
-  it("deletes a habit", () => {
-    let state = habitsReducer(
-      undefined,
-      saveHabit(undefined, " read  ", "hobby", "1")
-    );
-    state = habitsReducer(state, deleteHabit(" read "));
-    expect(state.weeks).toEqual({ y1w1: {} });
-  });
-});
-
-describe("habitsReducer", () => {
+describe("habitsReducer - default state", () => {
   it("returns state when no recognized action is provided", () => {
     const initialState = { works: true };
     const state = habitsReducer(initialState, { type: "NOT_RECOGNIZED" });
