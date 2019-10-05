@@ -16,7 +16,7 @@ export default {
         checked: [true, false, false, true, true, true, false]
       }
     },
-    y2019w38: {
+    y2019w39: {
       Read: {
         name: "Read",
         type: "Health",
@@ -33,6 +33,6 @@ export default {
       }
     }
   },
-  currentWeek: "y2019w38",
+  currentWeek: "y2019w39",
   isCreatingHabit: false
 };

@@ -1,4 +1,4 @@
-import { getCurrentWeek, getTodayIndex } from "./dateUtils";
+import { getCurrentWeek, getTodayIndex, isToday } from "./dateUtils";
 
 describe("dateUtils component", () => {
   const RealDate = Date;

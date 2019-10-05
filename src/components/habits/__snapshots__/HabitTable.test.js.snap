@@ -6,6 +6,7 @@ exports[`HabitTable component Renders static elements 1`] = `
 >
   <HabitHeader
     isReadOnly={true}
+    week="y1w1"
   />
   <HabitRows
     habits={

@@ -11,37 +11,44 @@ exports[`HabitHeader component Renders static elements 1`] = `
     className="habit__cell-frequency-container"
   >
     <h5
-      className="habit__cell"
+      className="rounded-top habit__cell "
+      key="header-cell-0"
     >
       Mon
     </h5>
     <h5
-      className="habit__cell"
+      className="rounded-top habit__cell "
+      key="header-cell-1"
     >
       Tue
     </h5>
     <h5
-      className="habit__cell"
+      className="rounded-top habit__cell "
+      key="header-cell-2"
     >
       Wed
     </h5>
     <h5
-      className="habit__cell"
+      className="rounded-top habit__cell "
+      key="header-cell-3"
     >
       Thu
     </h5>
     <h5
-      className="habit__cell"
+      className="rounded-top habit__cell "
+      key="header-cell-4"
     >
       Fri
     </h5>
     <h5
-      className="habit__cell"
+      className="rounded-top habit__cell "
+      key="header-cell-5"
     >
       Sat
     </h5>
     <h5
-      className="habit__cell"
+      className="rounded-top habit__cell "
+      key="header-cell-6"
     >
       Sun
     </h5>

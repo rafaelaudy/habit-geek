@@ -1,7 +1,7 @@
 import React from "react";
 
 import HabitCheckbox from "./HabitCheckbox";
-import { getTodayIndex, getCurrentWeek } from "../../utils/dateUtils";
+import { getTodayIndex, getCurrentWeek, isToday } from "../../utils/dateUtils";
 
 const HabitRowFrequency = ({
   week,
@@ -23,11 +23,17 @@ const HabitRowFrequency = ({
       className={`habit__cell-frequency-container ${succededClass} ${failedClass}`}
     >
       {[...Array(7).keys()].map(checkIndex => {
+        const todayClass = isToday(week, checkIndex)
+          ? "habit__cell--today"
+          : "";
         const isTodayOrBefore = todayIndex < checkIndex;
         const isDisabled = isCurrentWeek ? isTodayOrBefore : false;
 
         return (
-          <div className="habit__cell" key={`check-${name}-${checkIndex}`}>
+          <div
+            className={`habit__cell ${todayClass}`}
+            key={`check-${name}-${checkIndex}`}
+          >
             <HabitCheckbox
               clickHandler={() => toggleDayHabit(week, name, checkIndex)}
               isChecked={checked[checkIndex]}

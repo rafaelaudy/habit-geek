@@ -1,10 +1,12 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import HabitRowFrequency from "./HabitRowFrequency";
+import { isToday } from "../../utils/dateUtils";
 
 jest.mock("../../utils/dateUtils.js", () => ({
   getTodayIndex: jest.fn().mockReturnValue(1),
-  getCurrentWeek: jest.fn().mockReturnValue("y1w1")
+  getCurrentWeek: jest.fn().mockReturnValue("y1w1"),
+  isToday: jest.fn().mockReturnValue(false)
 }));
 
 const checked = [true, true, false, false, true, false, false];
@@ -31,6 +33,12 @@ describe("HabitRowFrequency component", () => {
     );
     expect(habitRowFrequency.find(".table-danger").length).toBe(1);
     expect(habitRowFrequency.find(".table-success").length).toBe(1);
+  });
+
+  it("shows border around current date", () => {
+    isToday.mockReturnValueOnce(true);
+    const habitRowFrequency = shallow(<HabitRowFrequency checked={checked} />);
+    expect(habitRowFrequency.find(".habit__cell--today").length).toBe(1);
   });
 
   it("disables checkboxes for dates in the future", () => {

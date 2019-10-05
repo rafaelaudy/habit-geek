@@ -13,7 +13,7 @@ const HabitTable = ({
 }) =>
   habits.length > 0 ? (
     <div className="mb-3">
-      <HabitHeader isReadOnly={isReadOnly}></HabitHeader>
+      <HabitHeader isReadOnly={isReadOnly} week={week}></HabitHeader>
       <HabitRows
         habits={habits}
         week={week}

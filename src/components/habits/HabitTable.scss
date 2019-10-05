@@ -1,3 +1,5 @@
+@import "../Variables.scss";
+
 .habit {
   &__table {
     display: flex;
@@ -7,6 +9,12 @@
 
   &__row {
     display: flex;
+
+    &:last-child .habit__cell--today {
+      border-bottom-width: $border-width;
+      border-bottom-left-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
   }
 
   &__cell-habit-container {
@@ -29,6 +37,18 @@
   &__cell {
     width: 55px;
     text-align: center;
+
+    &--today {
+      border: $border-width solid $muted;
+      border-width: 0 $border-width;
+    }
+    &--today-header {
+      border: $border-width solid $muted;
+      border-bottom-width: 0;
+      margin-bottom: 0px;
+      margin-top: -5px;
+      padding-top: 5px;
+    }
 
     .toggle {
       margin: 5px 0 5px 7px;
