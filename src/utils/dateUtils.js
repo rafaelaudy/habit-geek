@@ -1,4 +1,4 @@
-export const getCurrentWeek = function(providedDate) {
+export const getCurrentWeek = providedDate => {
   const date = providedDate || new Date();
   date.setHours(0, 0, 0, 0);
   const weekCalc = new Date(date.getFullYear(), 0, 1);
@@ -8,7 +8,48 @@ export const getCurrentWeek = function(providedDate) {
   return `y${date.getFullYear()}w${currentWeek}`;
 };
 
-export const getTodayIndex = function() {
+export const getTodayIndex = () => {
   const now = new Date();
   return now.getDay() === 0 ? 6 : now.getDay() - 1;
+};
+
+const getDateOfWeek = week => {
+  const [yearNumber, weekNumber] = week.substr(1).split("w");
+
+  const simple = new Date(yearNumber, 0, 1 + (weekNumber - 1) * 7);
+  const dow = simple.getDay();
+  const weekStart = simple;
+  if (dow <= 4) weekStart.setDate(simple.getDate() - simple.getDay() + 1);
+  else weekStart.setDate(simple.getDate() + 8 - simple.getDay());
+
+  let weekEnd = new Date(weekStart);
+  weekEnd.setDate(weekEnd.getDate() + 6);
+
+  return { weekStart, weekEnd };
+};
+
+const getShortDate = date => `${date.getDate()}/${getShortMonth(date)}`;
+
+export const getWeekIntervalText = week => {
+  const { weekStart, weekEnd } = getDateOfWeek(week);
+  return `${getShortDate(weekStart)} ... ${getShortDate(weekEnd)}`;
+};
+
+export const getShortMonth = date => {
+  const monthShortNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ];
+
+  return monthShortNames[date.getMonth()];
 };

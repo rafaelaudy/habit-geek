@@ -15,7 +15,8 @@ const props = {
 
 jest.mock("../../utils/dateUtils.js", () => ({
   getTodayIndex: jest.fn().mockReturnValue(1),
-  getCurrentWeek: jest.fn().mockReturnValue("y1w1")
+  getCurrentWeek: jest.fn().mockReturnValue("y1w1"),
+  getWeekIntervalText: jest.fn().mockReturnValue("30/Sep ... 6/Oct")
 }));
 
 describe("Dashboard component", () => {
@@ -39,7 +40,7 @@ describe("Dashboard component", () => {
         ]}
       />
     );
-    dashboard.find(".habit__cell-action-container.btn").simulate("click");
+    dashboard.find(".habit__row .btn").simulate("click");
     expect(dashboard.find("#new-habit-name").props().value).toBe("write");
     expect(dashboard.find("#new-habit-type").props().value).toBe("health");
     expect(dashboard.find("#new-habit-frequency").props().value).toBe("1");

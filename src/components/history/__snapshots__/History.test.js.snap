@@ -26,25 +26,25 @@ exports[`History component Renders static elements 1`] = `
   >
     <div
       className="card"
-      key="history-habit-1"
+      key="history-habit-y1w1"
     >
       <div
         className="card-header history__header"
-        id="history-habit-header-1"
+        id="history-habit-header-y1w1"
       >
         <button
-          aria-controls="history-habit-content-1"
+          aria-controls="history-habit-content-y1w1"
           aria-expanded="True"
           className="btn btn-secondary history__header-button"
           onClick={[Function]}
         >
-          Week 1 of 1
+          31/Dec ... 6/Jan
         </button>
       </div>
       <div
-        aria-labelledby="history-habit-header-1"
+        aria-labelledby="history-habit-header-y1w1"
         className="collapse show"
-        id="history-habit-content-1"
+        id="history-habit-content-y1w1"
       >
         <div
           className="card-body"
@@ -56,7 +56,7 @@ exports[`History component Renders static elements 1`] = `
               ]
             }
             isReadOnly={true}
-            key="history-habit-table-1"
+            key="history-habit-table-y1w1"
             toggleDayHabit={[Function]}
           />
         </div>
@@ -64,25 +64,25 @@ exports[`History component Renders static elements 1`] = `
     </div>
     <div
       className="card"
-      key="history-habit-2"
+      key="history-habit-y1w2"
     >
       <div
         className="card-header history__header"
-        id="history-habit-header-2"
+        id="history-habit-header-y1w2"
       >
         <button
-          aria-controls="history-habit-content-2"
+          aria-controls="history-habit-content-y1w2"
           aria-expanded="False"
           className="btn btn-secondary history__header-button"
           onClick={[Function]}
         >
-          Week 2 of 1
+          7/Jan ... 13/Jan
         </button>
       </div>
       <div
-        aria-labelledby="history-habit-header-2"
+        aria-labelledby="history-habit-header-y1w2"
         className="collapse "
-        id="history-habit-content-2"
+        id="history-habit-content-y1w2"
       >
         <div
           className="card-body"
@@ -94,7 +94,7 @@ exports[`History component Renders static elements 1`] = `
               ]
             }
             isReadOnly={true}
-            key="history-habit-table-2"
+            key="history-habit-table-y1w2"
             toggleDayHabit={[Function]}
           />
         </div>

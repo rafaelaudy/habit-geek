@@ -20,15 +20,11 @@ exports[`DashboardView component Renders static elements 1`] = `
      username
     ?
   </h2>
-  <h5
-    className="mb-3"
-  >
-    Current week
-  </h5>
   <DashboardWeekHeader
     hasPreviousWeek="y1w0"
     isCurrentWeek={true}
     toggleWeek={[Function]}
+    week="y1w1"
   />
   <HabitTable
     habits={

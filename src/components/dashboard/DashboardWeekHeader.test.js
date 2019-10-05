@@ -3,6 +3,7 @@ import { shallow } from "enzyme";
 import DashboardWeekHeader from "./DashboardWeekHeader";
 
 const props = {
+  week: "y1w1",
   isCurrentWeek: true,
   hasPreviousWeek: true,
   toggleWeek: () => {}
@@ -24,9 +25,17 @@ describe("DashboardWeekHeader component", () => {
   it("toggles the selected week", () => {
     const toggleWeekMock = jest.fn();
     const dashboardWeekHeader = shallow(
-      <DashboardWeekHeader {...props} toggleWeek={toggleWeekMock} />
+      <DashboardWeekHeader
+        {...props}
+        isCurrentWeek={false}
+        toggleWeek={toggleWeekMock}
+      />
     );
-    dashboardWeekHeader.find("button").simulate("click");
-    expect(toggleWeekMock).toHaveBeenCalledWith(false);
+    dashboardWeekHeader
+      .find("button")
+      .at(0)
+      .simulate("click");
+    expect(toggleWeekMock).toHaveBeenCalledWith(true);
+    expect(dashboardWeekHeader).toMatchSnapshot();
   });
 });

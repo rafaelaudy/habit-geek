@@ -14,8 +14,6 @@ import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
 //   }
 // }
 
-// import mockState from "./habitMockState";
-
 const getHabitStatus = (frequency, checked, isPreviousWeek) => {
   const todayIndex = getTodayIndex();
   const daysUntilEndOfWeek = checked[todayIndex]

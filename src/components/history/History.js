@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 
 import HabitTable from "../habits/HabitTable";
 import "./History.scss";
+import { getWeekIntervalText } from "../../utils/dateUtils";
 
 const History = ({ weeks }) => {
   const [openedList, setOpened] = useState({
@@ -23,30 +24,28 @@ const History = ({ weeks }) => {
 
   const getWeeks = () => {
     return weeks.map(({ week, habits }) => {
-      const [yearNumber, weekNumber] = week.substr(1).split("w");
-
       return (
-        <div className="card" key={`history-habit-${weekNumber}`}>
+        <div className="card" key={`history-habit-${week}`}>
           <div
             className="card-header history__header"
-            id={`history-habit-header-${weekNumber}`}
+            id={`history-habit-header-${week}`}
           >
             <button
               className="btn btn-secondary history__header-button"
               aria-expanded={openedList[week] ? "True" : "False"}
-              aria-controls={`history-habit-content-${weekNumber}`}
+              aria-controls={`history-habit-content-${week}`}
               onClick={() => toggleOpened(week)}
             >
-              {`Week ${weekNumber} of ${yearNumber}`}
+              {getWeekIntervalText(week)}
             </button>
           </div>
 
           <div
-            id={`history-habit-content-${weekNumber}`}
+            id={`history-habit-content-${week}`}
             className={`collapse ${openedList[week] ? "show" : ""}`}
-            aria-labelledby={`history-habit-header-${weekNumber}`}
+            aria-labelledby={`history-habit-header-${week}`}
           >
-            <div className="card-body">{getHabit(habits, weekNumber)}</div>
+            <div className="card-body">{getHabit(habits, week)}</div>
           </div>
         </div>
       );

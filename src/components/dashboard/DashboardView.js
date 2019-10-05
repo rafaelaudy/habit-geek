@@ -20,9 +20,9 @@ const DashboardView = ({
       <h2 className="mb-3">
         What have you done this week{username ? " " + username : ""}?
       </h2>
-      <h5 className="mb-3">Current week</h5>
 
       <DashboardWeekHeader
+        week={isCurrentWeek ? currentWeek : previousWeek}
         isCurrentWeek={isCurrentWeek}
         hasPreviousWeek={previousWeek}
         toggleWeek={setIsCurrentWeek}
