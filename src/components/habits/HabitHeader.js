@@ -1,8 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { isToday } from "../../utils/dateUtils";
 
 const HabitHeader = ({ isReadOnly, week }) => {
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const { t } = useTranslation();
+  const days = t("date-days-short", { returnObjects: true });
+
   const cellComponents = days.map((day, index) => {
     const todayClass = isToday(week, index) ? "habit__cell--today-header" : "";
     return (

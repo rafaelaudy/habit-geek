@@ -1,3 +1,5 @@
+import i18next from "i18next";
+
 const getDateOfWeek = week => {
   const [yearNumber, weekNumber] = week.substr(1).split("w");
 
@@ -36,21 +38,9 @@ export const getWeekIntervalText = week => {
 };
 
 export const getShortMonth = date => {
-  const monthShortNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec"
-  ];
-
+  const monthShortNames = i18next.t("date-months-short", {
+    returnObjects: true
+  });
   return monthShortNames[date.getMonth()];
 };
 

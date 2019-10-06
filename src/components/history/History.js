@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import HabitTable from "../habits/HabitTable";
 import "./History.scss";
@@ -8,6 +9,7 @@ const History = ({ weeks }) => {
   const [openedList, setOpened] = useState({
     [weeks[0] ? weeks[0].week : "empty"]: true
   });
+  const { t } = useTranslation();
 
   const toggleOpened = week => {
     setOpened({ ...openedList, [week]: openedList[week] ? false : true });
@@ -55,10 +57,10 @@ const History = ({ weeks }) => {
   return (
     <div className="large-size-container">
       {weeks.length === 0 ? (
-        <h2 className="mb-3">You just started, come back next week!</h2>
+        <h2 className="mb-3">{t("history-title-empty-data")}</h2>
       ) : (
         <Fragment>
-          <h2 className="mb-3">Here is your progress so far:</h2>
+          <h2 className="mb-3">{t("history-title")}</h2>
           <div id="history-accordion">{getWeeks()}</div>
         </Fragment>
       )}

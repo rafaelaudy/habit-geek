@@ -43,7 +43,7 @@ exports[`Dashboard component Renders New Habit 1`] = `
         <label
           htmlFor="new-habit-name"
         >
-          Name
+          Name:
         </label>
         <input
           className="form-control"
@@ -64,7 +64,7 @@ exports[`Dashboard component Renders New Habit 1`] = `
         <label
           htmlFor="new-habit-type"
         >
-          Type
+          Type:
         </label>
         <select
           className="form-control"
@@ -78,21 +78,25 @@ exports[`Dashboard component Renders New Habit 1`] = `
             value=""
           />
           <option
+            key="save-habit-type-option-Health"
             value="Health"
           >
             Health
           </option>
           <option
+            key="save-habit-type-option-Social"
             value="Social"
           >
             Social
           </option>
           <option
+            key="save-habit-type-option-Career"
             value="Career"
           >
             Career
           </option>
           <option
+            key="save-habit-type-option-Hobbies"
             value="Hobbies"
           >
             Hobbies
@@ -110,7 +114,7 @@ exports[`Dashboard component Renders New Habit 1`] = `
         <label
           htmlFor="new-habit-frequency"
         >
-          Frequency
+          Frequency:
         </label>
         <select
           className="form-control"

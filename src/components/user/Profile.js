@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { navigate } from "@reach/router";
+import { useTranslation } from "react-i18next";
+
 import "./Profile.scss";
 import avatar1 from "./../../imgs/avatars/001-burglar.svg";
 import avatar2 from "./../../imgs/avatars/002-woman.svg";
@@ -16,6 +18,7 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
   const [name, setName] = useState(initialName);
   const [selectedAvatar, setAvatar] = useState(avatar ? avatar : avatar1);
   const [validityChecked, setValidityChecked] = useState(false);
+  const { t } = useTranslation();
 
   const register = event => {
     event.preventDefault();
@@ -35,9 +38,9 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
       onSubmit={register}
       noValidate
     >
-      <h2>Super hero who?</h2>
+      <h2>{t("profile-title")}</h2>
       <div className="mb-3">
-        <label htmlFor="profile-name">Name:</label>
+        <label htmlFor="profile-name">{t("profile-name")}</label>
         <input
           id="profile-name"
           className="form-control"
@@ -45,12 +48,10 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
           onChange={e => setName(e.target.value)}
           required
         ></input>
-        <div className="invalid-feedback">
-          What an honor! The invisible habit geek among us?
-        </div>
+        <div className="invalid-feedback">{t("profile-name-validation")}</div>
       </div>
       <div className="mb-3">
-        <label htmlFor="profile-avatar">Avatar:</label>
+        <label htmlFor="profile-avatar">{t("profile-avatar")}</label>
         <div className="input-group profile__avatar-container">
           {avatars.map((avatar, index) => (
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events
@@ -58,7 +59,7 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
               key={`avatar-${index}`}
               onClick={() => setAvatar(avatar)}
               src={avatar}
-              alt="Avatar, not really important. Don't worry!"
+              alt={t("profile-avatar-alt-desc")}
               className={`profile__avatar ${
                 avatar === selectedAvatar ? "profile__avatar--selected" : ""
               }`}
@@ -68,7 +69,7 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
       </div>
       <hr className="mb-4" />
       <button type="submit" className="btn btn-primary btn-lg btn-block">
-        Done!
+        {t("profile-save")}
       </button>
     </form>
   );

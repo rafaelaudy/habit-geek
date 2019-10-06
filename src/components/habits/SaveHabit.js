@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const SaveHabit = ({
   id,
@@ -13,6 +14,7 @@ const SaveHabit = ({
   const [type, setType] = useState(defaultType);
   const [frequency, setFrequency] = useState(defaultFrequency);
   const [validityChecked, setValidityChecked] = useState(false);
+  const { t } = useTranslation();
 
   const saveAndClose = event => {
     event.preventDefault();
@@ -29,6 +31,10 @@ const SaveHabit = ({
     onGoBack();
   };
 
+  const typeOptions = t("save-habit-type-options", {
+    returnObjects: true
+  });
+
   return (
     <form
       onSubmit={saveAndClose}
@@ -37,9 +43,9 @@ const SaveHabit = ({
       }`}
       noValidate
     >
-      <h2>Nice, what will it be?</h2>
+      <h2>{t("save-habit-title")}</h2>
       <div className="mb-3">
-        <label htmlFor="new-habit-name">Name</label>
+        <label htmlFor="new-habit-name">{t("save-habit-name")}</label>
         <input
           id="new-habit-name"
           className="form-control"
@@ -48,11 +54,11 @@ const SaveHabit = ({
           required
         ></input>
         <div className="invalid-feedback">
-          Hey! Trying to commit to "Blank"?
+          {t("save-habit-name-validation")}
         </div>
       </div>
       <div className="mb-3">
-        <label htmlFor="new-habit-type">Type</label>
+        <label htmlFor="new-habit-type">{t("save-habit-type")}</label>
         <select
           id="new-habit-type"
           className="form-control"
@@ -62,15 +68,18 @@ const SaveHabit = ({
           required
         >
           <option value=""></option>
-          <option value="Health">Health</option>
-          <option value="Social">Social</option>
-          <option value="Career">Career</option>
-          <option value="Hobbies">Hobbies</option>
+          {typeOptions.map(({ key, label }) => (
+            <option key={`save-habit-type-option-${key}`} value={label}>
+              {label}
+            </option>
+          ))}
         </select>
-        <div className="invalid-feedback">Common... Help me help you!</div>
+        <div className="invalid-feedback">
+          {t("save-habit-type-validation")}
+        </div>
       </div>
       <div className="mb-3">
-        <label htmlFor="new-habit-frequency">Frequency</label>
+        <label htmlFor="new-habit-frequency">{t("save-habit-frequency")}</label>
         <select
           id="new-habit-frequency"
           className="form-control"
@@ -89,18 +98,20 @@ const SaveHabit = ({
           <option value="7">7x</option>
         </select>
         <div className="invalid-feedback">
-          Funny, that's an easy way to ace it!
+          {t("save-habit-frequency-validation")}
         </div>
       </div>
       <hr className="mb-4" />
-      <button className="btn btn-primary btn-lg btn-block">Let's start!</button>
+      <button className="btn btn-primary btn-lg btn-block">
+        {t("save-habit-save")}
+      </button>
       {id ? (
         <button
           type="button"
           className="btn btn-danger btn-lg btn-block"
           onClick={deleteHabitAndClose}
         >
-          Let's scrap this!
+          {t("save-habit-delete")}
         </button>
       ) : null}
       <button
@@ -108,7 +119,7 @@ const SaveHabit = ({
         className="btn btn-secondary btn-lg btn-block"
         onClick={onGoBack}
       >
-        Maybe tomorrow...
+        {t("save-habit-cancel")}
       </button>
     </form>
   );

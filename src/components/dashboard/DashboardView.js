@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import { useTranslation } from "react-i18next";
 
 import HabitTable from "../habits/HabitTable";
 import DashboardWeekHeader from "./DashboardWeekHeader";
@@ -14,12 +15,13 @@ const DashboardView = ({
   toggleDayHabit
 }) => {
   const [isCurrentWeek, setIsCurrentWeek] = useState(true);
+  const { t } = useTranslation();
+
+  let tUsername = username ? " " + username : username;
 
   return (
     <div className="large-size-container">
-      <h2 className="mb-3">
-        What have you done this week{username ? " " + username : ""}?
-      </h2>
+      <h2 className="mb-3">{t("my-habits-title", { username: tUsername })}</h2>
 
       <DashboardWeekHeader
         week={isCurrentWeek ? currentWeek : previousWeek}
@@ -40,7 +42,7 @@ const DashboardView = ({
           <hr />
           <div className="d-flex justify-content-center">
             <button className="btn btn-primary btn-lg" onClick={onAddNewHabit}>
-              I'll add a new habit!
+              {t("my-habits-new-habit")}
             </button>
           </div>
         </Fragment>
