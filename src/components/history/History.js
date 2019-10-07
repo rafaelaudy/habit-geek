@@ -55,7 +55,7 @@ const History = ({ weeks }) => {
   };
 
   return (
-    <div className="large-size-container">
+    <div className="history large-size-container">
       {weeks.length === 0 ? (
         <h2 className="mb-3">{t("history-title-empty-data")}</h2>
       ) : (

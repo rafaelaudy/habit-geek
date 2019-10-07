@@ -7,3 +7,9 @@
     width: 100%;
   }
 }
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 0;
+  }
+}
