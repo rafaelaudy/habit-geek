@@ -3,6 +3,7 @@ import History from "./History";
 
 const mapStateToProps = ({ habits }) => {
   let mappedWeeks = Object.keys(habits.weeks)
+    .sort()
     .map(weekKey => {
       return {
         week: weekKey,

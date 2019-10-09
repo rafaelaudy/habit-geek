@@ -8,12 +8,14 @@ import {
 
 const mapHabits = habits =>
   habits
-    ? Object.keys(habits).map(key => {
-        return {
-          name: key,
-          ...habits[key]
-        };
-      })
+    ? Object.keys(habits)
+        .sort()
+        .map(key => {
+          return {
+            name: key,
+            ...habits[key]
+          };
+        })
     : [];
 
 const mapStateToProps = ({ habits, user }) => {
