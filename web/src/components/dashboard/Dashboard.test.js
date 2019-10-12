@@ -13,7 +13,7 @@ const props = {
   toggleDayHabit: () => {}
 };
 
-jest.mock("../../utils/dateUtils.js", () => ({
+jest.mock("@habit-geek/shared/utils/dateUtils.js", () => ({
   getTodayIndex: jest.fn().mockReturnValue(1),
   getCurrentWeek: jest.fn().mockReturnValue("y1w1"),
   getWeekIntervalText: jest.fn().mockReturnValue("30/Sep ... 6/Oct"),

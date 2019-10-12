@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import HabitRowFrequency from "./HabitRowFrequency";
-import { isToday } from "../../utils/dateUtils";
+import { isToday } from "@habit-geek/shared/utils/dateUtils";
 
-jest.mock("../../utils/dateUtils.js", () => ({
+jest.mock("@habit-geek/shared/utils/dateUtils.js", () => ({
   getTodayIndex: jest.fn().mockReturnValue(1),
   getCurrentWeek: jest.fn().mockReturnValue("y1w1"),
   isToday: jest.fn().mockReturnValue(false)

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { isToday } from "../../utils/dateUtils";
+import { isToday } from "@habit-geek/shared/utils/dateUtils";
 
 const HabitHeader = ({ isReadOnly, week }) => {
   const { t } = useTranslation();

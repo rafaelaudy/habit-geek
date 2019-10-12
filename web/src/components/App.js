@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "@reach/router";
 
-import { getCurrentWeek } from "../utils/dateUtils";
+import { getCurrentWeek } from "@habit-geek/shared/utils/dateUtils";
 
 import ProfileContainer from "./user/ProfileContainer";
 import DashboardContainer from "./dashboard/DashboardContainer";

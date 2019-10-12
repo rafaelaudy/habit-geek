@@ -4,7 +4,7 @@ import {
   faChevronCircleLeft,
   faChevronCircleRight
 } from "@fortawesome/free-solid-svg-icons";
-import { getWeekIntervalText } from "../../utils/dateUtils";
+import { getWeekIntervalText } from "@habit-geek/shared/utils/dateUtils";
 
 const DashboardWeekHeader = ({
   week,

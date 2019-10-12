@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
 import AppContainer from "./components/AppContainer";
-import { store, persistor } from "./store";
+import { store, persistor } from "@habit-geek/shared/store";
 import "./i18n";
 
 ReactDOM.render(

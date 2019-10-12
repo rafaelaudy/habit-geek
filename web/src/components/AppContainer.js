@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import { startNewWeek } from "../actions/habitActions";
+import { startNewWeek } from "@habit-geek/shared/actions/habitActions";
 
 import "./App.scss";
 import App from "./App";

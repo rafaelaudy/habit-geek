@@ -1,9 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 import HabitHeader from "./HabitHeader";
-import { isToday } from "../../utils/dateUtils";
+import { isToday } from "@habit-geek/shared/utils/dateUtils";
 
-jest.mock("../../utils/dateUtils", () => ({
+jest.mock("@habit-geek/shared/utils/dateUtils", () => ({
   isToday: jest.fn().mockReturnValue(false)
 }));
 

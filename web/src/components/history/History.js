@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import HabitTable from "../habits/HabitTable";
 import "./History.scss";
-import { getWeekIntervalText } from "../../utils/dateUtils";
+import { getWeekIntervalText } from "@habit-geek/shared/utils/dateUtils";
 
 const History = ({ weeks }) => {
   const [openedList, setOpened] = useState({

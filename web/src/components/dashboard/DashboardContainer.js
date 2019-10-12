@@ -4,7 +4,7 @@ import {
   saveHabit,
   toggleDayHabit,
   deleteHabit
-} from "../../actions/habitActions";
+} from "@habit-geek/shared/actions/habitActions";
 
 const mapHabits = habits =>
   habits

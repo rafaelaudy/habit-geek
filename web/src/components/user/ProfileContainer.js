@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Profile from "./Profile";
-import { registerUser } from "../../actions/userActions";
+import { registerUser } from "@habit-geek/shared/actions/userActions";
 
 const mapStateToProps = ({ user }) => ({
   name: user.name,

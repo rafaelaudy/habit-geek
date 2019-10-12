@@ -1,5 +1,5 @@
 {
-  "name": "habit-geek-shared",
+  "name": "@habit-geek/shared",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

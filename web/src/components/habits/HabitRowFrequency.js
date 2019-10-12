@@ -1,7 +1,11 @@
 import React from "react";
 
 import HabitCheckbox from "./HabitCheckbox";
-import { getTodayIndex, getCurrentWeek, isToday } from "../../utils/dateUtils";
+import {
+  getTodayIndex,
+  getCurrentWeek,
+  isToday
+} from "@habit-geek/shared/utils/dateUtils";
 
 const HabitRowFrequency = ({
   week,
