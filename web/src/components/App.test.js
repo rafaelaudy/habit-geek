@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
 
-jest.mock("../utils/dateUtils.js", () => ({
+jest.mock("@habit-geek/shared/utils/dateUtils", () => ({
   getCurrentWeek: jest.fn().mockReturnValue("y1w1")
 }));
 

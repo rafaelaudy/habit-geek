@@ -5,9 +5,9 @@ Check it out here: https://habit-geek.herokuapp.com
 
 In the project directory, you can run:
 
-`npm start`
-`npm test`
-`npm run build`
+- `yarn start`
+- `yarn test`
+- `yarn build`
 
 ## Next improvements:
 
