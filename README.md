@@ -11,6 +11,12 @@ Check it out here: https://habit-geek.herokuapp.com
 
 ## Available Scripts:
 
+Install dependencies - `yarn bootstrap`
+Clean dependencies - `yarn clean`
+Start projects - `yarn start`
+Test projects - `yarn test`
+Build projects - `yarn build`
+
 ## Next improvements:
 
 ## Tech debt

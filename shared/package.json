@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
+    "react-i18next": "^10.13.1",
+    "i18next": "^17.0.18",
+    "i18next-browser-languagedetector": "^3.1.1"
+  }
 }
