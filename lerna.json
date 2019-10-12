@@ -1,0 +1,4 @@
+{
+  "packages": ["mobile", "server", "web", "shared"],
+  "version": "0.0.0"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "habit-geek-monorepo",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "build": "lerna run build",
+    "start": "lerna run start",
+    "postinstall": "npm run bootstrap && npm run build",
+    "test": "lerna run test"
+  },
+  "devDependencies": {
+    "lerna": "^3.17.0"
+  }
+}
