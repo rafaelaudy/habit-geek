@@ -12,7 +12,7 @@
     "clean": "lerna clean && rm -rf node_modules",
     "build": "lerna run build",
     "start": "lerna run start",
-    "test": "lerna run test"
+    "test": "CI=true lerna run test"
   },
   "devDependencies": {
     "lerna": "^3.17.0"

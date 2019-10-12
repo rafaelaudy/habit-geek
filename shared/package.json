@@ -4,18 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "[ $CI == true ] && jest || jest --watch --coverage"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "redux": "^4.0.4",
-    "redux-persist": "^6.0.0",
-    "react-i18next": "^10.13.1",
     "i18next": "^17.0.18",
-    "i18next-browser-languagedetector": "^3.1.1"
+    "i18next-browser-languagedetector": "^3.1.1",
+    "react-i18next": "^10.13.1",
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-jest": "^24.9.0"
   }
 }
