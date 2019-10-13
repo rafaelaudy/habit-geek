@@ -1,5 +1,5 @@
 {
-  "packages": ["mobile", "server", "web", "shared"],
+  "packages": ["server", "web", "shared"],
   "version": "0.0.0",
   "npmClient": "yarn",
   "useWorkspaces": true
