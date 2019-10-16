@@ -4,7 +4,8 @@
   "workspaces": [
     "server",
     "web",
-    "shared"
+    "shared",
+    "mobile"
   ],
   "scripts": {
     "bootstrap": "yarn && lerna bootstrap --use-workspaces",
