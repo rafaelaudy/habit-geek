@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/habit-geek/static/css/main.43d67ba1.chunk.css",
+    "main.css": "/habit-geek/static/css/main.e96a846a.chunk.css",
     "main.js": "/habit-geek/static/js/main.e26fd1b7.chunk.js",
     "main.js.map": "/habit-geek/static/js/main.e26fd1b7.chunk.js.map",
     "runtime~main.js": "/habit-geek/static/js/runtime~main.031c85ba.js",
@@ -8,9 +8,9 @@
     "static/js/2.aff39f61.chunk.js": "/habit-geek/static/js/2.aff39f61.chunk.js",
     "static/js/2.aff39f61.chunk.js.map": "/habit-geek/static/js/2.aff39f61.chunk.js.map",
     "index.html": "/habit-geek/index.html",
-    "precache-manifest.00656f57b38baa9cd5d8180ed710c01f.js": "/habit-geek/precache-manifest.00656f57b38baa9cd5d8180ed710c01f.js",
+    "precache-manifest.1feb69a8439504c45d2ceb5f45ef5b91.js": "/habit-geek/precache-manifest.1feb69a8439504c45d2ceb5f45ef5b91.js",
     "service-worker.js": "/habit-geek/service-worker.js",
-    "static/css/main.43d67ba1.chunk.css.map": "/habit-geek/static/css/main.43d67ba1.chunk.css.map",
+    "static/css/main.e96a846a.chunk.css.map": "/habit-geek/static/css/main.e96a846a.chunk.css.map",
     "static/media/001-burglar.svg": "/habit-geek/static/media/001-burglar.fad4fb81.svg",
     "static/media/002-woman.svg": "/habit-geek/static/media/002-woman.972480c3.svg",
     "static/media/003-superhero.svg": "/habit-geek/static/media/003-superhero.30672cbf.svg",
