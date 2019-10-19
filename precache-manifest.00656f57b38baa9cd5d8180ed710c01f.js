@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35f422c7bfd3bf085abbaacbdfef3367",
+    "revision": "b47b5307dc9fafe1cd5d9957b53f2f3c",
     "url": "/habit-geek/index.html"
   },
   {
-    "revision": "47267566e09bf56ee8d8",
-    "url": "/habit-geek/static/css/2.22a7d4ef.chunk.css"
+    "revision": "01271f77fba74f743f3a",
+    "url": "/habit-geek/static/css/main.43d67ba1.chunk.css"
   },
   {
-    "revision": "384f2335442542493a71",
-    "url": "/habit-geek/static/css/main.05494800.chunk.css"
+    "revision": "895b281474552f7edca8",
+    "url": "/habit-geek/static/js/2.aff39f61.chunk.js"
   },
   {
-    "revision": "47267566e09bf56ee8d8",
-    "url": "/habit-geek/static/js/2.b940b8ef.chunk.js"
+    "revision": "01271f77fba74f743f3a",
+    "url": "/habit-geek/static/js/main.e26fd1b7.chunk.js"
   },
   {
-    "revision": "384f2335442542493a71",
-    "url": "/habit-geek/static/js/main.37c0fa8e.chunk.js"
-  },
-  {
-    "revision": "8d3a7da2497ec1145738",
-    "url": "/habit-geek/static/js/runtime~main.9224e52c.js"
+    "revision": "3a3c512be87ae76aadc3",
+    "url": "/habit-geek/static/js/runtime~main.031c85ba.js"
   },
   {
     "revision": "fad4fb81428b3b98e0bc8d0574ca11d1",
