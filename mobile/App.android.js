@@ -5,8 +5,7 @@ export default function App() {
   return (
     <WebView
       source={{ uri: "https://rafaelaudy.github.io/habit-geek" }}
-      style={{ marginTop: 20 }}
-      useWebKit={true}
+      style={{ marginTop: 24 }}
     />
   );
 }
