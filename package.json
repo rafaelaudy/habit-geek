@@ -10,7 +10,7 @@
   "scripts": {
     "bootstrap": "yarn && lerna bootstrap --use-workspaces",
     "clean": "lerna clean && rm -rf node_modules",
-    "build": "lerna run build && mkdir ../docs && cp -a build/ ../docs/",
+    "build": "lerna run build",
     "start": "lerna run start",
     "test": "CI=true lerna run test"
   },
