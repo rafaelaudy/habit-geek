@@ -3,6 +3,10 @@ import { WebView } from "react-native";
 
 export default function App() {
   return (
-    <WebView source={{ uri: "https://github.com/facebook/react-native" }} />
+    <WebView
+      source={{ uri: "https://rafaelaudy.github.io/habit-geek" }}
+      style={{ marginTop: 20 }}
+      useWebKit={true}
+    />
   );
 }
