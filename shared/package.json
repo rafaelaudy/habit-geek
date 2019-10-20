@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "[ $CI == true ] && jest || jest --watch --coverage"
+    "test": "cross-env [ $CI == true ] && jest || jest --watch --coverage"
   },
   "author": "",
   "license": "ISC",

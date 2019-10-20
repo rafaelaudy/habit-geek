@@ -12,9 +12,10 @@
     "clean": "lerna clean && rm -rf node_modules",
     "build": "lerna run build",
     "start": "lerna run start",
-    "test": "CI=true lerna run test"
+    "test": "cross-env CI=true lerna run test"
   },
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "lerna": "^3.17.0"
   }
 }
