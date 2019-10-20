@@ -5,7 +5,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 const resources = {
   en: {
     translation: {
-      "nav-my-habits": "My habits",
+      "nav-my-habits": "My Habits",
       "nav-history": "History",
       "nav-profile": "Profile",
 
