@@ -1,9 +1,10 @@
 import { createStore, combineReducers } from "redux";
-import { persistStore, persistReducer } from "redux-persist";
+import { persistStore, persistReducer, createMigrate } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import habitsReducer from "./habitsReducer";
-import userReducer from "./userReducer";
+import habitsReducer from "./reducers/habitsReducer";
+import userReducer from "./reducers/userReducer";
+import migrations from "./migrations";
 
 const rooReducer = combineReducers({
   habits: habitsReducer,
@@ -12,7 +13,9 @@ const rooReducer = combineReducers({
 
 const persistConfig = {
   key: "root",
-  storage
+  storage,
+  version: 0,
+  migrate: createMigrate(migrations)
 };
 
 const persistedReducer = persistReducer(persistConfig, rooReducer);

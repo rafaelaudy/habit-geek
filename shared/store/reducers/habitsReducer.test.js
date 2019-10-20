@@ -4,10 +4,10 @@ import {
   toggleDayHabit,
   startNewWeek,
   deleteHabit
-} from "../actions/habitActions";
-import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
+} from "../../actions/habitActions";
+import { getCurrentWeek, getTodayIndex } from "../../utils/dateUtils";
 
-jest.mock("../utils/dateUtils", () => ({
+jest.mock("../../utils/dateUtils", () => ({
   getCurrentWeek: jest.fn().mockReturnValue("y1w1"),
   getTodayIndex: jest.fn().mockReturnValue("1")
 }));

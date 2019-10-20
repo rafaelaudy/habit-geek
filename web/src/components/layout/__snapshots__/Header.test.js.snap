@@ -90,7 +90,7 @@ exports[`Header component Renders static elements 1`] = `
                 href="/"
                 onClick={[Function]}
               >
-                My habits
+                My Habits
               </a>
             </LocationProvider>
           </Location>

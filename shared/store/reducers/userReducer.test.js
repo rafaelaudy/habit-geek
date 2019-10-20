@@ -1,5 +1,5 @@
 import userReducer from "./userReducer";
-import { registerUser } from "../actions/userActions";
+import { registerUser } from "../../actions/userActions";
 
 describe("userReducer", () => {
   it("registers the user", () => {

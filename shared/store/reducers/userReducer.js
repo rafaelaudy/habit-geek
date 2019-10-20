@@ -1,4 +1,4 @@
-import { REGISTER_USER } from "../actions/userActions";
+import { REGISTER_USER } from "../../actions/userActions";
 
 const defaulState = {
   name: "",

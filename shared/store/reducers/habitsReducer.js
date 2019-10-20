@@ -3,8 +3,8 @@ import {
   TOGGLE_DAY_HABIT,
   START_NEW_WEEK,
   DELETE_HABIT
-} from "../actions/habitActions";
-import { getCurrentWeek, getTodayIndex } from "../utils/dateUtils";
+} from "../../actions/habitActions";
+import { getCurrentWeek, getTodayIndex } from "../../utils/dateUtils";
 
 // import mockState from "./habitMockState";
 
