@@ -7,7 +7,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
   onSubmit={[Function]}
 >
   <h2>
-    Nice, what will it be?
+    save-habit-title
   </h2>
   <div
     className="mb-3"
@@ -15,7 +15,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
     <label
       htmlFor="new-habit-name"
     >
-      Name:
+      save-habit-name
     </label>
     <input
       className="form-control"
@@ -27,7 +27,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
     <div
       className="invalid-feedback"
     >
-      Hey! Trying to commit to "Blank"?
+      save-habit-name-validation
     </div>
   </div>
   <div
@@ -36,7 +36,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
     <label
       htmlFor="new-habit-type"
     >
-      Type:
+      save-habit-type
     </label>
     <select
       className="form-control"
@@ -77,7 +77,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
     <div
       className="invalid-feedback"
     >
-      Common... Help me help you!
+      save-habit-type-validation
     </div>
   </div>
   <div
@@ -86,7 +86,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
     <label
       htmlFor="new-habit-frequency"
     >
-      Frequency:
+      save-habit-frequency
     </label>
     <select
       className="form-control"
@@ -138,7 +138,7 @@ exports[`SaveHabit component Renders static elements 1`] = `
     <div
       className="invalid-feedback"
     >
-      Funny, that's an easy way to ace it!
+      save-habit-frequency-validation
     </div>
   </div>
   <hr
@@ -147,13 +147,13 @@ exports[`SaveHabit component Renders static elements 1`] = `
   <button
     className="btn btn-primary btn-lg btn-block"
   >
-    Let's start!
+    save-habit-save
   </button>
   <button
     className="btn btn-secondary btn-lg btn-block"
     type="button"
   >
-    Maybe tomorrow...
+    save-habit-cancel
   </button>
 </form>
 `;

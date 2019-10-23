@@ -7,7 +7,7 @@ exports[`History component Don't show anything if historical weeks are empty 1`]
   <h2
     className="mb-3"
   >
-    You just started, come back next week!
+    history-title-empty-data
   </h2>
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`History component Renders static elements 1`] = `
   <h2
     className="mb-3"
   >
-    Here is your progress so far:
+    history-title
   </h2>
   <div
     id="history-accordion"
@@ -38,7 +38,7 @@ exports[`History component Renders static elements 1`] = `
           className="btn btn-secondary history__header-button"
           onClick={[Function]}
         >
-          31/Dec ... 6/Jan
+          31/- ... 6/d
         </button>
       </div>
       <div
@@ -76,7 +76,7 @@ exports[`History component Renders static elements 1`] = `
           className="btn btn-secondary history__header-button"
           onClick={[Function]}
         >
-          7/Jan ... 13/Jan
+          7/d ... 13/d
         </button>
       </div>
       <div

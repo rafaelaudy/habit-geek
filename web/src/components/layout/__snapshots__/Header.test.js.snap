@@ -90,7 +90,7 @@ exports[`Header component Renders static elements 1`] = `
                 href="/"
                 onClick={[Function]}
               >
-                My Habits
+                nav-my-habits
               </a>
             </LocationProvider>
           </Location>
@@ -132,7 +132,7 @@ exports[`Header component Renders static elements 1`] = `
                 href="/history"
                 onClick={[Function]}
               >
-                History
+                nav-history
               </a>
             </LocationProvider>
           </Location>
@@ -174,7 +174,7 @@ exports[`Header component Renders static elements 1`] = `
                 href="/profile"
                 onClick={[Function]}
               >
-                Profile
+                nav-profile
               </a>
             </LocationProvider>
           </Location>

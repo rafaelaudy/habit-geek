@@ -22,3 +22,5 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn test
+
+      - run: cd web && yarn deploy

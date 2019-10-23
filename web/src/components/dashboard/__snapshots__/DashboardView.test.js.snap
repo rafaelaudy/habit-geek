@@ -4,7 +4,7 @@ exports[`DashboardView component Doesn't show username is none is provided 1`] =
 <h2
   className="mb-3"
 >
-  What have you done this week?
+  my-habits-title
 </h2>
 `;
 
@@ -15,7 +15,7 @@ exports[`DashboardView component Renders static elements 1`] = `
   <h2
     className="mb-3"
   >
-    What have you done this week username?
+    my-habits-title
   </h2>
   <DashboardWeekHeader
     hasPreviousWeek="y1w0"
@@ -46,7 +46,7 @@ exports[`DashboardView component Renders static elements 1`] = `
       className="btn btn-primary btn-lg"
       onClick={[Function]}
     >
-      I'll add a new habit!
+      my-habits-new-habit
     </button>
   </div>
 </div>

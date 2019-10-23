@@ -41,7 +41,7 @@ exports[`DashboardWeekHeader component Renders static elements 1`] = `
     />
   </button>
   <h5>
-    31/Dec ... 6/Jan
+    31/- ... 6/d
   </h5>
   <button
     className="habit__cell-action-container btn btn-link disabled"
@@ -87,7 +87,7 @@ exports[`DashboardWeekHeader component doesn't show buttons to change week when 
   className="mb-3 d-flex justify-content-center align-items-baseline"
 >
   <h5>
-    31/Dec ... 6/Jan
+    31/- ... 6/d
   </h5>
 </div>
 `;
@@ -133,7 +133,7 @@ exports[`DashboardWeekHeader component toggles the selected week 1`] = `
     />
   </button>
   <h5>
-    31/Dec ... 6/Jan
+    31/- ... 6/d
   </h5>
   <button
     className="habit__cell-action-container btn btn-link "

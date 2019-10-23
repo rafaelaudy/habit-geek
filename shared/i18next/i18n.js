@@ -14,7 +14,7 @@ const resources = {
 
       "save-habit-title": "New habit",
       "save-habit-name": "Name:",
-      "save-habit-name-validation": 'Eerg... we kind of need this one, right?',
+      "save-habit-name-validation": "Eerg... we kind of need this one, right?",
       "save-habit-type": "Type:",
       "save-habit-type-validation": "Dude, this field is mandatory.",
       "save-habit-type-options": [
@@ -69,7 +69,8 @@ const resources = {
 
       "save-habit-title": "Novo hábito",
       "save-habit-name": "Nome:",
-      "save-habit-name-validation": "Umm... esse campo meio que é importante, não?",
+      "save-habit-name-validation":
+        "Umm... esse campo meio que é importante, não?",
       "save-habit-type": "Tipo:",
       "save-habit-type-validation": "Campo obrigatório.",
       "save-habit-type-options": [

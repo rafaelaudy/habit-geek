@@ -7,7 +7,7 @@ exports[`Profile component Renders static elements 1`] = `
   onSubmit={[Function]}
 >
   <h2>
-    Super hero who?
+    profile-title
   </h2>
   <div
     className="mb-3"
@@ -15,7 +15,7 @@ exports[`Profile component Renders static elements 1`] = `
     <label
       htmlFor="profile-name"
     >
-      Name:
+      profile-name
     </label>
     <input
       className="form-control"
@@ -27,7 +27,7 @@ exports[`Profile component Renders static elements 1`] = `
     <div
       className="invalid-feedback"
     >
-      What an honor! The invisible habit geek among us?
+      profile-name-validation
     </div>
   </div>
   <div
@@ -36,48 +36,48 @@ exports[`Profile component Renders static elements 1`] = `
     <label
       htmlFor="profile-avatar"
     >
-      Avatar:
+      profile-avatar
     </label>
     <div
       className="input-group profile__avatar-container"
     >
       <img
-        alt="Avatar, not really important. Don't worry!"
+        alt="profile-avatar-alt-desc"
         className="profile__avatar "
         key="avatar-0"
         onClick={[Function]}
         src="001-burglar.svg"
       />
       <img
-        alt="Avatar, not really important. Don't worry!"
+        alt="profile-avatar-alt-desc"
         className="profile__avatar profile__avatar--selected"
         key="avatar-1"
         onClick={[Function]}
         src="002-woman.svg"
       />
       <img
-        alt="Avatar, not really important. Don't worry!"
+        alt="profile-avatar-alt-desc"
         className="profile__avatar "
         key="avatar-2"
         onClick={[Function]}
         src="003-superhero.svg"
       />
       <img
-        alt="Avatar, not really important. Don't worry!"
+        alt="profile-avatar-alt-desc"
         className="profile__avatar "
         key="avatar-3"
         onClick={[Function]}
         src="004-robot.svg"
       />
       <img
-        alt="Avatar, not really important. Don't worry!"
+        alt="profile-avatar-alt-desc"
         className="profile__avatar "
         key="avatar-4"
         onClick={[Function]}
         src="005-dragon.svg"
       />
       <img
-        alt="Avatar, not really important. Don't worry!"
+        alt="profile-avatar-alt-desc"
         className="profile__avatar "
         key="avatar-5"
         onClick={[Function]}
@@ -92,7 +92,7 @@ exports[`Profile component Renders static elements 1`] = `
     className="btn btn-primary btn-lg btn-block"
     type="submit"
   >
-    Done!
+    profile-save
   </button>
 </form>
 `;
