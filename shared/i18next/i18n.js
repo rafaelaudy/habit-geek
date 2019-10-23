@@ -9,7 +9,7 @@ const resources = {
       "nav-history": "History",
       "nav-profile": "Profile",
 
-      "my-habits-title": "How is the current week going,{{username}}?",
+      "my-habits-title": "How is the current week going{{username}}?",
       "my-habits-new-habit": "Add new habit!",
 
       "save-habit-title": "New habit",
