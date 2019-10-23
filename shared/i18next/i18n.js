@@ -40,6 +40,7 @@ const resources = {
       "profile-avatar-alt-desc": "Avatar, not really important. Don't worry!",
       "profile-save": "Save!",
 
+      "week-description": "Week",
       "date-days-short": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       "date-months-short": [
         "Jan",
@@ -98,6 +99,7 @@ const resources = {
         "Avatar, não é muito importante. Não se preocupe!",
       "profile-save": "Salvar!",
 
+      "week-description": "Semana",
       "date-days-short": ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
       "date-months-short": [
         "Jan",

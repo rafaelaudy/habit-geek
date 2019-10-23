@@ -38,7 +38,7 @@ exports[`History component Renders static elements 1`] = `
           className="btn btn-secondary history__header-button"
           onClick={[Function]}
         >
-          31/- ... 6/d
+          week-description 1: 31/- - 6/d
         </button>
       </div>
       <div
@@ -76,7 +76,7 @@ exports[`History component Renders static elements 1`] = `
           className="btn btn-secondary history__header-button"
           onClick={[Function]}
         >
-          7/d ... 13/d
+          week-description 2: 7/d - 13/d
         </button>
       </div>
       <div

@@ -34,7 +34,11 @@ export const getTodayIndex = () => {
 
 export const getWeekIntervalText = week => {
   const { weekStart, weekEnd } = getDateOfWeek(week);
-  return `${getShortDate(weekStart)} ... ${getShortDate(weekEnd)}`;
+  const weekNumber = week.split("w")[1];
+
+  return `${i18next.t("week-description")} ${weekNumber}: ${getShortDate(
+    weekStart
+  )} - ${getShortDate(weekEnd)}`;
 };
 
 export const getShortMonth = date => {
