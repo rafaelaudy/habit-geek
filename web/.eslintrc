@@ -3,5 +3,9 @@
   "plugins": ["jsx-a11y"],
   "rules": {
     "array-callback-return": "off"
+  },
+  "globals": {
+    "context": "readonly",
+    "cy": "readonly"
   }
 }

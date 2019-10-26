@@ -27,7 +27,9 @@ const DashboardWeekHeader = ({
   return (
     <div className="mb-3 d-flex justify-content-center align-items-baseline">
       {hasPreviousWeek ? getButton(faChevronCircleLeft, !isCurrentWeek) : null}
-      <h5>{getWeekIntervalText(week)}</h5>
+      <h5 className="dashboard-week-header__header">
+        {getWeekIntervalText(week)}
+      </h5>
       {hasPreviousWeek ? getButton(faChevronCircleRight, isCurrentWeek) : null}
     </div>
   );

@@ -6,14 +6,6 @@ import {
 } from "../../actions/habitActions";
 import { getCurrentWeek, getTodayIndex } from "../../utils/dateUtils";
 
-// import mockState from "./habitMockState";
-
-// {
-//   1 (weeks) {
-//      name: {name, type, frequency, habitSucceded, habitFailed, checked: [false, false, false, false, false, false, false] };
-//   }
-// }
-
 const getHabitStatus = (frequency, checked, isPreviousWeek) => {
   const todayIndex = getTodayIndex();
   const daysUntilEndOfWeek = checked[todayIndex]
@@ -32,14 +24,15 @@ const getHabitStatus = (frequency, checked, isPreviousWeek) => {
   };
 };
 
-const defaulState = {
-  weeks: {
-    [getCurrentWeek()]: {}
-  },
-  currentWeek: getCurrentWeek()
-};
+const defaulState = window.Cypress
+  ? require("../mock/habitMockState.json")
+  : {
+      weeks: {
+        [getCurrentWeek()]: {}
+      },
+      currentWeek: getCurrentWeek()
+    };
 
-// const habitsReducer = (state = mockState, { type, payload }) => {
 const habitsReducer = (state = defaulState, { type, payload }) => {
   switch (type) {
     case START_NEW_WEEK: {
