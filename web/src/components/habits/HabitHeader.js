@@ -19,7 +19,7 @@ const HabitHeader = ({ isReadOnly, week }) => {
   });
 
   return (
-    <div className="habit__row">
+    <div className="habit__header-row">
       <div className="habit__cell-habit-container"></div>
       <div className="habit__cell-frequency-container">{cellComponents}</div>
       {isReadOnly ? null : <div className="habit__cell-action-container"></div>}

@@ -4,16 +4,16 @@
       "Read": {
         "name": "Read",
         "type": "Health",
-        "frequency": "3",
-        "habitFailed": true,
-        "checked": [true, false, false, false, false, false, false]
+        "frequency": "4",
+        "habitSucceded": true,
+        "checked": [true, false, false, true, true, true, false]
       },
       "Write": {
         "name": "Write",
         "type": "Career",
         "frequency": "4",
-        "habitSucceded": true,
-        "checked": [true, false, false, true, true, true, false]
+        "habitFailed": true,
+        "checked": [false, true, true, false, true, false, false]
       }
     },
     "y2019w3": {
@@ -27,9 +27,9 @@
       "Write": {
         "name": "Write",
         "type": "Career",
-        "frequency": "4",
+        "frequency": "5",
         "habitFailed": true,
-        "checked": [true, false, false, false, true, false, false]
+        "checked": [false, true, true, false, true, false, false]
       }
     }
   },

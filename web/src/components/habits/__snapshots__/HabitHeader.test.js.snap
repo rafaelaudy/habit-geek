@@ -2,7 +2,7 @@
 
 exports[`HabitHeader component Renders static elements 1`] = `
 <div
-  className="habit__row"
+  className="habit__header-row"
 >
   <div
     className="habit__cell-habit-container"
