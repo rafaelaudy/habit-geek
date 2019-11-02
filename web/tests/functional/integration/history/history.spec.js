@@ -12,18 +12,18 @@ const failedRow = ".table-danger";
 
 context("History", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/history");
+    cy.visit("/history");
   });
 
   it("Show default message if there are no past weeks", () => {
     window.Cypress.habitMock = "1FullWeek";
-    cy.visit("http://localhost:3000/history");
+    cy.visit("/history");
     cy.get(emptyData).should("exist");
   });
 
   it("Hides empty weeks", () => {
     window.Cypress.habitMock = "PartialWeeks";
-    cy.visit("http://localhost:3000/history");
+    cy.visit("/history");
     cy.get(historyHeader).should("have.lengthOf", 1);
   });
 

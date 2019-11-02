@@ -34,7 +34,7 @@ const saveEditHabit = triggerButton => {
 
 context("Save", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("/");
   });
 
   context("Create habit", () => {

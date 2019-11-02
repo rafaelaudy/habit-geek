@@ -12,13 +12,13 @@ const failedRow = ".table-danger";
 
 context("Habits", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("/");
   });
 
   context("Navigation between weeks", () => {
     it("can't navigate back in the first week", () => {
       window.Cypress.habitMock = "1FullWeek";
-      cy.visit("http://localhost:3000");
+      cy.visit("/");
 
       cy.get(header).contains("Week 3");
       cy.get(forwardWeekButton).should("not.exist");
@@ -27,7 +27,7 @@ context("Habits", () => {
 
     it("can't navigate back if the previous week is empty", () => {
       window.Cypress.habitMock = "PartialWeeks";
-      cy.visit("http://localhost:3000");
+      cy.visit("/");
 
       cy.get(header).contains("Week 3");
       cy.get(forwardWeekButton).should("not.exist");

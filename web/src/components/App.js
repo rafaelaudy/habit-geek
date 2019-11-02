@@ -18,10 +18,13 @@ function App({ currentWeek, startNewWeek }) {
   return (
     <div>
       <Router>
-        <Layout path="/">
-          <DashboardContainer path="/" default></DashboardContainer>
-          <ProfileContainer path="/profile"></ProfileContainer>
-          <HistoryContainer path="/history"></HistoryContainer>
+        <Layout path="/habit-geek" default>
+          <DashboardContainer
+            path="/habit-geek/habits"
+            default
+          ></DashboardContainer>
+          <ProfileContainer path="/habit-geek/profile"></ProfileContainer>
+          <HistoryContainer path="/habit-geek/history"></HistoryContainer>
         </Layout>
       </Router>
     </div>

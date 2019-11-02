@@ -4,17 +4,18 @@ exports[`App component Renders static elements 1`] = `
 <div>
   <Router>
     <Layout
-      path="/"
+      default={true}
+      path="/habit-geek"
     >
       <Connect(Dashboard)
         default={true}
-        path="/"
+        path="/habit-geek/habits"
       />
       <Connect(Profile)
-        path="/profile"
+        path="/habit-geek/profile"
       />
       <Connect(History)
-        path="/history"
+        path="/habit-geek/history"
       />
     </Layout>
   </Router>

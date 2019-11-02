@@ -1,8 +1,8 @@
 {
-  "baseUrl": "http://localhost:3000",
+  "baseUrl": "http://localhost:3000/habit-geek",
   "fixturesFolder": "tests/functional/fixtures",
   "integrationFolder": "tests/functional/integration",
-  "pluginsFile": "tests/functional/plugins/index.js",
+  "pluginsFile": false,
   "screenshotsFolder": "tests/functional/screenshots",
   "videosFolder": "tests/functional/videos",
   "supportFile": "tests/functional/support/index.js"

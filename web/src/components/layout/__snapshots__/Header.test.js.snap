@@ -8,7 +8,7 @@ exports[`Header component Renders static elements 1`] = `
     >
       <ForwardRef
         className="navbar-brand"
-        to="/habits"
+        to="/habit-geek/habits"
       >
         <Location>
           <LocationProvider
@@ -40,7 +40,7 @@ exports[`Header component Renders static elements 1`] = `
           >
             <a
               className="navbar-brand"
-              href="/habits"
+              href="/habit-geek/habits"
               onClick={[Function]}
             >
               Habit Geek!
@@ -53,7 +53,7 @@ exports[`Header component Renders static elements 1`] = `
       >
         <ForwardRef
           getProps={[Function]}
-          to="/habits"
+          to="/habit-geek/habits"
         >
           <Location>
             <LocationProvider
@@ -85,7 +85,7 @@ exports[`Header component Renders static elements 1`] = `
             >
               <a
                 className="nav-item nav-link"
-                href="/habits"
+                href="/habit-geek/habits"
                 onClick={[Function]}
               >
                 nav-my-habits
@@ -95,7 +95,7 @@ exports[`Header component Renders static elements 1`] = `
         </ForwardRef>
         <ForwardRef
           getProps={[Function]}
-          to="/history"
+          to="/habit-geek/history"
         >
           <Location>
             <LocationProvider
@@ -127,7 +127,7 @@ exports[`Header component Renders static elements 1`] = `
             >
               <a
                 className="nav-item nav-link"
-                href="/history"
+                href="/habit-geek/history"
                 onClick={[Function]}
               >
                 nav-history
@@ -137,7 +137,7 @@ exports[`Header component Renders static elements 1`] = `
         </ForwardRef>
         <ForwardRef
           getProps={[Function]}
-          to="/profile"
+          to="/habit-geek/profile"
         >
           <Location>
             <LocationProvider
@@ -169,7 +169,7 @@ exports[`Header component Renders static elements 1`] = `
             >
               <a
                 className="nav-item nav-link"
-                href="/profile"
+                href="/habit-geek/profile"
                 onClick={[Function]}
               >
                 nav-profile

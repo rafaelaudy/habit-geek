@@ -5,7 +5,7 @@ const saveProfile = ".btn-primary";
 
 context("Save", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/profile");
+    cy.visit("/profile");
   });
 
   it("Validate form", () => {

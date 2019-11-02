@@ -6,7 +6,7 @@ const clickNav = index =>
 
 context("Nav", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("/");
   });
 
   it("Navigates between different sections of the website", () => {

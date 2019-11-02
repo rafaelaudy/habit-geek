@@ -16,17 +16,17 @@ function Header(props) {
   return (
     <header>
       <nav className="navbar navbar-expand navbar-dark bg-dark header">
-        <Link className="navbar-brand" to="/habits">
+        <Link className="navbar-brand" to="/habit-geek/habits">
           Habit Geek!
         </Link>
         <div className="navbar-nav">
-          <Link getProps={getLinkClass} to="/habits">
+          <Link getProps={getLinkClass} to="/habit-geek/habits">
             {t("nav-my-habits")}
           </Link>
-          <Link getProps={getLinkClass} to="/history">
+          <Link getProps={getLinkClass} to="/habit-geek/history">
             {t("nav-history")}
           </Link>
-          <Link getProps={getLinkClass} to="/profile">
+          <Link getProps={getLinkClass} to="/habit-geek/profile">
             {t("nav-profile")}
           </Link>
         </div>
