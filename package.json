@@ -16,7 +16,6 @@
     "test:ci": "lerna run test:ci"
   },
   "devDependencies": {
-    "cross-env": "^6.0.3",
     "lerna": "^3.17.0"
   }
 }

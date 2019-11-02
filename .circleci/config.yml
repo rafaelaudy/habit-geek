@@ -2,9 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12.11
+      - image: cypress/base:8
+        environment:
+          TERM: xterm
 
     working_directory: ~/repo
+
+    parallelism: 1
 
     steps:
       - checkout
@@ -22,6 +26,11 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn test:ci
+
+      - add_ssh_keys:
+          fingerprints:
+            - "38:a7:e8:fd:33:b8:15:70:5d:07:0f:eb:08:25:9a:8b"
+
       - run: git config --global -l
       - run: git config --global user.email rafael.audy@gmail.com
       - run: git config --global user.name rafaelaudy
