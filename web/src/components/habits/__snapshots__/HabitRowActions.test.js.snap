@@ -2,7 +2,7 @@
 
 exports[`HabitRowActions component Renders static elements 1`] = `
 <button
-  className="habit__cell-action-container btn btn-link"
+  className="habit__cell-action-container habit__cell-action-edit-habit btn btn-link"
   onClick={[Function]}
 >
   <FontAwesomeIcon

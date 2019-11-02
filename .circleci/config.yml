@@ -21,7 +21,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
-      - run: yarn test
+      - run: yarn test:ci
       - run: git config --global -l
       - run: git config --global user.email rafael.audy@gmail.com
       - run: git config --global user.name rafaelaudy

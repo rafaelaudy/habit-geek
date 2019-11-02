@@ -6,6 +6,16 @@ import {
 } from "../../actions/habitActions";
 import { getCurrentWeek, getTodayIndex } from "../../utils/dateUtils";
 
+const getDefaultState = () =>
+  typeof window !== "undefined" && window.Cypress
+    ? require(`../mock/${window.Cypress.habitMock}.json`)
+    : {
+        weeks: {
+          [getCurrentWeek()]: {}
+        },
+        currentWeek: getCurrentWeek()
+      };
+
 const getHabitStatus = (frequency, checked, isPreviousWeek) => {
   const todayIndex = getTodayIndex();
   const daysUntilEndOfWeek = checked[todayIndex]
@@ -24,16 +34,7 @@ const getHabitStatus = (frequency, checked, isPreviousWeek) => {
   };
 };
 
-const defaulState = window.Cypress
-  ? require(`../mock/${window.Cypress.habitMock}.json`)
-  : {
-      weeks: {
-        [getCurrentWeek()]: {}
-      },
-      currentWeek: getCurrentWeek()
-    };
-
-const habitsReducer = (state = defaulState, { type, payload }) => {
+const habitsReducer = (state = getDefaultState(), { type, payload }) => {
   switch (type) {
     case START_NEW_WEEK: {
       const newWeekHabits = {};

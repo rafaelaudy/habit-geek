@@ -5,7 +5,7 @@ exports[`History component Don't show anything if historical weeks are empty 1`]
   className="history large-size-container"
 >
   <h2
-    className="mb-3"
+    className="mb-3 history__empty-data"
   >
     history-title-empty-data
   </h2>

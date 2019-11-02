@@ -8,7 +8,7 @@ exports[`Header component Renders static elements 1`] = `
     >
       <ForwardRef
         className="navbar-brand"
-        to="/"
+        to="/habits"
       >
         <Location>
           <LocationProvider
@@ -39,9 +39,8 @@ exports[`Header component Renders static elements 1`] = `
             }
           >
             <a
-              aria-current="page"
               className="navbar-brand"
-              href="/"
+              href="/habits"
               onClick={[Function]}
             >
               Habit Geek!
@@ -54,7 +53,7 @@ exports[`Header component Renders static elements 1`] = `
       >
         <ForwardRef
           getProps={[Function]}
-          to="/"
+          to="/habits"
         >
           <Location>
             <LocationProvider
@@ -85,9 +84,8 @@ exports[`Header component Renders static elements 1`] = `
               }
             >
               <a
-                aria-current="page"
-                className="nav-item nav-link active"
-                href="/"
+                className="nav-item nav-link"
+                href="/habits"
                 onClick={[Function]}
               >
                 nav-my-habits

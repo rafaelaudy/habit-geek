@@ -57,6 +57,6 @@ describe("Dashboard component", () => {
     );
     dashboard.find(".btn-primary").simulate("click");
     dashboard.find(".btn-secondary").simulate("click");
-    expect(dashboard.find(".habit__row").length).toBe(2);
+    expect(dashboard.find(".habit__row").length).toBe(1);
   });
 });

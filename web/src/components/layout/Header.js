@@ -16,7 +16,7 @@ function Header(props) {
   return (
     <header>
       <nav className="navbar navbar-expand navbar-dark bg-dark header">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/habits">
           Habit Geek!
         </Link>
         <div className="navbar-nav">
