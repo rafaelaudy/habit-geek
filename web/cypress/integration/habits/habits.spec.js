@@ -1,5 +1,5 @@
-const backWeekButton = ".fa-chevron-circle-left";
-const forwardWeekButton = ".fa-chevron-circle-right";
+const backWeekButton = ".habit__cell-action-previous";
+const forwardWeekButton = ".habit__cell-action-forward";
 const header = ".dashboard-week-header__header";
 
 const habitRows = ".habit__row";
@@ -29,17 +29,37 @@ const toggleHabit = (rowIndex, dayIndex, withinFunc) => {
 
 context("Habits", () => {
   beforeEach(() => {
-    const now = new Date(2019, 0, 19).getTime();
-    cy.clock(now);
     cy.visit("http://localhost:3000");
   });
 
   context("Navigation between weeks", () => {
+    it("can't navigate back in the first week", () => {
+      window.Cypress.habitMock = "1FullWeek";
+      cy.visit("http://localhost:3000");
+
+      cy.get(header).contains("Week 3");
+      cy.get(forwardWeekButton).should("not.exist");
+      cy.get(backWeekButton).should("not.exist");
+    });
+
+    it("can't navigate back if the previous week is empty", () => {
+      window.Cypress.habitMock = "PartialWeeks";
+      cy.visit("http://localhost:3000");
+
+      cy.get(header).contains("Week 3");
+      cy.get(forwardWeekButton).should("not.exist");
+      cy.get(backWeekButton).should("not.exist");
+    });
+
     it("navigates between weeks", () => {
       cy.get(backWeekButton).click();
       cy.get(header).contains("Week 2");
+      cy.get(forwardWeekButton).should("not.have.class", "disabled");
+      cy.get(backWeekButton).should("have.class", "disabled");
       cy.get(forwardWeekButton).click();
       cy.get(header).contains("Week 3");
+      cy.get(forwardWeekButton).should("have.class", "disabled");
+      cy.get(backWeekButton).should("not.have.class", "disabled");
     });
   });
 
@@ -68,11 +88,13 @@ context("Habits", () => {
       getRow(0, () => cy.get(successRow));
       getRow(1, () => cy.get(failedRow));
     });
+
     it("achieve and blow up a habit", () => {
       toggleHabit(1, 0);
       getRow(1, () => cy.get(rowStatus).not(failedRow));
       toggleHabit(1, 3, () => cy.get(successRow));
     });
+
     it("disable toggle of habit on future dates", () => {
       toggleHabit(0, 5);
       getRow(0, () => {

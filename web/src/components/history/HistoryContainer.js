@@ -5,13 +5,18 @@ const mapStateToProps = ({ habits }) => {
   let mappedWeeks = Object.keys(habits.weeks)
     .sort()
     .map(weekKey => {
+      const habitsKeys = Object.keys(habits.weeks[weekKey]);
+
+      if (habitsKeys.length === 0) return false;
+
       return {
         week: weekKey,
-        habits: Object.keys(habits.weeks[weekKey]).map(habitKey => {
+        habits: habitsKeys.map(habitKey => {
           return habits.weeks[weekKey][habitKey];
         })
       };
     })
+    .filter(week => week)
     .reverse();
 
   mappedWeeks.shift();

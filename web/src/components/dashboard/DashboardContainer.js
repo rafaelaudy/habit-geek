@@ -28,7 +28,7 @@ const mapStateToProps = ({ habits, user }) => {
     currentHabits: currentMappedHabits,
     previousHabits: previousMappedHabits,
     currentWeek,
-    previousWeek
+    previousWeek: previousMappedHabits.length && previousWeek
   };
 };
 

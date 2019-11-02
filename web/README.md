@@ -15,6 +15,11 @@ In the project directory, you can run:
   https://www.freecodecamp.org/news/how-to-use-redux-persist-when-migrating-your-states-a5dee16b5ead/
 - Fails or approves previous habits when week changes
 
+## Techdebt:
+
+- User -> Profile
+- Refactor css to modules
+
 ## Backlog of future improvements:
 
 - Code Splitting

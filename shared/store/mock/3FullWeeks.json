@@ -1,15 +1,31 @@
 {
   "weeks": {
     "y2019w2": {
-      "Read": {
-        "name": "Read",
+      "a_Previous": {
+        "name": "a_Previous",
         "type": "Health",
         "frequency": "4",
         "habitSucceded": true,
         "checked": [true, false, false, true, true, true, false]
       },
-      "Write": {
-        "name": "Write",
+      "b_FullWeek": {
+        "name": "b_FullWeek",
+        "type": "Career",
+        "frequency": "4",
+        "habitFailed": true,
+        "checked": [false, true, true, false, true, false, false]
+      }
+    },
+    "y2019w1": {
+      "a_Previous": {
+        "name": "a_Previous",
+        "type": "Health",
+        "frequency": "4",
+        "habitSucceded": true,
+        "checked": [true, false, false, true, true, true, false]
+      },
+      "b_FullWeek": {
+        "name": "b_FullWeek",
         "type": "Career",
         "frequency": "4",
         "habitFailed": true,
@@ -17,15 +33,15 @@
       }
     },
     "y2019w3": {
-      "Meditate": {
-        "name": "Meditate",
+      "a_Actual": {
+        "name": "a_Actual",
         "type": "Health",
         "frequency": "3",
         "habitSucceded": true,
         "checked": [true, false, false, true, true, false, false]
       },
-      "Write": {
-        "name": "Write",
+      "b_FullWeek": {
+        "name": "b_FullWeek",
         "type": "Career",
         "frequency": "5",
         "habitFailed": true,

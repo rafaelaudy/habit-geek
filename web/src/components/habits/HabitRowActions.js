@@ -8,7 +8,7 @@ const HabitRowActions = ({ week, name, onUpdateHabit }) => {
   if (week === getCurrentWeek()) {
     return (
       <button
-        className="habit__cell-action-container btn btn-link"
+        className="habit__cell-action-container habit__cell-action-edit-habit btn btn-link"
         onClick={() => onUpdateHabit(name)}
       >
         <FontAwesomeIcon icon={faEdit} />

@@ -25,7 +25,7 @@ const getHabitStatus = (frequency, checked, isPreviousWeek) => {
 };
 
 const defaulState = window.Cypress
-  ? require("../mock/habitMockState.json")
+  ? require(`../mock/${window.Cypress.habitMock}.json`)
   : {
       weeks: {
         [getCurrentWeek()]: {}

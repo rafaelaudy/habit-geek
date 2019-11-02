@@ -57,7 +57,9 @@ const History = ({ weeks }) => {
   return (
     <div className="history large-size-container">
       {weeks.length === 0 ? (
-        <h2 className="mb-3">{t("history-title-empty-data")}</h2>
+        <h2 className="mb-3 history__empty-data">
+          {t("history-title-empty-data")}
+        </h2>
       ) : (
         <Fragment>
           <h2 className="mb-3">{t("history-title")}</h2>

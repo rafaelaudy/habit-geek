@@ -20,7 +20,7 @@ function Header(props) {
           Habit Geek!
         </Link>
         <div className="navbar-nav">
-          <Link getProps={getLinkClass} to="/">
+          <Link getProps={getLinkClass} to="/habits">
             {t("nav-my-habits")}
           </Link>
           <Link getProps={getLinkClass} to="/history">
