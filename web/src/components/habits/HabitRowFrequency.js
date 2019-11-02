@@ -1,11 +1,12 @@
 import React from "react";
-
-import HabitCheckbox from "./HabitCheckbox";
 import {
   getTodayIndex,
   getCurrentWeek,
   isToday
 } from "@habit-geek/shared/utils/dateUtils";
+
+import HabitCheckbox from "./HabitCheckbox";
+import "./HabitRowFrequency.scss";
 
 const HabitRowFrequency = ({
   week,
@@ -23,19 +24,17 @@ const HabitRowFrequency = ({
   const failedClass = habitFailed ? "table-danger" : "";
 
   return (
-    <div
-      className={`habit__cell-frequency-container ${succededClass} ${failedClass}`}
-    >
+    <div className={`habit-row-frequency ${succededClass} ${failedClass}`}>
       {[...Array(7).keys()].map(checkIndex => {
         const todayClass = isToday(week, checkIndex)
-          ? "habit__cell--today"
+          ? "habit-row-frequency__cell--today"
           : "";
         const isTodayOrBefore = todayIndex < checkIndex;
         const isDisabled = isCurrentWeek ? isTodayOrBefore : false;
 
         return (
           <div
-            className={`habit__cell ${todayClass}`}
+            className={`habit-row-frequency__cell ${todayClass}`}
             key={`check-${name}-${checkIndex}`}
           >
             <HabitCheckbox

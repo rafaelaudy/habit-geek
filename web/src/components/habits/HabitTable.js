@@ -2,7 +2,6 @@ import React from "react";
 
 import HabitHeader from "./HabitHeader";
 import HabitRows from "./HabitRows";
-import "./HabitTable.scss";
 
 const HabitTable = ({
   week,

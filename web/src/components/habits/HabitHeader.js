@@ -7,11 +7,13 @@ const HabitHeader = ({ isReadOnly, week }) => {
   const days = t("date-days-short", { returnObjects: true });
 
   const cellComponents = days.map((day, index) => {
-    const todayClass = isToday(week, index) ? "habit__cell--today-header" : "";
+    const todayClass = isToday(week, index)
+      ? "habit-row-frequency__cell--today-header"
+      : "";
     return (
       <h5
         key={`header-cell-${index}`}
-        className={`rounded-top habit__cell ${todayClass}`}
+        className={`rounded-top habit-row-frequency__cell ${todayClass}`}
       >
         {day}
       </h5>
@@ -19,10 +21,10 @@ const HabitHeader = ({ isReadOnly, week }) => {
   });
 
   return (
-    <div className="habit__header-row">
-      <div className="habit__cell-habit-container"></div>
-      <div className="habit__cell-frequency-container">{cellComponents}</div>
-      {isReadOnly ? null : <div className="habit__cell-action-container"></div>}
+    <div className="habit-row__header">
+      <div className="habit-row__title"></div>
+      <div className="habit-row-frequency">{cellComponents}</div>
+      {isReadOnly ? null : <div className="icon-button"></div>}
     </div>
   );
 };

@@ -5,7 +5,7 @@ exports[`DashboardWeekHeader component Renders static elements 1`] = `
   className="mb-3 d-flex justify-content-center align-items-baseline"
 >
   <button
-    className="habit__cell-action-container habit__cell-action-previous btn btn-link "
+    className="icon-button icon-button-previous btn btn-link "
     onClick={[Function]}
   >
     <FontAwesomeIcon
@@ -41,12 +41,12 @@ exports[`DashboardWeekHeader component Renders static elements 1`] = `
     />
   </button>
   <h5
-    className="dashboard-week-header__header"
+    className="dashboard-week-header"
   >
     week-description 1: 31/- - 6/d
   </h5>
   <button
-    className="habit__cell-action-container habit__cell-action-forward btn btn-link disabled"
+    className="icon-button icon-button-forward btn btn-link disabled"
     onClick={[Function]}
   >
     <FontAwesomeIcon
@@ -89,7 +89,7 @@ exports[`DashboardWeekHeader component doesn't show buttons to change week when 
   className="mb-3 d-flex justify-content-center align-items-baseline"
 >
   <h5
-    className="dashboard-week-header__header"
+    className="dashboard-week-header"
   >
     week-description 1: 31/- - 6/d
   </h5>
@@ -101,7 +101,7 @@ exports[`DashboardWeekHeader component toggles the selected week 1`] = `
   className="mb-3 d-flex justify-content-center align-items-baseline"
 >
   <button
-    className="habit__cell-action-container habit__cell-action-previous btn btn-link disabled"
+    className="icon-button icon-button-previous btn btn-link disabled"
     onClick={[Function]}
   >
     <FontAwesomeIcon
@@ -137,12 +137,12 @@ exports[`DashboardWeekHeader component toggles the selected week 1`] = `
     />
   </button>
   <h5
-    className="dashboard-week-header__header"
+    className="dashboard-week-header"
   >
     week-description 1: 31/- - 6/d
   </h5>
   <button
-    className="habit__cell-action-container habit__cell-action-forward btn btn-link "
+    className="icon-button icon-button-forward btn btn-link "
     onClick={[Function]}
   >
     <FontAwesomeIcon

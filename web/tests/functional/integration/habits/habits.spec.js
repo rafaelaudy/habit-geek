@@ -1,12 +1,12 @@
-const backWeekButton = ".habit__cell-action-previous";
-const forwardWeekButton = ".habit__cell-action-forward";
-const header = ".dashboard-week-header__header";
+const backWeekButton = ".icon-button-previous";
+const forwardWeekButton = ".icon-button-forward";
+const header = ".dashboard-week-header";
 
-const habitRows = ".habit__row";
+const habitRows = ".habit-row";
 const habitToggle = ".toggle";
 const habitCheckbox = ".toggle__input";
 
-const rowStatus = ".habit__cell-frequency-container";
+const rowStatus = ".habit-row-frequency";
 const successRow = ".table-success";
 const failedRow = ".table-danger";
 

@@ -2,11 +2,11 @@
 
 exports[`HabitRows component Renders static elements 1`] = `
 <div
-  className="habit__row"
+  className="habit-row"
   key="check-container-0"
 >
   <div
-    className="habit__cell-habit-container"
+    className="habit-row__title"
   >
     <span>
       (

@@ -15,7 +15,7 @@ const DashboardWeekHeader = ({
   const clickHandler = () => toggleWeek(!isCurrentWeek);
   const getButton = (direction, icon, isDisabled) => (
     <button
-      className={`habit__cell-action-container habit__cell-action-${direction} btn btn-link ${
+      className={`icon-button icon-button-${direction} btn btn-link ${
         isDisabled ? "disabled" : ""
       }`}
       onClick={clickHandler}
@@ -26,11 +26,13 @@ const DashboardWeekHeader = ({
 
   return (
     <div className="mb-3 d-flex justify-content-center align-items-baseline">
-      {hasPreviousWeek ? getButton('previous', faChevronCircleLeft, !isCurrentWeek) : null}
-      <h5 className="dashboard-week-header__header">
-        {getWeekIntervalText(week)}
-      </h5>
-      {hasPreviousWeek ? getButton('forward', faChevronCircleRight, isCurrentWeek) : null}
+      {hasPreviousWeek
+        ? getButton("previous", faChevronCircleLeft, !isCurrentWeek)
+        : null}
+      <h5 className="dashboard-week-header">{getWeekIntervalText(week)}</h5>
+      {hasPreviousWeek
+        ? getButton("forward", faChevronCircleRight, isCurrentWeek)
+        : null}
     </div>
   );
 };

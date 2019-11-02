@@ -1,9 +1,9 @@
-const backWeekButton = ".habit__cell-action-previous";
-const forwardWeekButton = ".habit__cell-action-forward";
-const header = ".dashboard-week-header__header";
+const backWeekButton = ".icon-button-previous";
+const forwardWeekButton = ".icon-button-forward";
+const header = ".dashboard-week-header";
 const newHabitButton = ".btn-primary";
-const editHabitButton = ".habit__cell-action-edit-habit";
-const habitRow = ".habit__row";
+const editHabitButton = ".icon-button__edit";
+const habitRow = ".habit-row";
 
 const name = "#new-habit-name";
 const type = "#new-habit-type";

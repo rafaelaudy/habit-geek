@@ -2,6 +2,7 @@ import React from "react";
 
 import HabitRowActions from "./HabitRowActions";
 import HabitRowFrequency from "./HabitRowFrequency";
+import "./HabitRows.scss";
 
 const HabitRows = ({
   week,
@@ -16,8 +17,8 @@ const HabitRows = ({
       containerIndex
     ) => {
       return (
-        <div key={`check-container-${containerIndex}`} className="habit__row">
-          <div className="habit__cell-habit-container">
+        <div key={`check-container-${containerIndex}`} className="habit-row">
+          <div className="habit-row__title">
             <span>
               ({frequency}x) - {name}
             </span>

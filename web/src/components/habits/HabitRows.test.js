@@ -39,6 +39,6 @@ describe("HabitRows component", () => {
         ]}
       />
     );
-    expect(habitRows.find(".habit__row").length).toBe(2);
+    expect(habitRows.find(".habit-row").length).toBe(2);
   });
 });

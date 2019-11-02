@@ -38,7 +38,9 @@ describe("HabitRowFrequency component", () => {
   it("shows border around current date", () => {
     isToday.mockReturnValueOnce(true);
     const habitRowFrequency = shallow(<HabitRowFrequency checked={checked} />);
-    expect(habitRowFrequency.find(".habit__cell--today").length).toBe(1);
+    expect(
+      habitRowFrequency.find(".habit-row-frequency__cell--today").length
+    ).toBe(1);
   });
 
   it("disables checkboxes for dates in the future", () => {

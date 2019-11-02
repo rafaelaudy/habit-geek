@@ -41,7 +41,7 @@ describe("Dashboard component", () => {
         ]}
       />
     );
-    dashboard.find(".habit__row .btn").simulate("click");
+    dashboard.find(".habit-row .btn").simulate("click");
     expect(dashboard.find("#new-habit-name").props().value).toBe("write");
     expect(dashboard.find("#new-habit-type").props().value).toBe("health");
     expect(dashboard.find("#new-habit-frequency").props().value).toBe("1");
@@ -57,6 +57,6 @@ describe("Dashboard component", () => {
     );
     dashboard.find(".btn-primary").simulate("click");
     dashboard.find(".btn-secondary").simulate("click");
-    expect(dashboard.find(".habit__row").length).toBe(1);
+    expect(dashboard.find(".habit-row").length).toBe(1);
   });
 });

@@ -1,0 +1,40 @@
+@import "../Variables.scss";
+
+.habit-row {
+  &__header,
+  & {
+    display: flex;
+
+    &:last-child .habit-row-frequency__cell--today {
+      border-bottom-width: $border-width;
+      border-bottom-left-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .habit-row {
+    &__header,
+    & {
+      flex-wrap: wrap;
+      margin: auto;
+      max-width: 380px;
+    }
+
+    &__header .habit-row__title {
+      height: 0;
+    }
+
+    &__title {
+      justify-content: center;
+      height: 42px;
+    }
+  }
+}

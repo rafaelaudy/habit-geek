@@ -2,8 +2,8 @@ const emptyData = ".history__empty-data";
 const historyHeader = ".history__header-button";
 const historyContent = ".show .card-body";
 
-const habitRows = ".habit__row";
-const toggleHabit = ".habit__cell";
+const habitRows = ".habit-row";
+const toggleHabit = ".habit-row-frequency__cell";
 const habitCheckbox = ".toggle__input";
 
 const successRow = ".table-success";

@@ -2,10 +2,10 @@
 
 exports[`HabitRowFrequency component Renders static elements 1`] = `
 <div
-  className="habit__cell-frequency-container  "
+  className="habit-row-frequency  "
 >
   <div
-    className="habit__cell "
+    className="habit-row-frequency__cell "
     key="check-name-0"
   >
     <HabitCheckbox
@@ -16,7 +16,7 @@ exports[`HabitRowFrequency component Renders static elements 1`] = `
     />
   </div>
   <div
-    className="habit__cell "
+    className="habit-row-frequency__cell "
     key="check-name-1"
   >
     <HabitCheckbox
@@ -27,7 +27,7 @@ exports[`HabitRowFrequency component Renders static elements 1`] = `
     />
   </div>
   <div
-    className="habit__cell "
+    className="habit-row-frequency__cell "
     key="check-name-2"
   >
     <HabitCheckbox
@@ -38,7 +38,7 @@ exports[`HabitRowFrequency component Renders static elements 1`] = `
     />
   </div>
   <div
-    className="habit__cell "
+    className="habit-row-frequency__cell "
     key="check-name-3"
   >
     <HabitCheckbox
@@ -49,7 +49,7 @@ exports[`HabitRowFrequency component Renders static elements 1`] = `
     />
   </div>
   <div
-    className="habit__cell "
+    className="habit-row-frequency__cell "
     key="check-name-4"
   >
     <HabitCheckbox
@@ -60,7 +60,7 @@ exports[`HabitRowFrequency component Renders static elements 1`] = `
     />
   </div>
   <div
-    className="habit__cell "
+    className="habit-row-frequency__cell "
     key="check-name-5"
   >
     <HabitCheckbox
@@ -71,7 +71,7 @@ exports[`HabitRowFrequency component Renders static elements 1`] = `
     />
   </div>
   <div
-    className="habit__cell "
+    className="habit-row-frequency__cell "
     key="check-name-6"
   >
     <HabitCheckbox
