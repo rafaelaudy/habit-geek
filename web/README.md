@@ -6,6 +6,8 @@ In the project directory, you can run:
 
 - `yarn start`
 - `yarn test`
+- `yarn test:functional`
+- `yarn test:ci`
 - `yarn build`
 - `yarn deploy`
 

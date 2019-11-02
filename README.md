@@ -19,4 +19,5 @@ The projects that compose this solution are:
 - Clean dependencies - `yarn clean`
 - Start projects - `yarn start`
 - Test projects - `yarn test`
+- Test projects without watch - `yarn test:ci`
 - Build projects - `yarn build`
