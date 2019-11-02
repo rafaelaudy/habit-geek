@@ -1,21 +1,14 @@
+import { getRow } from "../utils";
+
 const emptyData = ".history__empty-data";
 const historyHeader = ".history__header-button";
 const historyContent = ".show .card-body";
 
-const habitRows = ".habit-row";
 const toggleHabit = ".habit-row-frequency__cell";
 const habitCheckbox = ".toggle__input";
 
 const successRow = ".table-success";
 const failedRow = ".table-danger";
-
-const getRow = (rowIndex, withinFunc) => {
-  cy.get(habitRows)
-    .eq(rowIndex)
-    .within(() => {
-      withinFunc && withinFunc();
-    });
-};
 
 context("History", () => {
   beforeEach(() => {

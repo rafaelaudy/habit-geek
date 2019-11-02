@@ -1,31 +1,14 @@
+import { getRow, toggleHabit } from "../utils";
+
 const backWeekButton = ".icon-button-previous";
 const forwardWeekButton = ".icon-button-forward";
 const header = ".dashboard-week-header";
 
-const habitRows = ".habit-row";
-const habitToggle = ".toggle";
 const habitCheckbox = ".toggle__input";
 
 const rowStatus = ".habit-row-frequency";
 const successRow = ".table-success";
 const failedRow = ".table-danger";
-
-const getRow = (rowIndex, withinFunc) => {
-  cy.get(habitRows)
-    .eq(rowIndex)
-    .within(() => {
-      withinFunc && withinFunc();
-    });
-};
-
-const toggleHabit = (rowIndex, dayIndex, withinFunc) => {
-  getRow(rowIndex, () => {
-    cy.get(habitToggle)
-      .eq(dayIndex)
-      .click();
-    withinFunc && withinFunc();
-  });
-};
 
 context("Habits", () => {
   beforeEach(() => {

@@ -1,8 +1,9 @@
+import { editHabit } from "../utils";
+
 const backWeekButton = ".icon-button-previous";
 const forwardWeekButton = ".icon-button-forward";
 const header = ".dashboard-week-header";
 const newHabitButton = ".btn-primary";
-const editHabitButton = ".icon-button__edit";
 const habitRow = ".habit-row";
 
 const name = "#new-habit-name";
@@ -21,21 +22,13 @@ const savesHabit = triggerButton => {
   cy.get(saveHabit).click();
 };
 
-const editHabit = index => {
-  cy.get(editHabitButton)
-    .eq(index)
-    .click();
-};
-
 const saveNewHabit = triggerButton => {
   cy.get(newHabitButton).click();
   savesHabit();
 };
 
 const saveEditHabit = triggerButton => {
-  cy.get(editHabitButton)
-    .eq(0)
-    .click();
+  editHabit(0);
   savesHabit();
 };
 
