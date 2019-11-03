@@ -1,14 +1,10 @@
 {
   "expo": {
     "name": "Habit Geek",
-    "slug": "mobile",
+    "slug": "habit-geek",
     "privacy": "public",
     "sdkVersion": "35.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,15 +16,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "packagerOpts": {
       "config": "metro.config.js"
     },
-    "description": ""
+    "description": "The best tool to create good habits!",
+    "android": {
+      "package": "com.portoIT.habitGeek",
+      "permissions": []
+    }
   }
 }
