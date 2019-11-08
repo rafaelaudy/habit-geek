@@ -3,21 +3,31 @@
 This project wants to be your go to app to improve and monitor your daily habits!
 Check it out here: https://rafaelaudy.github.io/habit-geek
 
-## Projects:
-
-This is a monorepo built with Lerna.
-The projects that compose this solution are:
-
-- The web project (react).
-- The mobile project (react-native).
-- The shared project containes logic for web/mobile (vanilla javascript).
-- The server project (GraphQL/Node/AWS Lambda).
+This is the project for the web version of the app.
 
 ## Available Scripts:
 
-- Install dependencies - `yarn bootstrap`
-- Clean dependencies - `yarn clean`
-- Start projects - `yarn start`
-- Test projects - `yarn test`
-- Test projects without watch - `yarn test:ci`
-- Build projects - `yarn build`
+- `yarn start`
+- `yarn test`
+- `yarn test:functional`
+- `yarn test:ci`
+- `yarn build`
+- `yarn deploy`
+
+## Immediate next steps:
+
+- Add migration stategy for when a change to the schema is necessary on local storage
+  https://www.freecodecamp.org/news/how-to-use-redux-persist-when-migrating-your-states-a5dee16b5ead/
+- Fails or approves previous habits when week changes
+
+## Techdebt:
+
+- User -> Profile
+- Refactor css to modules
+
+## Backlog of future improvements:
+
+- Code Splitting
+- Analyzing the Bundle Size
+- Server rendering or pre rendering
+- Service worker and working offline
