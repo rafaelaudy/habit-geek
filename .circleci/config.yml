@@ -18,14 +18,17 @@ jobs:
       - checkout
 
       - restore_cache:
+          paths:
+            - /root/.cache/Cypress/
+
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
-            - v1-dependencies-
 
       - run: yarn install
 
       - save_cache:
           paths:
+            - /root/.cache/Cypress/
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
@@ -38,4 +41,4 @@ jobs:
       - run: git config --global -l
       - run: git config --global user.email rafael.audy@gmail.com
       - run: git config --global user.name rafaelaudy
-      - run: cd web && yarn deploy
+      - run: yarn deploy

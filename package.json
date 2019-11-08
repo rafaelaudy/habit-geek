@@ -1,6 +1,6 @@
 {
   "name": "habit-geek-web",
-  "homepage": "https://rafaelaudy.github.io/habit-geek",
+  "homepage": "https://rafaelaudy.github.io/habit-geek-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
