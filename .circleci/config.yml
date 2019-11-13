@@ -36,7 +36,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "38:a7:e8:fd:33:b8:15:70:5d:07:0f:eb:08:25:9a:8b"
+            - "8c:7a:17:fe:7e:ca:86:53:e0:a3:f6:ec:0d:c2:8e:03"
 
       - run: git config --global -l
       - run: git config --global user.email rafael.audy@gmail.com
