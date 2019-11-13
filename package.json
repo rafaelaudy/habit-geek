@@ -1,6 +1,6 @@
 {
-  "name": "habit-geek-web",
-  "homepage": "https://rafaelaudy.github.io/habit-geek-web",
+  "name": "habit-geek",
+  "homepage": "https://rafaelaudy.github.io/habit-geek",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +16,14 @@
     "react-redux": "^7.1.1",
     "react-scripts": "3.1.1",
     "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "cypress": "^3.5.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
+    "gh-pages": "^2.1.1",
+    "start-server-and-test": "^1.10.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,14 +49,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "cypress": "^3.5.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.4.0",
-    "gh-pages": "^2.1.1",
-    "start-server-and-test": "^1.10.6"
   },
   "jest": {
     "snapshotSerializers": [
