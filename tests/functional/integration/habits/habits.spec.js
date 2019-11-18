@@ -69,7 +69,11 @@ context("Habits", () => {
   context("Current week", () => {
     it("show habits state", () => {
       getRow(0, () => cy.get(successRow));
-      getRow(1, () => cy.get(failedRow));
+      getRow(1, () => { 
+        cy.get(successRow).should('not.exist');
+        cy.get(failedRow).should('not.exist');
+      });
+      getRow(2, () => cy.get(failedRow));
     });
 
     it("achieve and blow up a habit", () => {

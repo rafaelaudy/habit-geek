@@ -10,9 +10,11 @@ import HistoryContainer from "./history/HistoryContainer";
 
 import "./App.scss";
 
-function App({ currentWeek, startNewWeek }) {
+function App({ currentWeek, startNewWeek, updateCurrentWeekStatuses }) {
   if (currentWeek !== getCurrentWeek()) {
     startNewWeek();
+  } else {
+    updateCurrentWeekStatuses();
   }
 
   return (

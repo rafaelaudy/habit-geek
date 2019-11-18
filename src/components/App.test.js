@@ -8,7 +8,7 @@ jest.mock("@rafael.audy/habit-geek-utils/utils/dateUtils", () => ({
 
 describe("App component", () => {
   it("Renders static elements", () => {
-    const app = shallow(<App currentWeek="y1w1" />);
+    const app = shallow(<App currentWeek="y1w1" updateCurrentWeekStatuses={()=>{}}/>);
     expect(app).toMatchSnapshot();
   });
 
@@ -16,5 +16,11 @@ describe("App component", () => {
     const startNewWeekMock = jest.fn();
     shallow(<App currentWeek="y1w0" startNewWeek={startNewWeekMock} />);
     expect(startNewWeekMock).toHaveBeenCalled();
+  });
+
+  it("updates current week statuses", () => {
+    const updateCurrentWeekStatusesMock = jest.fn();
+    shallow(<App currentWeek="y1w1" updateCurrentWeekStatuses={updateCurrentWeekStatusesMock} />);
+    expect(updateCurrentWeekStatusesMock).toHaveBeenCalled();
   });
 });
