@@ -51,18 +51,18 @@ context("Save", () => {
     });
 
     it("Creates habit", () => {
-      cy.get(habitRow).should("have.lengthOf", 2);
-      saveNewHabit();
       cy.get(habitRow).should("have.lengthOf", 3);
+      saveNewHabit();
+      cy.get(habitRow).should("have.lengthOf", 4);
     });
 
     it("Not available on previous weeks", () => {
-      cy.get(habitRow).should("have.lengthOf", 2);
+      cy.get(habitRow).should("have.lengthOf", 3);
       cy.get(backWeekButton).click();
       cy.get(habitRow).should("have.lengthOf", 2);
       cy.get(forwardWeekButton).click();
       saveNewHabit();
-      cy.get(habitRow).should("have.lengthOf", 3);
+      cy.get(habitRow).should("have.lengthOf", 4);
       cy.get(backWeekButton).click();
       cy.get(habitRow).should("have.lengthOf", 2);
     });
@@ -87,16 +87,16 @@ context("Save", () => {
     });
 
     it("Saves habit", () => {
-      cy.get(habitRow).should("have.lengthOf", 2);
+      cy.get(habitRow).should("have.lengthOf", 3);
       saveEditHabit();
-      cy.get(habitRow).should("have.lengthOf", 2);
+      cy.get(habitRow).should("have.lengthOf", 3);
     });
 
     it("Deletes habit", () => {
-      cy.get(habitRow).should("have.lengthOf", 2);
+      cy.get(habitRow).should("have.lengthOf", 3);
       editHabit(0);
       cy.get(deleteHabit).click();
-      cy.get(habitRow).should("have.lengthOf", 1);
+      cy.get(habitRow).should("have.lengthOf", 2);
     });
   });
 });
