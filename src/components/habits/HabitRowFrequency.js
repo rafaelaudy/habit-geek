@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   getTodayIndex,
   getCurrentWeek,
@@ -17,6 +18,9 @@ const HabitRowFrequency = ({
   isReadOnly,
   toggleDayHabit
 }) => {
+  const { t } = useTranslation();
+  const days = t("date-days-short", { returnObjects: true });
+
   const todayIndex = getTodayIndex();
   const currentWeek = getCurrentWeek();
   const isCurrentWeek = week === currentWeek;
@@ -38,6 +42,7 @@ const HabitRowFrequency = ({
             key={`check-${name}-${checkIndex}`}
           >
             <HabitCheckbox
+              day={days[checkIndex]}
               clickHandler={() => toggleDayHabit(week, name, checkIndex)}
               isChecked={checked[checkIndex]}
               isDisabled={isDisabled}

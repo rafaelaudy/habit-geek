@@ -186,3 +186,20 @@ The animation of switching states
   --toggleBgColor: white;
   --toggleSize: 30px;
 }
+
+.toggle__day {
+  position: absolute;
+  width: 30px;
+  top: 4px;
+}
+
+.toggle__day {
+  position: absolute;
+  width: 30px;
+  top: 4px;
+}
+
+.toggle__input:disabled ~ .toggle__day,
+.toggle__input[data-readonly="true"] ~ .toggle__day {
+  color: $muted;
+}

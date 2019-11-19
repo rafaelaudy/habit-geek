@@ -1,15 +1,18 @@
 @import "../Variables.scss";
 
 .habit-row {
-  &__header,
-  & {
-    display: flex;
+  display: flex;
 
-    &:last-child .habit-row-frequency__cell--today {
-      border-bottom-width: $border-width;
-      border-bottom-left-radius: 0.25rem;
-      border-bottom-right-radius: 0.25rem;
-    }
+  &:first-child .habit-row-frequency__cell--today {
+    border-top-width: $border-width;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  &:last-child .habit-row-frequency__cell--today {
+    border-bottom-width: $border-width;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
   }
 
   &__title {
@@ -21,16 +24,9 @@
 
 @media (max-width: 576px) {
   .habit-row {
-    &__header,
-    & {
-      flex-wrap: wrap;
-      margin: auto;
-      max-width: 380px;
-    }
-
-    &__header .habit-row__title {
-      height: 0;
-    }
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 380px;
 
     &__title {
       justify-content: center;

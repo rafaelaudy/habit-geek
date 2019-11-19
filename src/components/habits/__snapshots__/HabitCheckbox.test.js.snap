@@ -12,6 +12,9 @@ exports[`HabitCheckbox component disables component 1`] = `
       type="checkbox"
     />
     <span
+      className="toggle__day"
+    />
+    <span
       className="toggle__label"
     >
       <span
@@ -33,6 +36,9 @@ exports[`HabitCheckbox component only disables component if it is not readonly 1
       data-readonly={true}
       disabled={false}
       type="checkbox"
+    />
+    <span
+      className="toggle__day"
     />
     <span
       className="toggle__label"
@@ -57,6 +63,9 @@ exports[`HabitCheckbox component renders checked checkboxes 1`] = `
       type="checkbox"
     />
     <span
+      className="toggle__day"
+    />
+    <span
       className="toggle__label"
     >
       <span
@@ -75,6 +84,9 @@ exports[`HabitCheckbox component renders static elements 1`] = `
     <input
       className="toggle__input"
       type="checkbox"
+    />
+    <span
+      className="toggle__day"
     />
     <span
       className="toggle__label"

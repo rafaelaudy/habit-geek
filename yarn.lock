@@ -1185,10 +1185,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@rafael.audy/habit-geek-utils@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@rafael.audy/habit-geek-utils/-/habit-geek-utils-1.0.4.tgz#bd8d9b9ec636cfdc34a563526d58a69eaf511791"
-  integrity sha512-+dxUD9eVjgzX8ayPpid9IkPdX8RXkIE43XvmYx4kpz8yN52rh4/aijQCbjUY3Jw11Gtbmci0l5jiZMEgDSOWBg==
+"@rafael.audy/habit-geek-utils@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@rafael.audy/habit-geek-utils/-/habit-geek-utils-1.0.6.tgz#abe3dd4e23010c51c827c9fec0eb83f4e2009cad"
+  integrity sha512-7SnFWBoK/48UitlZOO0EhPuEZbTJxUyxeKKXNXTVwzLYou51ynWpm+ATL+1MCq18fwerGbKwsFQ4dERqzJooVA==
   dependencies:
     i18next "^17.0.18"
     i18next-browser-languagedetector "^3.1.1"

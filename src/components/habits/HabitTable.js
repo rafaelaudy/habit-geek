@@ -1,6 +1,5 @@
 import React from "react";
 
-import HabitHeader from "./HabitHeader";
 import HabitRows from "./HabitRows";
 
 const HabitTable = ({
@@ -12,7 +11,6 @@ const HabitTable = ({
 }) =>
   habits.length > 0 ? (
     <div className="mb-3">
-      <HabitHeader isReadOnly={isReadOnly} week={week}></HabitHeader>
       <HabitRows
         habits={habits}
         week={week}
