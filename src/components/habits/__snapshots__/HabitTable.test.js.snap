@@ -1,20 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HabitTable component Renders static elements 1`] = `
-<div
-  className="mb-3"
->
-  <HabitRows
-    habits={
-      Array [
-        Object {},
-        Object {},
-      ]
-    }
-    isReadOnly={true}
-    onUpdateHabit={[Function]}
-    toggleDayHabit={[Function]}
-    week="y1w1"
-  />
-</div>
+<HabitRows
+  habits={
+    Array [
+      Object {},
+      Object {},
+    ]
+  }
+  isReadOnly={true}
+  onUpdateHabit={[Function]}
+  toggleDayHabit={[Function]}
+  week="y1w1"
+/>
 `;

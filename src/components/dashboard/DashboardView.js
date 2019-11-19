@@ -30,12 +30,14 @@ const DashboardView = ({
         toggleWeek={setIsCurrentWeek}
       ></DashboardWeekHeader>
 
-      <HabitTable
-        habits={isCurrentWeek ? currentHabits : previousHabits}
-        week={isCurrentWeek ? currentWeek : previousWeek}
-        toggleDayHabit={toggleDayHabit}
-        onUpdateHabit={onUpdateHabit}
-      ></HabitTable>
+      <div className="mb-3">
+        <HabitTable
+          habits={isCurrentWeek ? currentHabits : previousHabits}
+          week={isCurrentWeek ? currentWeek : previousWeek}
+          toggleDayHabit={toggleDayHabit}
+          onUpdateHabit={onUpdateHabit}
+        ></HabitTable>
+      </div>
 
       {isCurrentWeek ? (
         <Fragment>

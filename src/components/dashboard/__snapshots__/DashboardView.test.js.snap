@@ -23,21 +23,25 @@ exports[`DashboardView component Renders static elements 1`] = `
     toggleWeek={[Function]}
     week="y1w1"
   />
-  <HabitTable
-    habits={
-      Array [
-        Object {
-          "checked": Array [],
-          "frequency": "1",
-          "name": "write",
-          "type": "health",
-        },
-      ]
-    }
-    onUpdateHabit={[Function]}
-    toggleDayHabit={[Function]}
-    week="y1w1"
-  />
+  <div
+    className="mb-3"
+  >
+    <HabitTable
+      habits={
+        Array [
+          Object {
+            "checked": Array [],
+            "frequency": "1",
+            "name": "write",
+            "type": "health",
+          },
+        ]
+      }
+      onUpdateHabit={[Function]}
+      toggleDayHabit={[Function]}
+      week="y1w1"
+    />
+  </div>
   <hr />
   <div
     className="d-flex justify-content-center"

@@ -10,15 +10,13 @@ const HabitTable = ({
   toggleDayHabit
 }) =>
   habits.length > 0 ? (
-    <div className="mb-3">
-      <HabitRows
-        habits={habits}
-        week={week}
-        isReadOnly={isReadOnly}
-        toggleDayHabit={toggleDayHabit}
-        onUpdateHabit={onUpdateHabit}
-      ></HabitRows>
-    </div>
+    <HabitRows
+      habits={habits}
+      week={week}
+      isReadOnly={isReadOnly}
+      toggleDayHabit={toggleDayHabit}
+      onUpdateHabit={onUpdateHabit}
+    ></HabitRows>
   ) : null;
 
 export default HabitTable;
