@@ -56,6 +56,7 @@ describe("SaveHabit component", () => {
         onGoBack={onGoBackMock}
       ></SaveHabit>
     );
+    expect(saveHabits.find("h2").text()).toBe("save-habit-edit-title");
     saveHabits
       .find("#new-habit-name")
       .simulate("change", { target: { value: "Read" } });

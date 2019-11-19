@@ -35,7 +35,7 @@ exports[`Dashboard component Renders New Habit 1`] = `
       onSubmit={[Function]}
     >
       <h2>
-        save-habit-title
+        save-habit-new-title
       </h2>
       <div
         className="mb-3"

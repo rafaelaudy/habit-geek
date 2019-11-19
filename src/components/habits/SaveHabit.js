@@ -43,7 +43,7 @@ const SaveHabit = ({
       }`}
       noValidate
     >
-      <h2>{t("save-habit-title")}</h2>
+      <h2>{id ? t("save-habit-edit-title") : t("save-habit-new-title")}</h2>
       <div className="mb-3">
         <label htmlFor="new-habit-name">{t("save-habit-name")}</label>
         <input
