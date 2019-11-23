@@ -29,8 +29,8 @@ describe("Profile component", () => {
   });
 
   it("Register and navigates to Dashboard", () => {
-    const registerUserAction = jest.fn();
-    const profile = shallow(<Profile registerUser={registerUserAction} />);
+    const saveUserAction = jest.fn();
+    const profile = shallow(<Profile saveUser={saveUserAction} />);
     profile
       .find("#profile-name")
       .simulate("change", { target: { value: "Rafa" } });
@@ -39,20 +39,20 @@ describe("Profile component", () => {
       .at(0)
       .simulate("click");
     profile.find("form").simulate("submit", fakeEvent);
-    expect(registerUserAction).toHaveBeenCalled();
-    expect(registerUserAction).toHaveBeenCalledWith("Rafa", "001-burglar.svg");
+    expect(saveUserAction).toHaveBeenCalled();
+    expect(saveUserAction).toHaveBeenCalledWith("Rafa", "001-burglar.svg");
     expect(navigate).toHaveBeenCalledWith("/habits");
   });
 
   it("validates forms", () => {
-    const registerUserAction = jest.fn();
+    const saveUserAction = jest.fn();
     fakeEvent.target.checkValidity.mockReturnValueOnce(false);
-    const profile = shallow(<Profile registerUser={registerUserAction} />);
+    const profile = shallow(<Profile saveUser={saveUserAction} />);
     profile.find("form").simulate("submit", fakeEvent);
     expect(profile.find(".was-validated").length).toBe(1);
     expect(fakeEvent.preventDefault).toHaveBeenCalledTimes(1);
     expect(fakeEvent.target.checkValidity).toHaveBeenCalledTimes(1);
-    expect(registerUserAction).toHaveBeenCalledTimes(0);
+    expect(saveUserAction).toHaveBeenCalledTimes(0);
     expect(navigate).toHaveBeenCalledTimes(0);
   });
 });

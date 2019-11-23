@@ -1,6 +1,9 @@
 import { connect } from "react-redux";
 import Profile from "./Profile";
-import { registerUser } from "@rafael.audy/habit-geek-utils/actions/userActions";
+import {
+  saveUser,
+  saveSession
+} from "@rafael.audy/habit-geek-utils/actions/userActions";
 
 const mapStateToProps = ({ user }) => ({
   name: user.name,
@@ -8,10 +11,8 @@ const mapStateToProps = ({ user }) => ({
 });
 
 const mapDispatchToProps = {
-  registerUser
+  saveUser,
+  logout: () => saveSession()
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

@@ -137,7 +137,7 @@ exports[`Header component Renders static elements 1`] = `
         </ForwardRef>
         <ForwardRef
           getProps={[Function]}
-          to="/habit-geek/profile"
+          to="/habit-geek/login"
         >
           <Location>
             <LocationProvider
@@ -169,10 +169,10 @@ exports[`Header component Renders static elements 1`] = `
             >
               <a
                 className="nav-item nav-link"
-                href="/habit-geek/profile"
+                href="/habit-geek/login"
                 onClick={[Function]}
               >
-                nav-profile
+                nav-login
               </a>
             </LocationProvider>
           </Location>

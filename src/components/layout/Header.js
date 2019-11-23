@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import "./Header.scss";
 
-function Header(props) {
+function Header({ jwt }) {
   const { t } = useTranslation();
 
   const getLinkClass = ({ isCurrent }) => {
@@ -12,6 +12,15 @@ function Header(props) {
       className: isCurrent ? "nav-item nav-link active" : "nav-item nav-link"
     };
   };
+
+  let userLink, userLabel;
+  if (jwt) {
+    userLink = "/habit-geek/profile";
+    userLabel = t("nav-profile");
+  } else {
+    userLink = "/habit-geek/login";
+    userLabel = t("nav-login");
+  }
 
   return (
     <header>
@@ -26,8 +35,8 @@ function Header(props) {
           <Link getProps={getLinkClass} to="/habit-geek/history">
             {t("nav-history")}
           </Link>
-          <Link getProps={getLinkClass} to="/habit-geek/profile">
-            {t("nav-profile")}
+          <Link getProps={getLinkClass} to={userLink}>
+            {userLabel}
           </Link>
         </div>
       </nav>

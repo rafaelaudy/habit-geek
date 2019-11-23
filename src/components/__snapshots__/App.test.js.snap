@@ -11,8 +11,11 @@ exports[`App component Renders static elements 1`] = `
         default={true}
         path="/habit-geek/habits"
       />
-      <Connect(Profile)
+      <User
         path="/habit-geek/profile"
+      />
+      <User
+        path="/habit-geek/login"
       />
       <Connect(History)
         path="/habit-geek/history"

@@ -7,7 +7,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.24",
     "@fortawesome/free-solid-svg-icons": "^5.11.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "@rafael.audy/habit-geek-utils": "^1.0.6",
+    "@rafael.audy/habit-geek-utils": "^1.0.9",
     "@reach/router": "^1.2.1",
     "bootstrap": "^4.3.1",
     "node-sass": "^4.12.0",

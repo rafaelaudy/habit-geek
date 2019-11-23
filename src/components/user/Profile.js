@@ -1,5 +1,3 @@
-//
-
 import React, { useState } from "react";
 import { navigate } from "@reach/router";
 import { useTranslation } from "react-i18next";
@@ -14,18 +12,18 @@ import avatar6 from "@rafael.audy/habit-geek-utils/imgs/avatars/006-cyborg.svg";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
 
-const Profile = ({ name: initialName, avatar, registerUser }) => {
+const Profile = ({ name: initialName, avatar, saveUser, logout }) => {
   const [name, setName] = useState(initialName);
   const [selectedAvatar, setAvatar] = useState(avatar ? avatar : avatar1);
   const [validityChecked, setValidityChecked] = useState(false);
   const { t } = useTranslation();
 
-  const register = event => {
+  const save = event => {
     event.preventDefault();
     setValidityChecked(true);
 
     if (event.target.checkValidity()) {
-      registerUser(name, selectedAvatar);
+      saveUser(name, selectedAvatar);
       navigate("/habits");
     }
   };
@@ -35,7 +33,7 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
       className={`mobile-size-container ${
         validityChecked ? "was-validated" : ""
       }`}
-      onSubmit={register}
+      onSubmit={save}
       noValidate
     >
       <h2>{t("profile-title")}</h2>
@@ -70,6 +68,9 @@ const Profile = ({ name: initialName, avatar, registerUser }) => {
       <hr className="mb-4" />
       <button type="submit" className="btn btn-primary btn-lg btn-block">
         {t("profile-save")}
+      </button>
+      <button onClick={logout} className="btn btn-secondary btn-lg btn-block">
+        {t("profile-logout")}
       </button>
     </form>
   );
