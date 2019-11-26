@@ -94,5 +94,10 @@ exports[`Profile component Renders static elements 1`] = `
   >
     profile-save
   </button>
+  <button
+    className="btn btn-secondary btn-lg btn-block"
+  >
+    profile-logout
+  </button>
 </form>
 `;
