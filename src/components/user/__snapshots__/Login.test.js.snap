@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component Renders static elements 1`] = `
+<div
+  className="mobile-size-container"
+>
+  <form
+    className=""
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <h2>
+      login-title
+    </h2>
+    <UserForm
+      email=""
+      password=""
+      setEmail={[Function]}
+      setPassword={[Function]}
+    />
+    <hr
+      className="mb-4"
+    />
+    <button
+      className="btn btn-primary btn-lg btn-block"
+      type="submit"
+    >
+      login-login
+    </button>
+  </form>
+  <div>
+    login-sign-up-label
+    <button
+      className="px-0 btn btn-link"
+      onClick={[Function]}
+    >
+      login-sign-up
+    </button>
+  </div>
+  <div>
+    login-forgot-password-label
+    <button
+      className="px-0 btn btn-link"
+      onClick={[Function]}
+    >
+      login-forgot-password
+    </button>
+  </div>
+</div>
+`;

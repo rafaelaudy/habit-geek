@@ -1,5 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Header component Changes login to profile when jwt is present 1`] = `
+<Header
+  jwt="jwt"
+>
+  <header>
+    <nav
+      className="navbar navbar-expand navbar-dark bg-dark header"
+    >
+      <ForwardRef
+        className="navbar-brand"
+        to="/habit-geek/habits"
+      >
+        <Location>
+          <LocationProvider
+            history={
+              Object {
+                "_onTransitionComplete": [Function],
+                "listen": [Function],
+                "location": Object {
+                  "assign": [Function],
+                  "hash": "",
+                  "host": "localhost",
+                  "hostname": "localhost",
+                  "href": "http://localhost/",
+                  "key": "initial",
+                  "origin": "http://localhost",
+                  "pathname": "/",
+                  "port": "",
+                  "protocol": "http:",
+                  "reload": [Function],
+                  "replace": [Function],
+                  "search": "",
+                  "state": null,
+                  "toString": [Function],
+                },
+                "navigate": [Function],
+                "transitioning": false,
+              }
+            }
+          >
+            <a
+              className="navbar-brand"
+              href="/habit-geek/habits"
+              onClick={[Function]}
+            >
+              Habit Geek!
+            </a>
+          </LocationProvider>
+        </Location>
+      </ForwardRef>
+      <div
+        className="navbar-nav"
+      >
+        <ForwardRef
+          getProps={[Function]}
+          to="/habit-geek/habits"
+        >
+          <Location>
+            <LocationProvider
+              history={
+                Object {
+                  "_onTransitionComplete": [Function],
+                  "listen": [Function],
+                  "location": Object {
+                    "assign": [Function],
+                    "hash": "",
+                    "host": "localhost",
+                    "hostname": "localhost",
+                    "href": "http://localhost/",
+                    "key": "initial",
+                    "origin": "http://localhost",
+                    "pathname": "/",
+                    "port": "",
+                    "protocol": "http:",
+                    "reload": [Function],
+                    "replace": [Function],
+                    "search": "",
+                    "state": null,
+                    "toString": [Function],
+                  },
+                  "navigate": [Function],
+                  "transitioning": false,
+                }
+              }
+            >
+              <a
+                className="nav-item nav-link"
+                href="/habit-geek/habits"
+                onClick={[Function]}
+              >
+                nav-my-habits
+              </a>
+            </LocationProvider>
+          </Location>
+        </ForwardRef>
+        <ForwardRef
+          getProps={[Function]}
+          to="/habit-geek/history"
+        >
+          <Location>
+            <LocationProvider
+              history={
+                Object {
+                  "_onTransitionComplete": [Function],
+                  "listen": [Function],
+                  "location": Object {
+                    "assign": [Function],
+                    "hash": "",
+                    "host": "localhost",
+                    "hostname": "localhost",
+                    "href": "http://localhost/",
+                    "key": "initial",
+                    "origin": "http://localhost",
+                    "pathname": "/",
+                    "port": "",
+                    "protocol": "http:",
+                    "reload": [Function],
+                    "replace": [Function],
+                    "search": "",
+                    "state": null,
+                    "toString": [Function],
+                  },
+                  "navigate": [Function],
+                  "transitioning": false,
+                }
+              }
+            >
+              <a
+                className="nav-item nav-link"
+                href="/habit-geek/history"
+                onClick={[Function]}
+              >
+                nav-history
+              </a>
+            </LocationProvider>
+          </Location>
+        </ForwardRef>
+        <ForwardRef
+          getProps={[Function]}
+          to="/habit-geek/profile"
+        >
+          <Location>
+            <LocationProvider
+              history={
+                Object {
+                  "_onTransitionComplete": [Function],
+                  "listen": [Function],
+                  "location": Object {
+                    "assign": [Function],
+                    "hash": "",
+                    "host": "localhost",
+                    "hostname": "localhost",
+                    "href": "http://localhost/",
+                    "key": "initial",
+                    "origin": "http://localhost",
+                    "pathname": "/",
+                    "port": "",
+                    "protocol": "http:",
+                    "reload": [Function],
+                    "replace": [Function],
+                    "search": "",
+                    "state": null,
+                    "toString": [Function],
+                  },
+                  "navigate": [Function],
+                  "transitioning": false,
+                }
+              }
+            >
+              <a
+                className="nav-item nav-link"
+                href="/habit-geek/profile"
+                onClick={[Function]}
+              >
+                nav-profile
+              </a>
+            </LocationProvider>
+          </Location>
+        </ForwardRef>
+      </div>
+    </nav>
+  </header>
+</Header>
+`;
+
 exports[`Header component Renders static elements 1`] = `
 <Header>
   <header>

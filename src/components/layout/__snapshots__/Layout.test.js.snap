@@ -2,6 +2,6 @@
 
 exports[`Layout component Renders static elements 1`] = `
 <Fragment>
-  <Header />
+  <Connect(Header) />
 </Fragment>
 `;

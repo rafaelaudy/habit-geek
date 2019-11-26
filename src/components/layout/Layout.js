@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import Header from "./Header";
+import HeaderContainer from "./HeaderContainer";
 
 function Layout({ children }) {
   return (
     <Fragment>
-      <Header />
+      <HeaderContainer />
       {children}
     </Fragment>
   );

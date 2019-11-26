@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserForm component Renders static elements 1`] = `
+<Fragment>
+  <div
+    className="mb-3"
+  >
+    <label
+      htmlFor="user-form-email"
+    >
+      user-form-email
+    </label>
+    <input
+      className="form-control"
+      id="user-form-email"
+      onChange={[Function]}
+      required={true}
+    />
+    <div
+      className="invalid-feedback"
+    >
+      user-form-email-validation
+    </div>
+  </div>
+  <div
+    className="mb-3"
+  >
+    <label
+      htmlFor="user-form-password"
+    >
+      user-form-password
+    </label>
+    <input
+      className="form-control"
+      id="user-form-password"
+      onChange={[Function]}
+      required={true}
+    />
+    <div
+      className="invalid-feedback"
+    >
+      user-form-password-validation
+    </div>
+  </div>
+</Fragment>
+`;
