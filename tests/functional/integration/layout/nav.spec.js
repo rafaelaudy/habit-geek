@@ -13,7 +13,7 @@ context("Nav", () => {
     clickNav(1);
     cy.url().should("includes", "history");
     clickNav(2);
-    cy.url().should("includes", "profile");
+    cy.url().should("includes", "login");
     clickNav(0);
     cy.url().should("includes", "habits");
   });
