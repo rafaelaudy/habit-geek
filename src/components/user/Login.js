@@ -18,7 +18,7 @@ const Login = ({ saveSession }) => {
       userService
         .login(email, password)
         .then(saveSession)
-        .catch();
+        .catch(() => {});
     }
   };
 
