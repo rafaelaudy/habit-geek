@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`User component Renders static elements 1`] = `<Login />`;
+exports[`User component Renders the login component 1`] = `<Login />`;
+
+exports[`User component Renders the profile component 1`] = `<Connect(Profile) />`;

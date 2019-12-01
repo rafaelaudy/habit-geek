@@ -22,7 +22,7 @@ const SignUp = ({ jwt, saveSession }) => {
       userService
         .signUp(email, password)
         .then(saveSession)
-        .catch();
+        .catch(() => {});
     }
   };
 

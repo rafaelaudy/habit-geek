@@ -2,9 +2,13 @@ import React from "react";
 import { shallow } from "enzyme";
 import User from "./User";
 
-//TODO
 describe("User component", () => {
-  it("Renders static elements", () => {
+  it("Renders the profile component", () => {
+    const user = shallow(<User jwt="jwt" />);
+    expect(user).toMatchSnapshot();
+  });
+
+  it("Renders the login component", () => {
     const user = shallow(<User />);
     expect(user).toMatchSnapshot();
   });
