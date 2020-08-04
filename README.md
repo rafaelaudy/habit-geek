@@ -16,18 +16,15 @@ This is the project for the web version of the app.
 
 ## Immediate next steps:
 
-- Add migration stategy for when a change to the schema is necessary on local storage
-  https://www.freecodecamp.org/news/how-to-use-redux-persist-when-migrating-your-states-a5dee16b5ead/
-- Fails or approves previous habits when week changes
-
-## Techdebt:
-
-- User -> Profile
-- Refactor css to modules
-
-## Backlog of future improvements:
-
-- Code Splitting
-- Analyzing the Bundle Size
-- Server rendering or pre rendering
-- Service worker and working offline
+- Merge this and the util project so that all the UI is contained here
+- Refactor and remove all login code that does not make sense anymore
+- Remove APP repo
+- Create AWS infraestructure for
+  - Dynamo table 
+  - Cognito
+- Create a new serverless project that will have
+  - Lambda function exposing a graphql API
+    - Save week
+    - Request weeks
+- Refactor code to use the endpoints (only if logged in)
+  - Only loads data on first page load
